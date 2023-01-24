@@ -1,4 +1,4 @@
-COMPFLAGS     =  -O # -check_bounds  -g -trapeuv
+COMPFLAGS     =  -O -Wall -ffixed-line-length-132# -check_bounds  -g -trapeuv
 
 CFLAGS	      = $(COMPFLAGS)
 PFLAGS	      = $(COMPFLAGS)
@@ -18,7 +18,10 @@ HDRS	      =
 
 INSTALL	      = install
 
-LD	      = f77
+
+LD	          = gfortran
+FC            =	gfortran
+CC            =	cc
 
 LDFLAGS	      = $(COMPFLAGS)
 

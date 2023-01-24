@@ -22,17 +22,21 @@ c__________________________________________________________________________
  
       IMPLICIT NONE
       INTEGER iseed, equil, prod, nsamp, ii, icycl, ndispl, attempt, 
-     &        nacc, ncycl, nmoves, imove
-      DOUBLE PRECISION en, ent, vir, virt, dr
+     &        nacc, ncycl, nmoves, imove, nlambda, I
+      DOUBLE PRECISION en, ent, vir, virt, dr, lambda
  
       WRITE (6, *) '**************** MC_NVT ***************'
 c     ---initialize sysem
       CALL READDAT(equil, prod, nsamp, ndispl, dr, iseed)
       nmoves = ndispl
 c     ---total energy of the system
-      CALL TOTERG(en, vir)
+      lambda = 1
+      nlambda = 20
+      CALL TOTERG(en, vir, lambda)
+c      CALL TOTERG(en, vir)
       WRITE (6, 99001) en, vir
 c     ---start MC-cycle
+      WRITE (6, *) en, vir
       DO ii = 1, 2
 c        --- ii=1 equilibration
 c        --- ii=2 production
@@ -47,28 +51,39 @@ c        --- ii=2 production
          nacc = 0
 c        ---intialize the subroutine that adjust the maximum displacement
          CALL ADJUST(attempt, nacc, dr)
-         DO icycl = 1, ncycl
-            DO imove = 1, nmoves
-c              ---attempt to displace a particle
-               CALL MCMOVE(en, vir, attempt, nacc, dr, iseed)
-            END DO
-            IF (ii.EQ.2) THEN
-c              ---sample averages
-               IF (MOD(icycl,nsamp).EQ.0) CALL SAMPLE(icycl, en, vir)
-            END IF
-            IF (MOD(icycl,ncycl/5).EQ.0) THEN
-               WRITE (6, *) '======>> Done ', icycl, ' out of ', ncycl
-c              ---write intermediate configuration to file
-               CALL STORE(8, dr)
-c              ---adjust maximum displacements
-               CALL ADJUST(attempt, nacc, dr)
-            END IF
+
+
+         DO I = 0, nlambda
+             WRITE (66, *) "lambda = ", (nlambda-I)*lambda
+             DO icycl = 1, ncycl
+                DO imove = 1, nmoves
+c                  ---attempt to displace a particle
+                   CALL MCMOVE(en, vir, attempt, nacc, dr, iseed, (nlambda-I)*lambda)
+                END DO
+                IF (ii.EQ.2) THEN
+c                  ---sample averages
+                   IF (MOD(icycl,nsamp).EQ.0) CALL SAMPLE(icycl, en, vir, I)
+                END IF
+                IF (MOD(icycl,ncycl/5).EQ.0) THEN
+                   WRITE (6, *) '======>> Done ', icycl, ' out of ', ncycl
+c                  ---write intermediate configuration to file
+                   CALL STORE(8, dr)
+c                  ---adjust maximum displacements
+                   CALL ADJUST(attempt, nacc, dr)
+                END IF
+             END DO
+             WRITE (66, *)
          END DO
+
+
+
          IF (ncycl.NE.0) THEN
             IF (attempt.NE.0) WRITE (6, 99003) attempt, nacc, 
      &                               100.*FLOAT(nacc)/FLOAT(attempt)
 c           ---test total energy
-            CALL TOTERG(ent, virt)
+            CALL TOTERG(ent, virt, lambda)
+c            CALL TOTERG(ent, virt)
+
             IF (ABS(ent-en).GT.1.D-6) THEN
                WRITE (6, *) 
      &                    ' ######### PROBLEMS ENERGY ################ '

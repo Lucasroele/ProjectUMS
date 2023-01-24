@@ -1,0 +1,920 @@
+ --- rho 0.70 
+ **************** MC_NVT ***************
+  ******** test random numbers ***********
+  i,ranf()            1  0.11180420853611572     
+  i,ranf()            2  0.74166310703406746     
+  i,ranf()            3  0.46027934237707857     
+  i,ranf()            4  0.11380693953292953     
+  i,ranf()            5  0.54839950623688738     
+ Initialisation on lattice: 
+       100 particles placed on a lattice
+  Number of equilibration cycles             :       100
+  Number of production cycles                :     20000
+  Sample frequency                           :         1
+
+  Number of att. to displ. a part. per cycle :        50
+  Maximum displacement                       :     0.090
+
+
+  Number of particles                        :       100
+  Temperature                                :     2.000
+  Density                                    :     0.700
+  Box length                                 :     5.228
+
+  Model parameters: 
+     epsilon: 1.000
+     sigma  : 1.000
+     mass   : 1.000
+ Simulations with tail correction: 
+ Potential truncated at  Rc =:     2.614
+ Tail corrections:   energy =     -0.328 pressure     -0.459
+
+
+ Total energy initial configuration:   -486.41131
+ Total virial initial configuration:   1264.98050
+  Start equilibration 
+ ======>> Done           20  out of          100
+ Max. displ. set to :  0.135 (old :  0.090)
+ Frac. acc.: 0.79 attempts:    1000 succes:     786
+ ======>> Done           40  out of          100
+ Max. displ. set to :  0.169 (old :  0.135)
+ Frac. acc.: 0.62 attempts:    1000 succes:     625
+ ======>> Done           60  out of          100
+ Max. displ. set to :  0.190 (old :  0.169)
+ Frac. acc.: 0.56 attempts:    1000 succes:     564
+ ======>> Done           80  out of          100
+ Max. displ. set to :  0.220 (old :  0.190)
+ Frac. acc.: 0.58 attempts:    1000 succes:     579
+ ======>> Done          100  out of          100
+ Max. displ. set to :  0.237 (old :  0.220)
+ Frac. acc.: 0.54 attempts:    1000 succes:     537
+ Number of att. to displ. a part.  :       5000
+ success:       3091(= 61.82%)
+ Total energy end of simulation    :   -448.10741
+       running energy              :   -448.10741
+       difference                  :  -0.96634E-12
+ Total virial end of simulation    :   1226.93881
+       running virial              :   1226.93881
+       difference                  :  -0.52296E-11
+  Start production 
+ ======>> Done         4000  out of        20000
+ Max. displ. set to :  0.275 (old :  0.237)
+ Frac. acc.: 0.58 attempts:  200000 succes:  116186
+ ======>> Done         8000  out of        20000
+ Max. displ. set to :  0.291 (old :  0.275)
+ Frac. acc.: 0.53 attempts:  200000 succes:  105688
+ ======>> Done        12000  out of        20000
+ Max. displ. set to :  0.296 (old :  0.291)
+ Frac. acc.: 0.51 attempts:  200000 succes:  101859
+ ======>> Done        16000  out of        20000
+ Max. displ. set to :  0.296 (old :  0.296)
+ Frac. acc.: 0.50 attempts:  200000 succes:  100021
+ ======>> Done        20000  out of        20000
+ Max. displ. set to :  0.297 (old :  0.296)
+ Frac. acc.: 0.50 attempts:  200000 succes:  100388
+ Number of att. to displ. a part.  :    1000000
+ success:     524142(= 52.41%)
+ Total energy end of simulation    :   -419.73040
+       running energy              :   -419.73040
+       difference                  :  -0.57980E-11
+ Total virial end of simulation    :    968.25510
+       running virial              :    968.25510
+       difference                  :   0.48203E-10
+  ***** Calculate block averages ************
+   number of averages            2
+ block data     1  -4.294193   3.158999
+ block data     2  -4.277495   3.050381
+ block data     3  -4.327817   2.913755
+ block data     4  -4.300338   3.002624
+ block data     5  -4.347575   2.909495
+ block data     6  -4.309814   2.999890
+ block data     7  -4.283591   2.998119
+ block data     8  -4.313838   2.963587
+ block data     9  -4.286661   3.041149
+ block data    10  -4.287228   3.040402
+ block data    11  -4.304205   2.981352
+ block data    12  -4.316923   2.949027
+ block data    13  -4.301012   2.955077
+ block data    14  -4.319219   2.891099
+ block data    15  -4.310122   3.043148
+ block data    16  -4.301643   3.007464
+ block data    17  -4.292471   3.027666
+ block data    18  -4.284451   3.072932
+ block data    19  -4.340071   2.839386
+ block data    20  -4.329685   2.877347
+ ###### energy       -4.30641765         0.03256735
+ ###### press         2.98614495         0.13335897
+   number of blocks        20000
+         0   0.0010   0.0000   0.0042   0.0000
+         1   0.0014   0.0000   0.0058   0.0000
+         2   0.0019   0.0000   0.0078   0.0001
+         3   0.0025   0.0000   0.0103   0.0001
+         4   0.0031   0.0001   0.0132   0.0003
+         5   0.0037   0.0001   0.0162   0.0005
+         6   0.0043   0.0002   0.0193   0.0008
+         7   0.0047   0.0003   0.0213   0.0012
+         8   0.0045   0.0004   0.0209   0.0017
+         9   0.0046   0.0005   0.0218   0.0025
+        10   0.0051   0.0008   0.0209   0.0035
+        11   0.0057   0.0014   0.0245   0.0061
+        12   0.0037   0.0015   0.0164   0.0067
+        13   0.0021   0.0015   0.0037   0.0026
+ --- rho 0.70 
+ **************** MC_NVT ***************
+  ******** test random numbers ***********
+  i,ranf()            1  0.11180420853611572     
+  i,ranf()            2  0.74166310703406746     
+  i,ranf()            3  0.46027934237707857     
+  i,ranf()            4  0.11380693953292953     
+  i,ranf()            5  0.54839950623688738     
+ Initialisation on lattice: 
+       100 particles placed on a lattice
+  Number of equilibration cycles             :       100
+  Number of production cycles                :       200
+  Sample frequency                           :         1
+
+  Number of att. to displ. a part. per cycle :        50
+  Maximum displacement                       :     0.090
+
+
+  Number of particles                        :       100
+  Temperature                                :     2.000
+  Density                                    :     0.700
+  Box length                                 :     5.228
+
+  Model parameters: 
+     epsilon: 1.000
+     sigma  : 1.000
+     mass   : 1.000
+ Simulations with tail correction: 
+ Potential truncated at  Rc =:     2.614
+ Tail corrections:   energy =     -0.328 pressure     -0.459
+
+
+ Total energy initial configuration:   -486.41131
+ Total virial initial configuration:   1264.98050
+  -486.41130707075240        1264.9804960038036     
+  Start equilibration 
+ ======>> Done           20  out of          100
+ Max. displ. set to :  0.135 (old :  0.090)
+ Frac. acc.: 0.79 attempts:    1000 succes:     786
+ ======>> Done           40  out of          100
+ Max. displ. set to :  0.169 (old :  0.135)
+ Frac. acc.: 0.62 attempts:    1000 succes:     625
+ ======>> Done           60  out of          100
+ Max. displ. set to :  0.190 (old :  0.169)
+ Frac. acc.: 0.56 attempts:    1000 succes:     564
+ ======>> Done           80  out of          100
+ Max. displ. set to :  0.220 (old :  0.190)
+ Frac. acc.: 0.58 attempts:    1000 succes:     579
+ ======>> Done          100  out of          100
+ Max. displ. set to :  0.237 (old :  0.220)
+ Frac. acc.: 0.54 attempts:    1000 succes:     537
+ Number of att. to displ. a part.  :       5000
+ success:       3091(= 61.82%)
+ Total energy end of simulation    :   -448.10741
+       running energy              :   -448.10741
+       difference                  :  -0.96634E-12
+ Total virial end of simulation    :   1226.93881
+       running virial              :   1226.93881
+       difference                  :  -0.52296E-11
+  Start production 
+ ======>> Done           40  out of          200
+ Max. displ. set to :  0.258 (old :  0.237)
+ Frac. acc.: 0.54 attempts:    2000 succes:    1089
+ ======>> Done           80  out of          200
+ Max. displ. set to :  0.260 (old :  0.258)
+ Frac. acc.: 0.51 attempts:    2000 succes:    1010
+ ======>> Done          120  out of          200
+ Max. displ. set to :  0.265 (old :  0.260)
+ Frac. acc.: 0.51 attempts:    2000 succes:    1018
+ ======>> Done          160  out of          200
+ Max. displ. set to :  0.270 (old :  0.265)
+ Frac. acc.: 0.51 attempts:    2000 succes:    1020
+ ======>> Done          200  out of          200
+ Max. displ. set to :  0.280 (old :  0.270)
+ Frac. acc.: 0.52 attempts:    2000 succes:    1035
+ Number of att. to displ. a part.  :      10000
+ success:       5172(= 51.72%)
+ Total energy end of simulation    :   -445.76855
+       running energy              :   -445.76855
+       difference                  :   0.96634E-12
+ Total virial end of simulation    :    821.37034
+       running virial              :    821.37034
+       difference                  :  -0.30695E-11
+At line 29 of file block.f (unit = 32, file = 'fort.32')
+Fortran runtime error: Bad integer for item 1 in list input
+
+Error termination. Backtrace:
+#0  0x101d488be
+#1  0x101d495a5
+#2  0x101d4a15b
+#3  0x101f82cb0
+#4  0x101f85dfa
+#5  0x101f8697a
+#6  0x1011bf2c0
+#7  0x1011bfd75
+  ***** Calculate block averages ************
+   number of averages            2
+ --- rho 0.70 
+ **************** MC_NVT ***************
+  ******** test random numbers ***********
+  i,ranf()            1  0.11180420853611572     
+  i,ranf()            2  0.74166310703406746     
+  i,ranf()            3  0.46027934237707857     
+  i,ranf()            4  0.11380693953292953     
+  i,ranf()            5  0.54839950623688738     
+ Initialisation on lattice: 
+       100 particles placed on a lattice
+  Number of equilibration cycles             :       100
+  Number of production cycles                :       200
+  Sample frequency                           :         1
+
+  Number of att. to displ. a part. per cycle :        50
+  Maximum displacement                       :     0.090
+
+
+  Number of particles                        :       100
+  Temperature                                :     2.000
+  Density                                    :     0.700
+  Box length                                 :     5.228
+
+  Model parameters: 
+     epsilon: 1.000
+     sigma  : 1.000
+     mass   : 1.000
+ Simulations with tail correction: 
+ Potential truncated at  Rc =:     2.614
+ Tail corrections:   energy =     -0.328 pressure     -0.459
+
+
+ Total energy initial configuration:   -486.41131
+ Total virial initial configuration:   1264.98050
+  -486.41130707075240        1264.9804960038036     
+  Start equilibration 
+ ======>> Done           20  out of          100
+ Max. displ. set to :  0.045 (old :  0.090)
+ Frac. acc.: 0.17 attempts:    1000 succes:     167
+ ======>> Done           40  out of          100
+ Max. displ. set to :  0.024 (old :  0.045)
+ Frac. acc.: 0.26 attempts:    1000 succes:     263
+ ======>> Done           60  out of          100
+ Max. displ. set to :  0.016 (old :  0.024)
+ Frac. acc.: 0.33 attempts:    1000 succes:     333
+ ======>> Done           80  out of          100
+ Max. displ. set to :  0.011 (old :  0.016)
+ Frac. acc.: 0.34 attempts:    1000 succes:     336
+ ======>> Done          100  out of          100
+ Max. displ. set to :  0.009 (old :  0.011)
+ Frac. acc.: 0.40 attempts:    1000 succes:     404
+ ======>> Done           20  out of          100
+ Max. displ. set to :  0.007 (old :  0.009)
+ Frac. acc.: 0.42 attempts:    1000 succes:     423
+ ======>> Done           40  out of          100
+ Max. displ. set to :  0.006 (old :  0.007)
+ Frac. acc.: 0.41 attempts:    1000 succes:     405
+ ======>> Done           60  out of          100
+ Max. displ. set to :  0.005 (old :  0.006)
+ Frac. acc.: 0.44 attempts:    1000 succes:     438
+ ======>> Done           80  out of          100
+ Max. displ. set to :  0.005 (old :  0.005)
+ Frac. acc.: 0.48 attempts:    1000 succes:     476
+ ======>> Done          100  out of          100
+ Max. displ. set to :  0.005 (old :  0.005)
+ Frac. acc.: 0.46 attempts:    1000 succes:     462
+ ======>> Done           20  out of          100
+ Max. displ. set to :  0.004 (old :  0.005)
+ Frac. acc.: 0.42 attempts:    1000 succes:     424
+ ======>> Done           40  out of          100
+ Max. displ. set to :  0.003 (old :  0.004)
+ Frac. acc.: 0.46 attempts:    1000 succes:     456
+ ======>> Done           60  out of          100
+ Max. displ. set to :  0.003 (old :  0.003)
+ Frac. acc.: 0.48 attempts:    1000 succes:     477
+ ======>> Done           80  out of          100
+ Max. displ. set to :  0.003 (old :  0.003)
+ Frac. acc.: 0.43 attempts:    1000 succes:     434
+ ======>> Done          100  out of          100
+ Max. displ. set to :  0.003 (old :  0.003)
+ Frac. acc.: 0.47 attempts:    1000 succes:     473
+ ======>> Done           20  out of          100
+ Max. displ. set to :  0.003 (old :  0.003)
+ Frac. acc.: 0.48 attempts:    1000 succes:     476
+ ======>> Done           40  out of          100
+ Max. displ. set to :  0.002 (old :  0.003)
+ Frac. acc.: 0.45 attempts:    1000 succes:     452
+ ======>> Done           60  out of          100
+ Max. displ. set to :  0.002 (old :  0.002)
+ Frac. acc.: 0.45 attempts:    1000 succes:     450
+ ======>> Done           80  out of          100
+ Max. displ. set to :  0.002 (old :  0.002)
+ Frac. acc.: 0.49 attempts:    1000 succes:     489
+ ======>> Done          100  out of          100
+ Max. displ. set to :  0.002 (old :  0.002)
+ Frac. acc.: 0.50 attempts:    1000 succes:     499
+ ======>> Done           20  out of          100
+ Max. displ. set to :  0.002 (old :  0.002)
+ Frac. acc.: 0.50 attempts:    1000 succes:     497
+ ======>> Done           40  out of          100
+ Max. displ. set to :  0.002 (old :  0.002)
+ Frac. acc.: 0.48 attempts:    1000 succes:     485
+ ======>> Done           60  out of          100
+ Max. displ. set to :  0.002 (old :  0.002)
+ Frac. acc.: 0.51 attempts:    1000 succes:     513
+ ======>> Done           80  out of          100
+ Max. displ. set to :  0.002 (old :  0.002)
+ Frac. acc.: 0.45 attempts:    1000 succes:     447
+ ======>> Done          100  out of          100
+ Max. displ. set to :  0.002 (old :  0.002)
+ Frac. acc.: 0.49 attempts:    1000 succes:     489
+ ======>> Done           20  out of          100
+ Max. displ. set to :  0.002 (old :  0.002)
+ Frac. acc.: 0.49 attempts:    1000 succes:     486
+ ======>> Done           40  out of          100
+ Max. displ. set to :  0.002 (old :  0.002)
+ Frac. acc.: 0.48 attempts:    1000 succes:     482
+ ======>> Done           60  out of          100
+ Max. displ. set to :  0.002 (old :  0.002)
+ Frac. acc.: 0.47 attempts:    1000 succes:     475
+ ======>> Done           80  out of          100
+ Max. displ. set to :  0.002 (old :  0.002)
+ Frac. acc.: 0.51 attempts:    1000 succes:     514
+ ======>> Done          100  out of          100
+ Max. displ. set to :  0.002 (old :  0.002)
+ Frac. acc.: 0.49 attempts:    1000 succes:     493
+ ======>> Done           20  out of          100
+ Max. displ. set to :  0.002 (old :  0.002)
+ Frac. acc.: 0.49 attempts:    1000 succes:     492
+ ======>> Done           40  out of          100
+ Max. displ. set to :  0.001 (old :  0.002)
+ Frac. acc.: 0.46 attempts:    1000 succes:     459
+ ======>> Done           60  out of          100
+ Max. displ. set to :  0.001 (old :  0.001)
+ Frac. acc.: 0.50 attempts:    1000 succes:     499
+ ======>> Done           80  out of          100
+ Max. displ. set to :  0.001 (old :  0.001)
+ Frac. acc.: 0.48 attempts:    1000 succes:     483
+ ======>> Done          100  out of          100
+ Max. displ. set to :  0.001 (old :  0.001)
+ Frac. acc.: 0.48 attempts:    1000 succes:     478
+ ======>> Done           20  out of          100
+ Max. displ. set to :  0.001 (old :  0.001)
+ Frac. acc.: 0.49 attempts:    1000 succes:     495
+ ======>> Done           40  out of          100
+ Max. displ. set to :  0.001 (old :  0.001)
+ Frac. acc.: 0.46 attempts:    1000 succes:     456
+ ======>> Done           60  out of          100
+ Max. displ. set to :  0.001 (old :  0.001)
+ Frac. acc.: 0.49 attempts:    1000 succes:     493
+ ======>> Done           80  out of          100
+ Max. displ. set to :  0.001 (old :  0.001)
+ Frac. acc.: 0.49 attempts:    1000 succes:     493
+ ======>> Done          100  out of          100
+ Max. displ. set to :  0.001 (old :  0.001)
+ Frac. acc.: 0.49 attempts:    1000 succes:     488
+ ======>> Done           20  out of          100
+ Max. displ. set to :  0.001 (old :  0.001)
+ Frac. acc.: 0.49 attempts:    1000 succes:     486
+ ======>> Done           40  out of          100
+ Max. displ. set to :  0.001 (old :  0.001)
+ Frac. acc.: 0.49 attempts:    1000 succes:     495
+ ======>> Done           60  out of          100
+ Max. displ. set to :  0.001 (old :  0.001)
+ Frac. acc.: 0.48 attempts:    1000 succes:     477
+ ======>> Done           80  out of          100
+ Max. displ. set to :  0.001 (old :  0.001)
+ Frac. acc.: 0.51 attempts:    1000 succes:     511
+ ======>> Done          100  out of          100
+ Max. displ. set to :  0.001 (old :  0.001)
+ Frac. acc.: 0.50 attempts:    1000 succes:     496
+ ======>> Done           20  out of          100
+ Max. displ. set to :  0.001 (old :  0.001)
+ Frac. acc.: 0.50 attempts:    1000 succes:     498
+ ======>> Done           40  out of          100
+ Max. displ. set to :  0.001 (old :  0.001)
+ Frac. acc.: 0.49 attempts:    1000 succes:     490
+ ======>> Done           60  out of          100
+ Max. displ. set to :  0.001 (old :  0.001)
+ Frac. acc.: 0.50 attempts:    1000 succes:     501
+ ======>> Done           80  out of          100
+ Max. displ. set to :  0.001 (old :  0.001)
+ Frac. acc.: 0.49 attempts:    1000 succes:     491
+ ======>> Done          100  out of          100
+ Max. displ. set to :  0.001 (old :  0.001)
+ Frac. acc.: 0.50 attempts:    1000 succes:     498
+ ======>> Done           20  out of          100
+ Max. displ. set to :  0.001 (old :  0.001)
+ Frac. acc.: 0.49 attempts:    1000 succes:     487
+ ======>> Done           40  out of          100
+ Max. displ. set to :  0.001 (old :  0.001)
+ Frac. acc.: 0.49 attempts:    1000 succes:     486
+ ======>> Done           60  out of          100
+ Max. displ. set to :  0.001 (old :  0.001)
+ Frac. acc.: 0.51 attempts:    1000 succes:     507
+ ======>> Done           80  out of          100
+ Max. displ. set to :  0.001 (old :  0.001)
+ Frac. acc.: 0.47 attempts:    1000 succes:     470
+ ======>> Done          100  out of          100
+ Max. displ. set to :  0.001 (old :  0.001)
+ Frac. acc.: 0.50 attempts:    1000 succes:     502
+ ======>> Done           20  out of          100
+ Max. displ. set to :  0.001 (old :  0.001)
+ Frac. acc.: 0.50 attempts:    1000 succes:     497
+ ======>> Done           40  out of          100
+ Max. displ. set to :  0.001 (old :  0.001)
+ Frac. acc.: 0.52 attempts:    1000 succes:     516
+ ======>> Done           60  out of          100
+ Max. displ. set to :  0.001 (old :  0.001)
+ Frac. acc.: 0.49 attempts:    1000 succes:     489
+ ======>> Done           80  out of          100
+ Max. displ. set to :  0.001 (old :  0.001)
+ Frac. acc.: 0.52 attempts:    1000 succes:     518
+ ======>> Done          100  out of          100
+ Max. displ. set to :  0.001 (old :  0.001)
+ Frac. acc.: 0.51 attempts:    1000 succes:     506
+ ======>> Done           20  out of          100
+ Max. displ. set to :  0.001 (old :  0.001)
+ Frac. acc.: 0.52 attempts:    1000 succes:     518
+ ======>> Done           40  out of          100
+ Max. displ. set to :  0.001 (old :  0.001)
+ Frac. acc.: 0.49 attempts:    1000 succes:     492
+ ======>> Done           60  out of          100
+ Max. displ. set to :  0.001 (old :  0.001)
+ Frac. acc.: 0.54 attempts:    1000 succes:     536
+ ======>> Done           80  out of          100
+ Max. displ. set to :  0.001 (old :  0.001)
+ Frac. acc.: 0.49 attempts:    1000 succes:     492
+ ======>> Done          100  out of          100
+ Max. displ. set to :  0.001 (old :  0.001)
+ Frac. acc.: 0.51 attempts:    1000 succes:     507
+ ======>> Done           20  out of          100
+ Max. displ. set to :  0.001 (old :  0.001)
+ Frac. acc.: 0.55 attempts:    1000 succes:     546
+ ======>> Done           40  out of          100
+ Max. displ. set to :  0.001 (old :  0.001)
+ Frac. acc.: 0.52 attempts:    1000 succes:     521
+ ======>> Done           60  out of          100
+ Max. displ. set to :  0.001 (old :  0.001)
+ Frac. acc.: 0.52 attempts:    1000 succes:     515
+ ======>> Done           80  out of          100
+ Max. displ. set to :  0.001 (old :  0.001)
+ Frac. acc.: 0.52 attempts:    1000 succes:     520
+ ======>> Done          100  out of          100
+ Max. displ. set to :  0.001 (old :  0.001)
+ Frac. acc.: 0.53 attempts:    1000 succes:     526
+ ======>> Done           20  out of          100
+ Max. displ. set to :  0.001 (old :  0.001)
+ Frac. acc.: 0.51 attempts:    1000 succes:     511
+ ======>> Done           40  out of          100
+ Max. displ. set to :  0.001 (old :  0.001)
+ Frac. acc.: 0.53 attempts:    1000 succes:     533
+ ======>> Done           60  out of          100
+ Max. displ. set to :  0.002 (old :  0.001)
+ Frac. acc.: 0.53 attempts:    1000 succes:     531
+ ======>> Done           80  out of          100
+ Max. displ. set to :  0.002 (old :  0.002)
+ Frac. acc.: 0.52 attempts:    1000 succes:     518
+ ======>> Done          100  out of          100
+ Max. displ. set to :  0.002 (old :  0.002)
+ Frac. acc.: 0.53 attempts:    1000 succes:     532
+ ======>> Done           20  out of          100
+ Max. displ. set to :  0.002 (old :  0.002)
+ Frac. acc.: 0.57 attempts:    1000 succes:     573
+ ======>> Done           40  out of          100
+ Max. displ. set to :  0.002 (old :  0.002)
+ Frac. acc.: 0.55 attempts:    1000 succes:     546
+ ======>> Done           60  out of          100
+ Max. displ. set to :  0.002 (old :  0.002)
+ Frac. acc.: 0.57 attempts:    1000 succes:     568
+ ======>> Done           80  out of          100
+ Max. displ. set to :  0.003 (old :  0.002)
+ Frac. acc.: 0.52 attempts:    1000 succes:     519
+ ======>> Done          100  out of          100
+ Max. displ. set to :  0.003 (old :  0.003)
+ Frac. acc.: 0.54 attempts:    1000 succes:     536
+ ======>> Done           20  out of          100
+ Max. displ. set to :  0.003 (old :  0.003)
+ Frac. acc.: 0.58 attempts:    1000 succes:     583
+ ======>> Done           40  out of          100
+ Max. displ. set to :  0.004 (old :  0.003)
+ Frac. acc.: 0.59 attempts:    1000 succes:     595
+ ======>> Done           60  out of          100
+ Max. displ. set to :  0.004 (old :  0.004)
+ Frac. acc.: 0.56 attempts:    1000 succes:     559
+ ======>> Done           80  out of          100
+ Max. displ. set to :  0.005 (old :  0.004)
+ Frac. acc.: 0.57 attempts:    1000 succes:     573
+ ======>> Done          100  out of          100
+ Max. displ. set to :  0.005 (old :  0.005)
+ Frac. acc.: 0.53 attempts:    1000 succes:     533
+ ======>> Done           20  out of          100
+ Max. displ. set to :  0.007 (old :  0.005)
+ Frac. acc.: 0.67 attempts:    1000 succes:     671
+ ======>> Done           40  out of          100
+ Max. displ. set to :  0.009 (old :  0.007)
+ Frac. acc.: 0.65 attempts:    1000 succes:     650
+ ======>> Done           60  out of          100
+ Max. displ. set to :  0.011 (old :  0.009)
+ Frac. acc.: 0.60 attempts:    1000 succes:     604
+ ======>> Done           80  out of          100
+ Max. displ. set to :  0.013 (old :  0.011)
+ Frac. acc.: 0.58 attempts:    1000 succes:     580
+ ======>> Done          100  out of          100
+ Max. displ. set to :  0.015 (old :  0.013)
+ Frac. acc.: 0.57 attempts:    1000 succes:     571
+ ======>> Done           20  out of          100
+ Max. displ. set to :  0.022 (old :  0.015)
+ Frac. acc.: 0.82 attempts:    1000 succes:     821
+ ======>> Done           40  out of          100
+ Max. displ. set to :  0.033 (old :  0.022)
+ Frac. acc.: 0.76 attempts:    1000 succes:     763
+ ======>> Done           60  out of          100
+ Max. displ. set to :  0.045 (old :  0.033)
+ Frac. acc.: 0.68 attempts:    1000 succes:     678
+ ======>> Done           80  out of          100
+ Max. displ. set to :  0.053 (old :  0.045)
+ Frac. acc.: 0.60 attempts:    1000 succes:     599
+ ======>> Done          100  out of          100
+ Max. displ. set to :  0.058 (old :  0.053)
+ Frac. acc.: 0.54 attempts:    1000 succes:     544
+ ======>> Done           20  out of          100
+ Max. displ. set to :  0.087 (old :  0.058)
+ Frac. acc.: 0.96 attempts:    1000 succes:     963
+ ======>> Done           40  out of          100
+ Max. displ. set to :  0.131 (old :  0.087)
+ Frac. acc.: 0.90 attempts:    1000 succes:     900
+ ======>> Done           60  out of          100
+ Max. displ. set to :  0.196 (old :  0.131)
+ Frac. acc.: 0.80 attempts:    1000 succes:     798
+ ======>> Done           80  out of          100
+ Max. displ. set to :  0.255 (old :  0.196)
+ Frac. acc.: 0.65 attempts:    1000 succes:     652
+ ======>> Done          100  out of          100
+ Max. displ. set to :  0.291 (old :  0.255)
+ Frac. acc.: 0.57 attempts:    1000 succes:     570
+ ======>> Done           20  out of          100
+ Max. displ. set to :  0.437 (old :  0.291)
+ Frac. acc.: 1.00 attempts:    1000 succes:    1000
+ ======>> Done           40  out of          100
+ Max. displ. set to :  0.655 (old :  0.437)
+ Frac. acc.: 1.00 attempts:    1000 succes:    1000
+ ======>> Done           60  out of          100
+ Max. displ. set to :  0.982 (old :  0.655)
+ Frac. acc.: 1.00 attempts:    1000 succes:    1000
+ ======>> Done           80  out of          100
+ Max. displ. set to :  1.307 (old :  0.982)
+ Frac. acc.: 1.00 attempts:    1000 succes:    1000
+ ======>> Done          100  out of          100
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 1.00 attempts:    1000 succes:    1000
+ Number of att. to displ. a part.  :     105000
+ success:      56722(= 54.02%)
+  ######### PROBLEMS ENERGY ################ 
+  ######### PROBLEMS VIRIAL ################ 
+ Total energy end of simulation    : ************
+       running energy              : ************
+       difference                  :   0.28621E+10
+ Total virial end of simulation    : ************
+       running virial              : ************
+       difference                  :  -0.13413E+05
+  Start production 
+ ======>> Done           40  out of          200
+ Max. displ. set to :  0.653 (old :  1.307)
+ Frac. acc.: 0.11 attempts:    2000 succes:     220
+ ======>> Done           80  out of          200
+ Max. displ. set to :  0.327 (old :  0.653)
+ Frac. acc.: 0.06 attempts:    2000 succes:     123
+ ======>> Done          120  out of          200
+ Max. displ. set to :  0.163 (old :  0.327)
+ Frac. acc.: 0.09 attempts:    2000 succes:     187
+ ======>> Done          160  out of          200
+ Max. displ. set to :  0.082 (old :  0.163)
+ Frac. acc.: 0.12 attempts:    2000 succes:     231
+ ======>> Done          200  out of          200
+ Max. displ. set to :  0.041 (old :  0.082)
+ Frac. acc.: 0.15 attempts:    2000 succes:     300
+ ======>> Done           40  out of          200
+ Max. displ. set to :  0.020 (old :  0.041)
+ Frac. acc.: 0.20 attempts:    2000 succes:     391
+ ======>> Done           80  out of          200
+ Max. displ. set to :  0.011 (old :  0.020)
+ Frac. acc.: 0.27 attempts:    2000 succes:     538
+ ======>> Done          120  out of          200
+ Max. displ. set to :  0.007 (old :  0.011)
+ Frac. acc.: 0.33 attempts:    2000 succes:     655
+ ======>> Done          160  out of          200
+ Max. displ. set to :  0.005 (old :  0.007)
+ Frac. acc.: 0.36 attempts:    2000 succes:     724
+ ======>> Done          200  out of          200
+ Max. displ. set to :  0.004 (old :  0.005)
+ Frac. acc.: 0.39 attempts:    2000 succes:     775
+ ======>> Done           40  out of          200
+ Max. displ. set to :  0.003 (old :  0.004)
+ Frac. acc.: 0.40 attempts:    2000 succes:     803
+ ======>> Done           80  out of          200
+ Max. displ. set to :  0.003 (old :  0.003)
+ Frac. acc.: 0.40 attempts:    2000 succes:     802
+ ======>> Done          120  out of          200
+ Max. displ. set to :  0.002 (old :  0.003)
+ Frac. acc.: 0.43 attempts:    2000 succes:     869
+ ======>> Done          160  out of          200
+ Max. displ. set to :  0.002 (old :  0.002)
+ Frac. acc.: 0.43 attempts:    2000 succes:     870
+ ======>> Done          200  out of          200
+ Max. displ. set to :  0.002 (old :  0.002)
+ Frac. acc.: 0.44 attempts:    2000 succes:     874
+ ======>> Done           40  out of          200
+ Max. displ. set to :  0.001 (old :  0.002)
+ Frac. acc.: 0.43 attempts:    2000 succes:     861
+ ======>> Done           80  out of          200
+ Max. displ. set to :  0.001 (old :  0.001)
+ Frac. acc.: 0.42 attempts:    2000 succes:     838
+ ======>> Done          120  out of          200
+ Max. displ. set to :  0.001 (old :  0.001)
+ Frac. acc.: 0.46 attempts:    2000 succes:     910
+ ======>> Done          160  out of          200
+ Max. displ. set to :  0.001 (old :  0.001)
+ Frac. acc.: 0.45 attempts:    2000 succes:     906
+ ======>> Done          200  out of          200
+ Max. displ. set to :  0.001 (old :  0.001)
+ Frac. acc.: 0.43 attempts:    2000 succes:     859
+ ======>> Done           40  out of          200
+ Max. displ. set to :  0.001 (old :  0.001)
+ Frac. acc.: 0.46 attempts:    2000 succes:     918
+ ======>> Done           80  out of          200
+ Max. displ. set to :  0.001 (old :  0.001)
+ Frac. acc.: 0.45 attempts:    2000 succes:     898
+ ======>> Done          120  out of          200
+ Max. displ. set to :  0.001 (old :  0.001)
+ Frac. acc.: 0.46 attempts:    2000 succes:     928
+ ======>> Done          160  out of          200
+ Max. displ. set to :  0.001 (old :  0.001)
+ Frac. acc.: 0.45 attempts:    2000 succes:     890
+ ======>> Done          200  out of          200
+ Max. displ. set to :  0.001 (old :  0.001)
+ Frac. acc.: 0.47 attempts:    2000 succes:     941
+ ======>> Done           40  out of          200
+ Max. displ. set to :  0.001 (old :  0.001)
+ Frac. acc.: 0.50 attempts:    2000 succes:     995
+ ======>> Done           80  out of          200
+ Max. displ. set to :  0.001 (old :  0.001)
+ Frac. acc.: 0.48 attempts:    2000 succes:     961
+ ======>> Done          120  out of          200
+ Max. displ. set to :  0.001 (old :  0.001)
+ Frac. acc.: 0.50 attempts:    2000 succes:     994
+ ======>> Done          160  out of          200
+ Max. displ. set to :  0.001 (old :  0.001)
+ Frac. acc.: 0.48 attempts:    2000 succes:     970
+ ======>> Done          200  out of          200
+ Max. displ. set to :  0.000 (old :  0.001)
+ Frac. acc.: 0.48 attempts:    2000 succes:     963
+ ======>> Done           40  out of          200
+ Max. displ. set to :  0.001 (old :  0.000)
+ Frac. acc.: 0.51 attempts:    2000 succes:    1014
+ ======>> Done           80  out of          200
+ Max. displ. set to :  0.001 (old :  0.001)
+ Frac. acc.: 0.50 attempts:    2000 succes:    1006
+ ======>> Done          120  out of          200
+ Max. displ. set to :  0.001 (old :  0.001)
+ Frac. acc.: 0.51 attempts:    2000 succes:    1016
+ ======>> Done          160  out of          200
+ Max. displ. set to :  0.001 (old :  0.001)
+ Frac. acc.: 0.49 attempts:    2000 succes:     982
+ ======>> Done          200  out of          200
+ Max. displ. set to :  0.001 (old :  0.001)
+ Frac. acc.: 0.49 attempts:    2000 succes:     988
+ ======>> Done           40  out of          200
+ Max. displ. set to :  0.001 (old :  0.001)
+ Frac. acc.: 0.50 attempts:    2000 succes:    1007
+ ======>> Done           80  out of          200
+ Max. displ. set to :  0.001 (old :  0.001)
+ Frac. acc.: 0.53 attempts:    2000 succes:    1065
+ ======>> Done          120  out of          200
+ Max. displ. set to :  0.001 (old :  0.001)
+ Frac. acc.: 0.51 attempts:    2000 succes:    1018
+ ======>> Done          160  out of          200
+ Max. displ. set to :  0.001 (old :  0.001)
+ Frac. acc.: 0.52 attempts:    2000 succes:    1041
+ ======>> Done          200  out of          200
+ Max. displ. set to :  0.001 (old :  0.001)
+ Frac. acc.: 0.51 attempts:    2000 succes:    1017
+ ======>> Done           40  out of          200
+ Max. displ. set to :  0.001 (old :  0.001)
+ Frac. acc.: 0.55 attempts:    2000 succes:    1098
+ ======>> Done           80  out of          200
+ Max. displ. set to :  0.001 (old :  0.001)
+ Frac. acc.: 0.53 attempts:    2000 succes:    1067
+ ======>> Done          120  out of          200
+ Max. displ. set to :  0.001 (old :  0.001)
+ Frac. acc.: 0.52 attempts:    2000 succes:    1044
+ ======>> Done          160  out of          200
+ Max. displ. set to :  0.001 (old :  0.001)
+ Frac. acc.: 0.51 attempts:    2000 succes:    1010
+ ======>> Done          200  out of          200
+ Max. displ. set to :  0.001 (old :  0.001)
+ Frac. acc.: 0.50 attempts:    2000 succes:    1006
+ ======>> Done           40  out of          200
+ Max. displ. set to :  0.001 (old :  0.001)
+ Frac. acc.: 0.54 attempts:    2000 succes:    1082
+ ======>> Done           80  out of          200
+ Max. displ. set to :  0.001 (old :  0.001)
+ Frac. acc.: 0.53 attempts:    2000 succes:    1054
+ ======>> Done          120  out of          200
+ Max. displ. set to :  0.001 (old :  0.001)
+ Frac. acc.: 0.49 attempts:    2000 succes:     981
+ ======>> Done          160  out of          200
+ Max. displ. set to :  0.001 (old :  0.001)
+ Frac. acc.: 0.52 attempts:    2000 succes:    1045
+ ======>> Done          200  out of          200
+ Max. displ. set to :  0.001 (old :  0.001)
+ Frac. acc.: 0.53 attempts:    2000 succes:    1059
+ ======>> Done           40  out of          200
+ Max. displ. set to :  0.001 (old :  0.001)
+ Frac. acc.: 0.55 attempts:    2000 succes:    1107
+ ======>> Done           80  out of          200
+ Max. displ. set to :  0.001 (old :  0.001)
+ Frac. acc.: 0.50 attempts:    2000 succes:     997
+ ======>> Done          120  out of          200
+ Max. displ. set to :  0.001 (old :  0.001)
+ Frac. acc.: 0.53 attempts:    2000 succes:    1068
+ ======>> Done          160  out of          200
+ Max. displ. set to :  0.001 (old :  0.001)
+ Frac. acc.: 0.53 attempts:    2000 succes:    1068
+ ======>> Done          200  out of          200
+ Max. displ. set to :  0.001 (old :  0.001)
+ Frac. acc.: 0.52 attempts:    2000 succes:    1036
+ ======>> Done           40  out of          200
+ Max. displ. set to :  0.001 (old :  0.001)
+ Frac. acc.: 0.56 attempts:    2000 succes:    1126
+ ======>> Done           80  out of          200
+ Max. displ. set to :  0.001 (old :  0.001)
+ Frac. acc.: 0.52 attempts:    2000 succes:    1048
+ ======>> Done          120  out of          200
+ Max. displ. set to :  0.001 (old :  0.001)
+ Frac. acc.: 0.54 attempts:    2000 succes:    1079
+ ======>> Done          160  out of          200
+ Max. displ. set to :  0.002 (old :  0.001)
+ Frac. acc.: 0.53 attempts:    2000 succes:    1055
+ ======>> Done          200  out of          200
+ Max. displ. set to :  0.002 (old :  0.002)
+ Frac. acc.: 0.51 attempts:    2000 succes:    1018
+ ======>> Done           40  out of          200
+ Max. displ. set to :  0.002 (old :  0.002)
+ Frac. acc.: 0.55 attempts:    2000 succes:    1092
+ ======>> Done           80  out of          200
+ Max. displ. set to :  0.002 (old :  0.002)
+ Frac. acc.: 0.53 attempts:    2000 succes:    1053
+ ======>> Done          120  out of          200
+ Max. displ. set to :  0.002 (old :  0.002)
+ Frac. acc.: 0.54 attempts:    2000 succes:    1075
+ ======>> Done          160  out of          200
+ Max. displ. set to :  0.002 (old :  0.002)
+ Frac. acc.: 0.50 attempts:    2000 succes:    1009
+ ======>> Done          200  out of          200
+ Max. displ. set to :  0.002 (old :  0.002)
+ Frac. acc.: 0.52 attempts:    2000 succes:    1033
+ ======>> Done           40  out of          200
+ Max. displ. set to :  0.002 (old :  0.002)
+ Frac. acc.: 0.55 attempts:    2000 succes:    1108
+ ======>> Done           80  out of          200
+ Max. displ. set to :  0.003 (old :  0.002)
+ Frac. acc.: 0.56 attempts:    2000 succes:    1115
+ ======>> Done          120  out of          200
+ Max. displ. set to :  0.003 (old :  0.003)
+ Frac. acc.: 0.52 attempts:    2000 succes:    1047
+ ======>> Done          160  out of          200
+ Max. displ. set to :  0.003 (old :  0.003)
+ Frac. acc.: 0.52 attempts:    2000 succes:    1048
+ ======>> Done          200  out of          200
+ Max. displ. set to :  0.003 (old :  0.003)
+ Frac. acc.: 0.52 attempts:    2000 succes:    1035
+ ======>> Done           40  out of          200
+ Max. displ. set to :  0.003 (old :  0.003)
+ Frac. acc.: 0.61 attempts:    2000 succes:    1212
+ ======>> Done           80  out of          200
+ Max. displ. set to :  0.004 (old :  0.003)
+ Frac. acc.: 0.55 attempts:    2000 succes:    1109
+ ======>> Done          120  out of          200
+ Max. displ. set to :  0.004 (old :  0.004)
+ Frac. acc.: 0.54 attempts:    2000 succes:    1080
+ ======>> Done          160  out of          200
+ Max. displ. set to :  0.004 (old :  0.004)
+ Frac. acc.: 0.51 attempts:    2000 succes:    1022
+ ======>> Done          200  out of          200
+ Max. displ. set to :  0.004 (old :  0.004)
+ Frac. acc.: 0.50 attempts:    2000 succes:     997
+ ======>> Done           40  out of          200
+ Max. displ. set to :  0.006 (old :  0.004)
+ Frac. acc.: 0.65 attempts:    2000 succes:    1302
+ ======>> Done           80  out of          200
+ Max. displ. set to :  0.006 (old :  0.006)
+ Frac. acc.: 0.57 attempts:    2000 succes:    1134
+ ======>> Done          120  out of          200
+ Max. displ. set to :  0.007 (old :  0.006)
+ Frac. acc.: 0.53 attempts:    2000 succes:    1057
+ ======>> Done          160  out of          200
+ Max. displ. set to :  0.007 (old :  0.007)
+ Frac. acc.: 0.52 attempts:    2000 succes:    1040
+ ======>> Done          200  out of          200
+ Max. displ. set to :  0.007 (old :  0.007)
+ Frac. acc.: 0.50 attempts:    2000 succes:    1002
+ ======>> Done           40  out of          200
+ Max. displ. set to :  0.009 (old :  0.007)
+ Frac. acc.: 0.68 attempts:    2000 succes:    1358
+Note: The following floating-point exceptions are signalling: IEEE_OVERFLOW_FLAG IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+ ======>> Done           80  out of          200
+ Max. displ. set to :  0.011 (old :  0.009)
+ Frac. acc.: 0.60 attempts:    2000 succes:    1205
+ ======>> Done          120  out of          200
+ Max. displ. set to :  0.012 (old :  0.011)
+ Frac. acc.: 0.54 attempts:    2000 succes:    1089
+ ======>> Done          160  out of          200
+ Max. displ. set to :  0.013 (old :  0.012)
+ Frac. acc.: 0.51 attempts:    2000 succes:    1028
+ ======>> Done          200  out of          200
+ Max. displ. set to :  0.012 (old :  0.013)
+ Frac. acc.: 0.49 attempts:    2000 succes:     982
+ ======>> Done           40  out of          200
+ Max. displ. set to :  0.019 (old :  0.012)
+ Frac. acc.: 0.74 attempts:    2000 succes:    1490
+ ======>> Done           80  out of          200
+ Max. displ. set to :  0.024 (old :  0.019)
+ Frac. acc.: 0.64 attempts:    2000 succes:    1287
+ ======>> Done          120  out of          200
+ Max. displ. set to :  0.026 (old :  0.024)
+ Frac. acc.: 0.55 attempts:    2000 succes:    1100
+ ======>> Done          160  out of          200
+ Max. displ. set to :  0.026 (old :  0.026)
+ Frac. acc.: 0.50 attempts:    2000 succes:    1005
+ ======>> Done          200  out of          200
+ Max. displ. set to :  0.027 (old :  0.026)
+ Frac. acc.: 0.51 attempts:    2000 succes:    1012
+ ======>> Done           40  out of          200
+ Max. displ. set to :  0.040 (old :  0.027)
+ Frac. acc.: 0.83 attempts:    2000 succes:    1669
+ ======>> Done           80  out of          200
+ Max. displ. set to :  0.057 (old :  0.040)
+ Frac. acc.: 0.71 attempts:    2000 succes:    1427
+ ======>> Done          120  out of          200
+ Max. displ. set to :  0.072 (old :  0.057)
+ Frac. acc.: 0.63 attempts:    2000 succes:    1258
+ ======>> Done          160  out of          200
+ Max. displ. set to :  0.078 (old :  0.072)
+ Frac. acc.: 0.54 attempts:    2000 succes:    1079
+ ======>> Done          200  out of          200
+ Max. displ. set to :  0.074 (old :  0.078)
+ Frac. acc.: 0.48 attempts:    2000 succes:     959
+ ======>> Done           40  out of          200
+ Max. displ. set to :  0.112 (old :  0.074)
+ Frac. acc.: 0.94 attempts:    2000 succes:    1884
+ ======>> Done           80  out of          200
+ Max. displ. set to :  0.168 (old :  0.112)
+ Frac. acc.: 0.84 attempts:    2000 succes:    1675
+ ======>> Done          120  out of          200
+ Max. displ. set to :  0.246 (old :  0.168)
+ Frac. acc.: 0.73 attempts:    2000 succes:    1468
+ ======>> Done          160  out of          200
+ Max. displ. set to :  0.290 (old :  0.246)
+ Frac. acc.: 0.59 attempts:    2000 succes:    1179
+ ======>> Done          200  out of          200
+ Max. displ. set to :  0.297 (old :  0.290)
+ Frac. acc.: 0.51 attempts:    2000 succes:    1024
+ ======>> Done           40  out of          200
+ Max. displ. set to :  0.445 (old :  0.297)
+ Frac. acc.: 1.00 attempts:    2000 succes:    2000
+ ======>> Done           80  out of          200
+ Max. displ. set to :  0.668 (old :  0.445)
+ Frac. acc.: 1.00 attempts:    2000 succes:    2000
+ ======>> Done          120  out of          200
+ Max. displ. set to :  1.002 (old :  0.668)
+ Frac. acc.: 1.00 attempts:    2000 succes:    2000
+ ======>> Done          160  out of          200
+ Max. displ. set to :  1.307 (old :  1.002)
+ Frac. acc.: 1.00 attempts:    2000 succes:    2000
+ ======>> Done          200  out of          200
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 1.00 attempts:    2000 succes:    2000
+ Number of att. to displ. a part.  :     210000
+ success:     110144(= 52.45%)
+  ######### PROBLEMS ENERGY ################ 
+  ######### PROBLEMS VIRIAL ################ 
+ Total energy end of simulation    : ************
+       running energy              : ************
+       difference                  :   0.72357E+16
+ Total virial end of simulation    : ************
+       running virial              : ************
+       difference                  :   0.69710E+04
+At line 29 of file block.f (unit = 32, file = 'fort.32')
+Fortran runtime error: Bad integer for item 1 in list input
+
+Error termination. Backtrace:
+#0  0x10d63b8be
+#1  0x10d63c5a5
+#2  0x10d63d15b
+#3  0x10d875cb0
+#4  0x10d878dfa
+#5  0x10d87997a
+#6  0x10cab62c0
+#7  0x10cab6d75
+  ***** Calculate block averages ************
+   number of averages            2
