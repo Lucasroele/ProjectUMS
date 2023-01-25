@@ -1,6 +1,6 @@
 **==sample.spg  processed by SPAG 4.52O  at 18:54 on 27 Mar 1996
  
-      SUBROUTINE SAMPLE(I, En, Vir, lambda)
+      SUBROUTINE SAMPLE(I, En, Vir, Lambda)
 c
 c      write quantities (pressure and energy) to file
 c
@@ -14,7 +14,7 @@ c
       INCLUDE 'conf.inc'
       INCLUDE 'system.inc'
       INCLUDE 'potential.inc'
-      INTEGER I, lambda
+      INTEGER I, Lambda
       DOUBLE PRECISION En, enp, Vir, press, CORP, vol, rho
  
       IF (NPART.NE.0) THEN

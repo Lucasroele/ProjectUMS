@@ -18,7 +18,7 @@ endofdata
  time  ../Source/mc_nvt  		>>& out 
  cp 	fort.21         	lj.res
  cp 	fort.66         	lj.prt
- cp     fort.66             data.dat
+ mv   fort.66           data.dat
  #perform block analysis
  cp 	lj.prth 		fort.31
  mv  	lj.prt 		fort.32

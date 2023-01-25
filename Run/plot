@@ -1,0 +1,5 @@
+set xlabel 'Lambda'
+set ylabel 'Energy'
+set nokey
+plot 'data.dat' with li lw 3
+pause -1 "Hit return to continue"
