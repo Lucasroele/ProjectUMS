@@ -58,7 +58,7 @@ c        ---intialize the subroutine that adjust the maximum displacement
                Lambda = 0
             Else
                Lambda = DBLE(nLambda) / DBLE(I)
-               WRITE (66, *) "lambda = ", Lambda   
+               WRITE (66, *) "Lambda = ", Lambda   
             Endif
              DO icycl = 1, ncycl
                 DO imove = 1, nmoves
@@ -86,7 +86,7 @@ c                  ---adjust maximum displacements
             IF (attempt.NE.0) WRITE (6, 99003) attempt, nacc, 
      &                               100.*FLOAT(nacc)/FLOAT(attempt)
 c           ---test total energy
-            CALL TOTERG(ent, virt, lambda)
+            CALL TOTERG(ent, virt, Lambda)
 c            CALL TOTERG(ent, virt)
 
             IF (ABS(ent-en).GT.1.D-6) THEN
