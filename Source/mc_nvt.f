@@ -22,17 +22,17 @@ c__________________________________________________________________________
  
       IMPLICIT NONE
       INTEGER iseed, equil, prod, nsamp, ii, icycl, ndispl, attempt, 
-     &        nacc, ncycl, nmoves, imove, nlambda, I
-      DOUBLE PRECISION en, ent, vir, virt, dr, lambda
+     &        nacc, ncycl, nmoves, imove, nLambda, I
+      DOUBLE PRECISION en, ent, vir, virt, dr, Lambda
  
       WRITE (6, *) '**************** MC_NVT ***************'
 c     ---initialize sysem
       CALL READDAT(equil, prod, nsamp, ndispl, dr, iseed)
       nmoves = ndispl
 c     ---total energy of the system
-      lambda = 1
-      nlambda = 20
-      CALL TOTERG(en, vir, lambda)
+      Lambda = 1
+      nLambda = 25000
+      CALL TOTERG(en, vir, Lambda)
 c      CALL TOTERG(en, vir)
       WRITE (6, 99001) en, vir
 c     ---start MC-cycle
@@ -53,12 +53,17 @@ c        ---intialize the subroutine that adjust the maximum displacement
          CALL ADJUST(attempt, nacc, dr)
 
 
-         DO I = 0, nlambda
-             WRITE (66, *) "lambda = ", (nlambda-I)*lambda
+         DO I = nLambda, 0
+            If (I==0) then
+               Lambda = 0
+            Else
+               Lambda = DBLE(nLambda) / DBLE(I)
+               WRITE (66, *) "lambda = ", Lambda   
+            Endif
              DO icycl = 1, ncycl
                 DO imove = 1, nmoves
 c                  ---attempt to displace a particle
-                   CALL MCMOVE(en, vir, attempt, nacc, dr, iseed, (nlambda-I)*lambda)
+                   CALL MCMOVE(en, vir, attempt, nacc, dr, iseed, Lambda)
                 END DO
                 IF (ii.EQ.2) THEN
 c                  ---sample averages
