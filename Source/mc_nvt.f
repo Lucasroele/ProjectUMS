@@ -63,20 +63,21 @@ c        --- ii=2 production
 c        ---intialize the subroutine that adjust the maximum displacement
          CALL ADJUST(attempt, nacc, dr)
 
-
-         DO I = nLambda, 0
-            If (I==0) then
-               Lambda = 0
-            Else
-               Lambda = DBLE(nLambda) / DBLE(I)
-               WRITE (66, *) "Lambda = ", Lambda   
-            Endif
              DO icycl = 1, ncycl
                 DO imove = 1, nmoves
 c                  ---attempt to displace a particle
                    CALL MCMOVE(en, vir, attempt, nacc, dr, iseed, Lambda)
                 END DO
                 IF (ii.EQ.2) THEN
+                
+                  DO I = nLambda, 0
+                     If (I==0) then
+                        Lambda = 0
+                     Else
+                        Lambda = DBLE(nLambda) / DBLE(I)
+                        WRITE (66, *) "Lambda = ", Lambda   
+                     Endif
+
 c                  ---sample averages
                    IF (MOD(icycl,nsamp).EQ.0) Then
                      CALL SAMPLE(icycl, en, vir, press, lambda)
@@ -96,7 +97,8 @@ c                    --- Taking lambda as 1?
                         CALL ENERI(Xi, Yi, Zi, npart +1, 1, EnDummy, VirDummy,
      &                  1)
                         ChemicalPotentialCount = ChemicalPotentialCount + 1.0d0
-                        ChemicalPotentialSum = ChemicalPotentialSum + Dble(Exp(-Beta * EnDummy))
+                        ChemicalPotentialSum = ChemicalPotentialSum,
+     &                  + Dble(Exp(-Beta * EnDummy))
                      END DO
                   END IF
                 END IF
