@@ -88,7 +88,7 @@ c                  ---sample averages
                      EnSum = EnSum + en 
                      EnCount = EnCount + 1.0d0
 
-c              --- Calculation of chemical potential with 10 trial chains                     
+c                 --- Calculation of chemical potential with 10 trial chains                     
                      DO J = 1,10
                         Xi = Box * RandomNumber()
                         Yi = Box * RandomNumber()
