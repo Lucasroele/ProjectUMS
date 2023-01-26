@@ -19,6 +19,7 @@ endofdata
  cp 	fort.21         	lj.res
  cp 	fort.66         	lj.prt
  mv   fort.66           data.dat
+ mv   fort.10           WidomData.dat
  #perform block analysis
  cp 	lj.prth 		fort.31
  mv  	lj.prt 		fort.32
