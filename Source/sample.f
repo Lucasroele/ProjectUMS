@@ -1,6 +1,6 @@
 **==sample.spg  processed by SPAG 4.52O  at 18:54 on 27 Mar 1996
  
-      SUBROUTINE SAMPLE(I, En, Vir, Lambda)
+      SUBROUTINE SAMPLE(I, En, Vir, press, Lambda)
 c
 c      write quantities (pressure and energy) to file
 c

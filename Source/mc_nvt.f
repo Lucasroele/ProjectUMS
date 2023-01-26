@@ -22,13 +22,24 @@ c__________________________________________________________________________
  
       IMPLICIT NONE
       INTEGER iseed, equil, prod, nsamp, ii, icycl, ndispl, attempt, 
-     &        nacc, ncycl, nmoves, imove, nLambda, I
-      DOUBLE PRECISION en, ent, vir, virt, dr, Lambda
+     &        nacc, ncycl, nmoves, imove, nLambda, I, J
+      DOUBLE PRECISION en, ent, vir, virt, dr, Lambda , Press, PressSum, 
+     &        PressCount, ChemicalPotentialSum, ChemicalPotentialCount, 
+     &        Xi, Yi, Zi, EnSum, EnSquaredSum, EnCount, RandomNumber,
+     &        EnDummy, VirDummy
  
       WRITE (6, *) '**************** MC_NVT ***************'
-c     ---initialize sysem
+c     ---initialize system
       CALL READDAT(equil, prod, nsamp, ndispl, dr, iseed)
       nmoves = ndispl
+c     --- initializing system Widom     
+      PressSum = 0.0d0
+      PressCount = 0.0d0
+      EnSum = 0.0
+      EnSquaredSum = 0.0
+      ChemicalPotentialSum = 0.0
+      ChemicalPotentialCount = 0.0d0
+
 c     ---total energy of the system
       Lambda = 1
       nLambda = 25000
@@ -67,8 +78,29 @@ c                  ---attempt to displace a particle
                 END DO
                 IF (ii.EQ.2) THEN
 c                  ---sample averages
-                   IF (MOD(icycl,nsamp).EQ.0) CALL SAMPLE(icycl, en, vir, I)
+                   IF (MOD(icycl,nsamp).EQ.0) Then
+                     CALL SAMPLE(icycl, en, vir, press, lambda)
+                     PressSum = PressSum + Press
+                     PressCount = PressCount + 1.0d0
+
+                     EnSquaredSum = EnSquaredSum + en * en
+                     EnSum = EnSum + en 
+                     EnCount = EnCount + 1.0d0
+
+c              --- Calculation of chemical potential with 10 trial chains                     
+                     DO J = 1,10
+                        Xi = Box * RandomNumber()
+                        Yi = Box * RandomNumber()
+                        Zi = Box * RandomNumber()
+c                    --- Taking lambda as 1?
+                        CALL ENERI(Xi, Yi, Zi, npart +1, 1, EnDummy, VirDummy,
+     &                  1)
+                        ChemicalPotentialCount = ChemicalPotentialCount + 1.0d0
+                        ChemicalPotentialSum = ChemicalPotentialSum + Dble(Exp(-Beta * EnDummy))
+                     END DO
+                  END IF
                 END IF
+
                 IF (MOD(icycl,ncycl/5).EQ.0) THEN
                    WRITE (6, *) '======>> Done ', icycl, ' out of ', ncycl
 c                  ---write intermediate configuration to file
@@ -98,6 +130,16 @@ c            CALL TOTERG(ent, virt)
      &                    ' ######### PROBLEMS VIRIAL ################ '
             END IF
             WRITE (6, 99002) ent, en, ent - en, virt, vir, virt - vir
+
+c           --- Print Chemical Potential and Pressure
+            IF(ii .Eq. 2) THEN
+               Write(10,*) 'Heat Capacity                      :',0.0
+               Write(10,*) 'Average Pressure                  : ',
+     &           PressSum/PressCount
+               Write(10,*) 'Chemical Potential                : ',
+     &           -Log((ChemicalPotentialSum/ChemicalPotentialCount)*
+     &           (Box*Box*Box/Dble(npart)))/Beta
+            END IF
          END IF
       END DO
       CALL STORE(21, dr)
