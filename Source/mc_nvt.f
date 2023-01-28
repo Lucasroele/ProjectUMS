@@ -27,14 +27,15 @@ c__________________________________________________________________________
       INCLUDE 'potential.inc'
       INTEGER iseed, equil, prod, nsamp, ii, icycl, ndispl, attempt, 
      &        nacc, ncycl, nmoves, imove, nLambda, I, J, SampleCount,
-     &        nGhosts, nWidomCycle
+     &        nGhosts, nWidomCycle, runWidom, runTDI
       DOUBLE PRECISION en, ent, vir, virt, dr, Lambda , Press, PressSum, 
      &        ChemicalPotentialSum, RANF,
      &        Xi, Yi, Zi, EnSum, EnSquaredSum, rho, CORU,
      &        EnDummy, VirDummy
       WRITE (6, *) '**************** MC_NVT ***************'
 c     ---initialize system
-      CALL READDAT(equil, prod, nsamp, ndispl, dr, iseed, nLambda, nGhosts, nWidomCycle)
+      CALL READDAT(equil, prod, nsamp, ndispl, dr, iseed, nLambda, nGhosts, nWidomCycle, runWidom,
+     & runTDI)
       nmoves = ndispl
 c     --- initializing system Widom     
       PressSum = 0.0d0
@@ -42,7 +43,7 @@ c     --- initializing system Widom
       EnSum = 0.0d0
       EnSquaredSum = 0.0d0
       ChemicalPotentialSum = 0.0d0
-
+      
 c     ---total energy of the system
       Lambda = 1
 
@@ -52,6 +53,8 @@ c     ---start MC-cycle
       WRITE (6, *) en, vir
 
 c     --- Widom
+
+      IF (runWidom.ne.0) THEN
       DO ii = 1, 2
 
 c        --- ii=1 equilibration
@@ -82,12 +85,6 @@ c              ---attempt to displace a particle
                CALL MCMOVE(en, vir, attempt, nacc, dr, iseed, Lambda)
             END DO
 
-c           Do widom maths
-c           Do widom maths
-c           Do widom maths
-c           Do widom maths
-c           Do widom maths
-
 c           --- sample the system every nsamp times
 c           --- assumes decorellation after nsamp steps
             IF (ii.EQ.2) THEN
@@ -105,7 +102,6 @@ c                 --- Calculation of chemical potential with nGhosts trial chain
 c                    --- Taking lambda as 1
                      CALL ENERI(Xi, Yi, Zi, 0, 1, EnDummy, VirDummy, Lambda)
                      IF (TAILCO) THEN
-c                       --- prob not the right way to calc rho
 c                       --- verify tail correction
                         rho = NPART/(BOX**3)
                         EnDummy = EnDummy + 2*CORU(RC, rho)
@@ -119,11 +115,10 @@ c           --- Runs every 1/5th of ncycl (prod and equil)
             IF (MOD(icycl,ncycl/5).EQ.0) THEN
                WRITE (6, *) '======>> Done ', icycl, ' out of ', ncycl
 c              ---write intermediate configuration to file
-c               CALL STORE(8, dr)
+c              CALL STORE(8, dr)
 c              ---adjust maximum displacements
                CALL ADJUST(attempt, nacc, dr)
             END IF
-            WRITE (66, *)
          END DO
          IF (ncycl.NE.0) THEN
             IF (attempt.NE.0) WRITE (6, 99003) attempt, nacc,
@@ -141,15 +136,6 @@ c           ---test total energy
             END IF
             WRITE (6, 99002) ent, en, ent - en, virt, vir, virt - vir
 
-
-c                 --- Outuput widom stuff
-c                 --- Outuput widom stuff
-c                 --- Outuput widom stuff
-c                 --- Outuput widom stuff
-c                 --- Outuput widom stuff
-
-
-
 c           --- Print Chemical Potential and Pressure
             IF(ii .Eq. 2) THEN
                Write(10,99004) (PressSum/DBLE(SampleCount))/
@@ -159,6 +145,8 @@ c           --- Print Chemical Potential and Pressure
             END IF
          END IF
       END DO
+      END IF
+
       WRITE (6, *)
      &        ' ################################################ '
       WRITE (6, *)
@@ -170,6 +158,7 @@ c           --- Print Chemical Potential and Pressure
       WRITE (6, *)
      &        ' ################################################ '
 
+      IF (runTDI.NE.0) THEN
 c     --- TDI
       DO I = nLambda, 0, -1
          Lambda =  DBLE(I) / DBLE(nLambda)
@@ -222,7 +211,6 @@ c                  CALL STORE(8, dr)
 c                 ---adjust maximum displacements
                   CALL ADJUST(attempt, nacc, dr)
                END IF
-               WRITE (66, *)
             END DO
 
 
@@ -251,6 +239,7 @@ c           ---test total energy
             END IF
          END DO
       END DO
+      END IF
       CALL STORE(21, dr)
       STOP
  

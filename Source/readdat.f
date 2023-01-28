@@ -1,6 +1,6 @@
 **==readdat.spg  processed by SPAG 4.52O  at 18:54 on 27 Mar 1996
       SUBROUTINE READDAT(Equil, Prod, Nsamp, Ndispl, Dr, Iseed, nLambda, nGhosts,
-     & nWidomCycle)
+     & nWidomCycle, runWidom, runTDI)
 C     ---read input data and model parameters
 c
 c     ---input parameters: file: fort.15
@@ -17,8 +17,11 @@ c    TEMP        : temperature
 c    rho         : density
 c    nLambda     : number of distinct lambdas to simulate at
 c    nWidomCycle : number of Monte Carlo cycles during Widom production
-c    nGhosts   : number of particle insertion attempts
-c
+c    nGhosts     : number of particle insertion attempts
+c    runWidom    : 0 dont run Widom
+c                : 1 run Widom
+c    runTDI      : 0 dont run TDI cycle
+c                : 1 run TDI
 c
 c     ---input parameters: file: fort.25
 c    TAILCO = .true. : tail corrections are applied
@@ -47,7 +50,7 @@ c    X(NPART),Y(NPART),Z(NPART): position particle last particle
       INCLUDE 'potential.inc'
       INCLUDE 'conf.inc'
       INTEGER ibeg, Equil, Prod, i, Ndispl, Nsamp, Iseed, nLambda, nGhosts,
-     &       nWidomCycle
+     &       nWidomCycle, runWidom, runTDI
       DOUBLE PRECISION eps, sig, CORU, CORP, vir, boxf, rhof, rho, Dr
      
  
@@ -60,6 +63,8 @@ c     ---read simulation data
       READ (15, *) Ndispl, nLambda, nGhosts, nWidomCycle
       READ (15, *)
       READ (15, *) NPART, TEMP, rho
+      READ (15, *)
+      READ (15, *) runWidom, runTDI
 c     ---initialise and test random number generator
       CALL RANTEST(Iseed)
  
