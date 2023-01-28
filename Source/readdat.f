@@ -1,23 +1,23 @@
 **==readdat.spg  processed by SPAG 4.52O  at 18:54 on 27 Mar 1996
-      SUBROUTINE READDAT(Equil, Prod, Nsamp, Ndispl, Dr, Iseed, nLambda, nWidom,
+      SUBROUTINE READDAT(Equil, Prod, Nsamp, Ndispl, Dr, Iseed, nLambda, nGhosts,
      & nWidomCycle)
 C     ---read input data and model parameters
 c
 c     ---input parameters: file: fort.15
-c    ibeg  =  0 : initialize from a lattice
-c             1 : read configuration from disk
-c    Equil      : number of Monte Carlo cycles during equilibration
-c    Prod       : number of Monte Carlo cycles during production
-c    Nsamp      : number of Monte Carlo cycles between two sampling periods
-c    Iseed      : seed random number generator
-c    Dr         : maximum displacement
-c    Ndispl     : number of attemps to displace a particle per MC cycle
-c    NPART      : total numbero fo particles
-c    TEMP       : temperature
-c    rho        : density
-c    nLambda    : number of distinct lambdas to simulate at
-c    nWidomCycle: number of cycles that are run for the widom algorithm
-c    nWidom     : number of particle insertion attempts
+c    ibeg  =  0  : initialize from a lattice
+c             1  : read configuration from disk
+c    Equil       : number of Monte Carlo cycles during equilibration
+c    Prod        : number of Monte Carlo cycles during production
+c    Nsamp       : number of Monte Carlo cycles between two sampling periods
+c    Iseed       : seed random number generator
+c    Dr          : maximum displacement
+c    Ndispl      : number of attemps to displace a particle per MC cycle
+c    NPART       : total numbero fo particles
+c    TEMP        : temperature
+c    rho         : density
+c    nLambda     : number of distinct lambdas to simulate at
+c    nWidomCycle : number of Monte Carlo cycles during Widom production
+c    nGhosts   : number of particle insertion attempts
 c
 c
 c     ---input parameters: file: fort.25
@@ -46,7 +46,7 @@ c    X(NPART),Y(NPART),Z(NPART): position particle last particle
       INCLUDE 'system.inc'
       INCLUDE 'potential.inc'
       INCLUDE 'conf.inc'
-      INTEGER ibeg, Equil, Prod, i, Ndispl, Nsamp, Iseed, nLambda, nWidom,
+      INTEGER ibeg, Equil, Prod, i, Ndispl, Nsamp, Iseed, nLambda, nGhosts,
      &       nWidomCycle
       DOUBLE PRECISION eps, sig, CORU, CORP, vir, boxf, rhof, rho, Dr
      
@@ -57,7 +57,7 @@ c     ---read simulation data
       READ (15, *)
       READ (15, *) Dr
       READ (15, *)
-      READ (15, *) Ndispl, nLambda, nWidom, nWidomCycle
+      READ (15, *) Ndispl, nLambda, nGhosts, nWidomCycle
       READ (15, *)
       READ (15, *) NPART, TEMP, rho
 c     ---initialise and test random number generator

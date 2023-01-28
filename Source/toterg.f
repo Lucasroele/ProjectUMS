@@ -1,6 +1,5 @@
 **==toterg.spg  processed by SPAG 4.52O  at 18:54 on 27 Mar 1996
       SUBROUTINE TOTERG(Ener, Vir, Lambda)
-c      SUBROUTINE TOTERG(Ener, Vir)
 c
 c     calculates total energy
 c
@@ -16,7 +15,6 @@ c
       INCLUDE 'system.inc'
  
       DOUBLE PRECISION xi, yi, zi, Ener, eni, CORU, viri, Vir, rho, Lambda
-c      DOUBLE PRECISION xi, yi, zi, Ener, eni, CORU, viri, Vir, rho
       INTEGER i, jb
  
       Ener = 0

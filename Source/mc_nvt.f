@@ -24,16 +24,17 @@ c__________________________________________________________________________
       INCLUDE 'system.inc'
       INCLUDE 'parameter.inc'
       INCLUDE 'conf.inc'
+      INCLUDE 'potential.inc'
       INTEGER iseed, equil, prod, nsamp, ii, icycl, ndispl, attempt, 
      &        nacc, ncycl, nmoves, imove, nLambda, I, J, SampleCount,
-     &        nWidom, nWidomCycle
+     &        nGhosts, nWidomCycle
       DOUBLE PRECISION en, ent, vir, virt, dr, Lambda , Press, PressSum, 
      &        ChemicalPotentialSum, RANF,
-     &        Xi, Yi, Zi, EnSum, EnSquaredSum,
+     &        Xi, Yi, Zi, EnSum, EnSquaredSum, rho, CORU,
      &        EnDummy, VirDummy
       WRITE (6, *) '**************** MC_NVT ***************'
 c     ---initialize system
-      CALL READDAT(equil, prod, nsamp, ndispl, dr, iseed, nLambda, nWidom, nWidomCycle)
+      CALL READDAT(equil, prod, nsamp, ndispl, dr, iseed, nLambda, nGhosts, nWidomCycle)
       nmoves = ndispl
 c     --- initializing system Widom     
       PressSum = 0.0d0
@@ -66,6 +67,12 @@ c        --- ii=2 production
          attempt = 0
          nacc = 0
 
+c        Mathmatically describe ADJUST
+c        Mathmatically describe ADJUST
+c        Mathmatically describe ADJUST
+c        Mathmatically describe ADJUST
+c        Mathmatically describe ADJUST
+
 c        ---intialize the subroutine that adjusts the maximum displacement
          CALL ADJUST(attempt, nacc, dr)
 
@@ -74,6 +81,12 @@ c        ---intialize the subroutine that adjusts the maximum displacement
 c              ---attempt to displace a particle
                CALL MCMOVE(en, vir, attempt, nacc, dr, iseed, Lambda)
             END DO
+
+c           Do widom maths
+c           Do widom maths
+c           Do widom maths
+c           Do widom maths
+c           Do widom maths
 
 c           --- sample the system every nsamp times
 c           --- assumes decorellation after nsamp steps
@@ -84,29 +97,34 @@ c           --- assumes decorellation after nsamp steps
                   PressSum = PressSum + Press
                   EnSquaredSum = EnSquaredSum + en * en
                   EnSum = EnSum + en
-c                 --- Calculation of chemical potential with 10 trial chains
-                  DO J = 1, nWidom
+c                 --- Calculation of chemical potential with nGhosts trial chains
+                  DO J = 1, nGhosts
                      Xi = BOX * RANF()
                      Yi = BOX * RANF()
                      Zi = BOX * RANF()
 c                    --- Taking lambda as 1
-c                    --- ENERI needs checking
-                     CALL ENERI(Xi, Yi, Zi, 0, NPART+1, EnDummy, VirDummy, Lambda)
+                     CALL ENERI(Xi, Yi, Zi, 0, 1, EnDummy, VirDummy, Lambda)
+                     IF (TAILCO) THEN
+c                       --- prob not the right way to calc rho
+c                       --- verify tail correction
+                        rho = NPART/(BOX**3)
+                        EnDummy = EnDummy + 2*CORU(RC, rho)
+                     END IF
                      ChemicalPotentialSum = ChemicalPotentialSum + Exp(-BETA * EnDummy)
                   END DO
                END IF
             END IF
 
+c           --- Runs every 1/5th of ncycl (prod and equil)
             IF (MOD(icycl,ncycl/5).EQ.0) THEN
                WRITE (6, *) '======>> Done ', icycl, ' out of ', ncycl
 c              ---write intermediate configuration to file
-               CALL STORE(8, dr)
+c               CALL STORE(8, dr)
 c              ---adjust maximum displacements
                CALL ADJUST(attempt, nacc, dr)
             END IF
             WRITE (66, *)
          END DO
-
          IF (ncycl.NE.0) THEN
             IF (attempt.NE.0) WRITE (6, 99003) attempt, nacc,
      &                               100.*FLOAT(nacc)/FLOAT(attempt)
@@ -123,14 +141,21 @@ c           ---test total energy
             END IF
             WRITE (6, 99002) ent, en, ent - en, virt, vir, virt - vir
 
+
+c                 --- Outuput widom stuff
+c                 --- Outuput widom stuff
+c                 --- Outuput widom stuff
+c                 --- Outuput widom stuff
+c                 --- Outuput widom stuff
+
+
+
 c           --- Print Chemical Potential and Pressure
             IF(ii .Eq. 2) THEN
-               Write(10,*) 'Heat Capacity                      :',0.0
-               Write(10,*) 'Average Pressure                  : ',
-     &         PressSum/DBLE(SampleCount)
-               Write(10,*) 'Chemical Potential                : ',
-     &         -Log(((ChemicalPotentialSum / DBLE(SampleCount)) / DBLE(nWidom))*
-     &         (BOX*BOX*BOX/DBLE(npart)))/BETA
+               Write(10,99004) (PressSum/DBLE(SampleCount))/
+     &  DBLE(nGhosts), nGhosts*SampleCount,
+     &  -Log(((ChemicalPotentialSum/DBLE(SampleCount)) /
+     &  DBLE(nGhosts))*(BOX*BOX*BOX/DBLE(npart)))/BETA
             END IF
          END IF
       END DO
@@ -180,12 +205,20 @@ c              --- assumes decorellation after nsamp steps
                   IF (MOD(icycl,nsamp).EQ.0) Then
                      CALL SAMPLE(icycl, en, vir, press, lambda)
                   END IF
+
+c                 --- Outuput lambda stuff
+c                 --- Outuput lambda stuff
+c                 --- Outuput lambda stuff
+c                 --- Outuput lambda stuff
+c                 --- Outuput lambda stuff
+
                END IF
 
+c              --- Runs every 1/5th of ncycl (prod and equil)
                IF (MOD(icycl,ncycl/5).EQ.0) THEN
                   WRITE (6, *) '======>> Done ', icycl, ' out of ', ncycl
 c                 ---write intermediate configuration to file
-                  CALL STORE(8, dr)
+c                  CALL STORE(8, dr)
 c                 ---adjust maximum displacements
                   CALL ADJUST(attempt, nacc, dr)
                END IF
@@ -196,6 +229,14 @@ c                 ---adjust maximum displacements
             IF (ncycl.NE.0) THEN
                IF (attempt.NE.0) WRITE (6, 99003) attempt, nacc,
      &                               100.*FLOAT(nacc)/FLOAT(attempt)
+
+c           --- Figure out the justification of this algorithm
+c           --- Figure out the justification of this algorithm
+c           --- Figure out the justification of this algorithm
+c           --- Figure out the justification of this algorithm
+c           --- Figure out the justification of this algorithm
+
+
 c           ---test total energy
                CALL TOTERG(ent, virt, Lambda)
                IF (ABS(ent-en).GT.1.D-6) THEN
@@ -223,5 +264,9 @@ c           ---test total energy
      &        '       difference                  :  ', e12.5)
 99003 FORMAT (' Number of att. to displ. a part.  : ', i10, /, 
      &        ' success: ', i10, '(= ', f5.2, '%)')
+99004 FORMAT (' Results Widom test particle method : '/,
+     &        ' Average pressure          :', f12.5
+     &        ' Number of samples         :', i12,
+     &        ' Excess chemical potential :', f12.5)
       END
       

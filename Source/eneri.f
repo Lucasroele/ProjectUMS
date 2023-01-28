@@ -7,7 +7,7 @@ c  Xi (input) x coordinate particle I
 c  Yi (input) y coordinate particle I
 c  Zi (input) z coordinate particle I
 c  I  (input) particle number
-c  Jb (input) =  0 calculates energy of virtual particle with all particles
+c  Jb (input) =  1 calculates energy of virtual particle with all particles
 c             = jb calculates energy particle I with all particles j > jb
 c  En  (output) energy particle i
 c  Vir (output) virial particle i
@@ -23,9 +23,10 @@ c CALL ENERI(Xi, Yi, Zi, 1, 0, EnDummy, VirDummy, Lambda)
 c
       En = 0
       Vir = 0
+
       DO j = Jb, NPART
          IF (j.NE.I) THEN
-            dx = Xi - x(j)
+            dx = Xi - X(j)
             dy = Yi - Y(j)
             dz = Zi - Z(j)
             IF (dx.GT.HBOX) THEN
