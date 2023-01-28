@@ -10,139 +10,6 @@ Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLA
  Initialisation on lattice: 
        100 particles placed on a lattice
   Number of equilibration cycles             :       100
-  Number of production cycles                :       200
-  Sample frequency                           :         1
-
-  Number of att. to displ. a part. per cycle :        50
-  Maximum displacement                       :     0.090
-
-
-  Number of particles                        :       100
-  Temperature                                :     2.000
-  Density                                    :     0.700
-  Box length                                 :     5.228
-
-  Model parameters: 
-     epsilon: 1.000
-     sigma  : 1.000
-     mass   : 1.000
- number of lambda values:          2
-
-
- Simulations with tail correction: 
- Potential truncated at  Rc =:     2.614
- Tail corrections:   energy =     -0.328 pressure     -0.459
-
-
- Total energy initial configuration:   -486.41131
- Total virial initial configuration:   1264.98050
-  -486.41130707075240        1264.9804960038036     
-  Start equilibration 
- ======>> Done           20  out of          100
- Max. displ. set to :  0.135 (old :  0.090)
- Frac. acc.: 0.79 attempts:    1000 succes:     786
- ======>> Done           40  out of          100
- Max. displ. set to :  0.169 (old :  0.135)
- Frac. acc.: 0.62 attempts:    1000 succes:     625
- ======>> Done           60  out of          100
- Max. displ. set to :  0.190 (old :  0.169)
- Frac. acc.: 0.56 attempts:    1000 succes:     564
- ======>> Done           80  out of          100
- Max. displ. set to :  0.220 (old :  0.190)
- Frac. acc.: 0.58 attempts:    1000 succes:     579
- ======>> Done          100  out of          100
- Max. displ. set to :  0.237 (old :  0.220)
- Frac. acc.: 0.54 attempts:    1000 succes:     537
- Number of att. to displ. a part.  :       5000
- success:       3091(= 61.82%)
- Total energy end of simulation    :   -448.10741
-       running energy              :   -448.10741
-       difference                  :  -0.96634E-12
- Total virial end of simulation    :   1226.93881
-       running virial              :   1226.93881
-       difference                  :  -0.52296E-11
-  Start production 
- ======>> Done        20000  out of       100000
- Max. displ. set to :  0.276 (old :  0.237)
- Frac. acc.: 0.58 attempts: 1000000 succes:  583866
- ======>> Done        40000  out of       100000
- Max. displ. set to :  0.292 (old :  0.276)
- Frac. acc.: 0.53 attempts: 1000000 succes:  528705
- ======>> Done        60000  out of       100000
- Max. displ. set to :  0.296 (old :  0.292)
- Frac. acc.: 0.51 attempts: 1000000 succes:  506681
- ======>> Done        80000  out of       100000
- Max. displ. set to :  0.297 (old :  0.296)
- Frac. acc.: 0.50 attempts: 1000000 succes:  501708
- ======>> Done       100000  out of       100000
- Max. displ. set to :  0.297 (old :  0.297)
- Frac. acc.: 0.50 attempts: 1000000 succes:  499706
- Number of att. to displ. a part.  :    5000000
- success:    2620666(= 52.41%)
- Total energy end of simulation    :   -415.98163
-       running energy              :   -415.98163
-       difference                  :  -0.30923E-10
- Total virial end of simulation    :   1067.78579
-       running virial              :   1067.78579
-       difference                  :  -0.26375E-10
-  ################################################ 
-  ################################################ 
-  ################ WIDOM FINISHED ################ 
-  ################################################ 
-  ################################################ 
-  ***** Calculate block averages ************
-   number of averages            2
- block data     1  -4.304956   2.984955
- block data     2  -4.311618   2.907028
- block data     3  -4.300626   2.998489
- block data     4  -4.303679   3.000816
- block data     5  -4.314241   2.918112
- block data     6  -4.309250   2.959511
- block data     7  -4.308357   2.968948
- block data     8  -4.299912   2.979241
- block data     9  -4.297733   3.059320
- block data    10  -4.302377   2.981751
- block data    11  -4.289684   3.031682
- block data    12  -4.296115   2.990655
- block data    13  -4.293924   3.026022
- block data    14  -4.313222   2.953485
- block data    15  -4.288139   3.074211
- block data    16  -4.294887   3.051919
- block data    17  -4.293914   3.022132
- block data    18  -4.303937   2.984027
- block data    19  -4.300426   2.981818
- block data    20  -4.292292   3.045545
- ###### energy       -4.30096452         0.03257664
- ###### press         2.99598344         0.13279385
-   number of blocks       100000
-         0   0.0005   0.0000   0.0019   0.0000
-         1   0.0006   0.0000   0.0026   0.0000
-         2   0.0008   0.0000   0.0035   0.0000
-         3   0.0011   0.0000   0.0046   0.0000
-         4   0.0014   0.0000   0.0058   0.0001
-         5   0.0016   0.0000   0.0071   0.0001
-         6   0.0019   0.0000   0.0084   0.0002
-         7   0.0020   0.0001   0.0093   0.0002
-         8   0.0021   0.0001   0.0098   0.0003
-         9   0.0021   0.0001   0.0098   0.0005
-        10   0.0023   0.0002   0.0111   0.0008
-        11   0.0023   0.0002   0.0110   0.0011
-        12   0.0019   0.0003   0.0087   0.0013
-        13   0.0019   0.0004   0.0080   0.0017
-        14   0.0023   0.0007   0.0112   0.0035
-        15   0.0034   0.0017   0.0172   0.0086
- --- rho 0.70 
-Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
- **************** MC_NVT ***************
-  ******** test random numbers ***********
-  i,ranf()            1  0.11180420853611572     
-  i,ranf()            2  0.74166310703406746     
-  i,ranf()            3  0.46027934237707857     
-  i,ranf()            4  0.11380693953292953     
-  i,ranf()            5  0.54839950623688738     
- Initialisation on lattice: 
-       100 particles placed on a lattice
-  Number of equilibration cycles             :       100
   Number of production cycles                :     10000
   Sample frequency                           :         1
 
@@ -195,29 +62,29 @@ Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLA
        running virial              :   1226.93881
        difference                  :  -0.52296E-11
   Start production 
- ======>> Done        20000  out of       100000
- Max. displ. set to :  0.276 (old :  0.237)
- Frac. acc.: 0.58 attempts: 1000000 succes:  583866
- ======>> Done        40000  out of       100000
- Max. displ. set to :  0.292 (old :  0.276)
- Frac. acc.: 0.53 attempts: 1000000 succes:  528705
- ======>> Done        60000  out of       100000
- Max. displ. set to :  0.296 (old :  0.292)
- Frac. acc.: 0.51 attempts: 1000000 succes:  506681
- ======>> Done        80000  out of       100000
- Max. displ. set to :  0.297 (old :  0.296)
- Frac. acc.: 0.50 attempts: 1000000 succes:  501708
- ======>> Done       100000  out of       100000
- Max. displ. set to :  0.297 (old :  0.297)
- Frac. acc.: 0.50 attempts: 1000000 succes:  499706
- Number of att. to displ. a part.  :    5000000
- success:    2620666(= 52.41%)
- Total energy end of simulation    :   -415.98163
-       running energy              :   -415.98163
-       difference                  :  -0.30923E-10
- Total virial end of simulation    :   1067.78579
-       running virial              :   1067.78579
-       difference                  :  -0.26375E-10
+ ======>> Done         2000  out of        10000
+ Max. displ. set to :  0.275 (old :  0.237)
+ Frac. acc.: 0.58 attempts:  100000 succes:   57987
+ ======>> Done         4000  out of        10000
+ Max. displ. set to :  0.293 (old :  0.275)
+ Frac. acc.: 0.53 attempts:  100000 succes:   53288
+ ======>> Done         6000  out of        10000
+ Max. displ. set to :  0.295 (old :  0.293)
+ Frac. acc.: 0.50 attempts:  100000 succes:   50435
+ ======>> Done         8000  out of        10000
+ Max. displ. set to :  0.299 (old :  0.295)
+ Frac. acc.: 0.51 attempts:  100000 succes:   50582
+ ======>> Done        10000  out of        10000
+ Max. displ. set to :  0.299 (old :  0.299)
+ Frac. acc.: 0.50 attempts:  100000 succes:   50040
+ Number of att. to displ. a part.  :     500000
+ success:     262332(= 52.47%)
+ Total energy end of simulation    :   -429.38393
+       running energy              :   -429.38393
+       difference                  :   0.81855E-11
+ Total virial end of simulation    :    835.11412
+       running virial              :    835.11412
+       difference                  :  -0.10459E-10
   ################################################ 
   ################################################ 
   ################ WIDOM FINISHED ################ 
@@ -287,35 +154,38 @@ Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLA
        running virial              :   1226.93881
        difference                  :  -0.52296E-11
   Start production 
- ======>> Done        20000  out of       100000
- Max. displ. set to :  0.276 (old :  0.237)
- Frac. acc.: 0.58 attempts: 1000000 succes:  583866
- ======>> Done        40000  out of       100000
- Max. displ. set to :  0.292 (old :  0.276)
- Frac. acc.: 0.53 attempts: 1000000 succes:  528705
- ======>> Done        60000  out of       100000
- Max. displ. set to :  0.296 (old :  0.292)
- Frac. acc.: 0.51 attempts: 1000000 succes:  506681
- ======>> Done        80000  out of       100000
- Max. displ. set to :  0.297 (old :  0.296)
- Frac. acc.: 0.50 attempts: 1000000 succes:  501708
- ======>> Done       100000  out of       100000
- Max. displ. set to :  0.297 (old :  0.297)
- Frac. acc.: 0.50 attempts: 1000000 succes:  499706
- Number of att. to displ. a part.  :    5000000
- success:    2620666(= 52.41%)
- Total energy end of simulation    :   -415.98163
-       running energy              :   -415.98163
-       difference                  :  -0.30923E-10
- Total virial end of simulation    :   1067.78579
-       running virial              :   1067.78579
-       difference                  :  -0.26375E-10
+ ======>> Done         2000  out of        10000
+ Max. displ. set to :  0.275 (old :  0.237)
+ Frac. acc.: 0.58 attempts:  100000 succes:   57987
+ ======>> Done         4000  out of        10000
+ Max. displ. set to :  0.293 (old :  0.275)
+ Frac. acc.: 0.53 attempts:  100000 succes:   53288
+ ======>> Done         6000  out of        10000
+ Max. displ. set to :  0.295 (old :  0.293)
+ Frac. acc.: 0.50 attempts:  100000 succes:   50435
+ ======>> Done         8000  out of        10000
+ Max. displ. set to :  0.299 (old :  0.295)
+ Frac. acc.: 0.51 attempts:  100000 succes:   50582
+ ======>> Done        10000  out of        10000
+ Max. displ. set to :  0.299 (old :  0.299)
+ Frac. acc.: 0.50 attempts:  100000 succes:   50040
+ Number of att. to displ. a part.  :     500000
+ success:     262332(= 52.47%)
+ Total energy end of simulation    :   -429.38393
+       running energy              :   -429.38393
+       difference                  :   0.81855E-11
+ Total virial end of simulation    :    835.11412
+       running virial              :    835.11412
+       difference                  :  -0.10459E-10
+ Results Widom test particle method : 
+ Average pressure          :     0.29427 Number of samples         :      100000 Excess chemical potential :     1.24159
   ################################################ 
   ################################################ 
   ################ WIDOM FINISHED ################ 
   ################################################ 
   ################################################ 
  --- rho 0.70 
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
  **************** MC_NVT ***************
   ******** test random numbers ***********
   i,ranf()            1  0.11180420853611572     
@@ -353,6 +223,58 @@ Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLA
  Total energy initial configuration:   -486.41131
  Total virial initial configuration:   1264.98050
   -486.41130707075240        1264.9804960038036     
+  Start equilibration 
+ ======>> Done           20  out of          100
+ Max. displ. set to :  0.135 (old :  0.090)
+ Frac. acc.: 0.79 attempts:    1000 succes:     786
+ ======>> Done           40  out of          100
+ Max. displ. set to :  0.169 (old :  0.135)
+ Frac. acc.: 0.62 attempts:    1000 succes:     625
+ ======>> Done           60  out of          100
+ Max. displ. set to :  0.190 (old :  0.169)
+ Frac. acc.: 0.56 attempts:    1000 succes:     564
+ ======>> Done           80  out of          100
+ Max. displ. set to :  0.220 (old :  0.190)
+ Frac. acc.: 0.58 attempts:    1000 succes:     579
+ ======>> Done          100  out of          100
+ Max. displ. set to :  0.237 (old :  0.220)
+ Frac. acc.: 0.54 attempts:    1000 succes:     537
+ Number of att. to displ. a part.  :       5000
+ success:       3091(= 61.82%)
+ Total energy end of simulation    :   -448.10741
+       running energy              :   -448.10741
+       difference                  :  -0.96634E-12
+ Total virial end of simulation    :   1226.93881
+       running virial              :   1226.93881
+       difference                  :  -0.52296E-11
+  Start production 
+ ======>> Done         2000  out of        10000
+ Max. displ. set to :  0.275 (old :  0.237)
+ Frac. acc.: 0.58 attempts:  100000 succes:   57987
+ ======>> Done         4000  out of        10000
+ Max. displ. set to :  0.293 (old :  0.275)
+ Frac. acc.: 0.53 attempts:  100000 succes:   53288
+ ======>> Done         6000  out of        10000
+ Max. displ. set to :  0.295 (old :  0.293)
+ Frac. acc.: 0.50 attempts:  100000 succes:   50435
+ ======>> Done         8000  out of        10000
+ Max. displ. set to :  0.299 (old :  0.295)
+ Frac. acc.: 0.51 attempts:  100000 succes:   50582
+ ======>> Done        10000  out of        10000
+ Max. displ. set to :  0.299 (old :  0.299)
+ Frac. acc.: 0.50 attempts:  100000 succes:   50040
+ Number of att. to displ. a part.  :     500000
+ success:     262332(= 52.47%)
+ Total energy end of simulation    :   -429.38393
+       running energy              :   -429.38393
+       difference                  :   0.81855E-11
+ Total virial end of simulation    :    835.11412
+       running virial              :    835.11412
+       difference                  :  -0.10459E-10
+ Results Widom test particle method : 
+ Average pressure          :     0.29427
+ Number of samples         :      100000
+ Excess chemical potential :     1.24159
   ################################################ 
   ################################################ 
   ################ WIDOM FINISHED ################ 

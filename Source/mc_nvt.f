@@ -139,13 +139,16 @@ c           ---test total energy
 c           --- Print Chemical Potential and Pressure
             IF(ii .Eq. 2) THEN
                Write(10,99004) (PressSum/DBLE(SampleCount))/
-     &  DBLE(nGhosts), nGhosts*SampleCount,
-     &  -Log(((ChemicalPotentialSum/DBLE(SampleCount)) /
-     &  DBLE(nGhosts))*(BOX*BOX*BOX/DBLE(npart)))/BETA
+     &         DBLE(nGhosts), nGhosts*SampleCount,
+     &         -Log(((ChemicalPotentialSum/DBLE(SampleCount)) /
+     &         DBLE(nGhosts))*(BOX*BOX*BOX/DBLE(npart)))/BETA
+               Write(6,99004) (PressSum/DBLE(SampleCount))/
+     &         DBLE(nGhosts), nGhosts*SampleCount,
+     &         -Log(((ChemicalPotentialSum/DBLE(SampleCount)) /
+     &         DBLE(nGhosts))*(BOX*BOX*BOX/DBLE(npart)))/BETA
             END IF
          END IF
       END DO
-      END IF
 
       WRITE (6, *)
      &        ' ################################################ '
@@ -158,6 +161,8 @@ c           --- Print Chemical Potential and Pressure
       WRITE (6, *)
      &        ' ################################################ '
 
+      END IF
+      
       IF (runTDI.NE.0) THEN
 c     --- TDI
       DO I = nLambda, 0, -1
@@ -254,8 +259,8 @@ c           ---test total energy
 99003 FORMAT (' Number of att. to displ. a part.  : ', i10, /, 
      &        ' success: ', i10, '(= ', f5.2, '%)')
 99004 FORMAT (' Results Widom test particle method : '/,
-     &        ' Average pressure          :', f12.5
-     &        ' Number of samples         :', i12,
+     &        ' Average pressure          :', f12.5, /,
+     &        ' Number of samples         :', i12, /,
      &        ' Excess chemical potential :', f12.5)
       END
       
