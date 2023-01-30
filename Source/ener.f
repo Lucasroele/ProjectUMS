@@ -1,6 +1,5 @@
 **==ener.spg  processed by SPAG 4.52O  at 18:54 on 27 Mar 1996
-      SUBROUTINE ENER(En, Vir, R2, lambda)
-c      SUBROUTINE ENER(En, Vir, R2)
+      SUBROUTINE ENER(En, Vir, R2, lambda3, lambda5, sigmaMod)
 c
 c     calculate energy
 c
@@ -9,12 +8,10 @@ c     Vir: (output) virial
 c     R2 : (input) distance squared between two particles
 c
       IMPLICIT NONE
-      DOUBLE PRECISION R2, r2i, r6i, En, Vir, lambda, lambda3, lambda5
-c      DOUBLE PRECISION R2, r2i, r6i, En, Vir
+      DOUBLE PRECISION R2, r2i, r6i, En, Vir, lambda3, lambda5, sigmaMod
       INCLUDE 'potential.inc'
  
-      lambda3 = lambda*lambda*lambda
-      lambda5 = lambda3*lambda*lambda
+      
 
       IF (R2.LT.RC2) THEN
          r2i = SIG2/R2

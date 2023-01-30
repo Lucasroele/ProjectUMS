@@ -19,7 +19,21 @@ c
 c   Case Study 1: Equation of state of the Lennard-Jones fluid
 c
 c__________________________________________________________________________
- 
+c
+c Output files
+c 6  out
+c 10 WidomData.dat
+c 11 lj.res         [input]
+c 25 lj.model       [input]
+c 66 data.dat
+c 31 lj.prth        [input]
+c 32 PresEn.dat
+c
+c
+c
+c
+
+
       IMPLICIT NONE
       INCLUDE 'system.inc'
       INCLUDE 'parameter.inc'
@@ -29,13 +43,13 @@ c__________________________________________________________________________
      &        nacc, ncycl, nmoves, imove, nLambda, I, J, SampleCount,
      &        nGhosts, nWidomCycle, runWidom, runTDI
       DOUBLE PRECISION en, ent, vir, virt, dr, Lambda , Press, PressSum, 
-     &        ChemicalPotentialSum, RANF,
+     &        ChemicalPotentialSum, RANF, rhoMod,
      &        Xi, Yi, Zi, EnSum, EnSquaredSum, rho, CORU,
-     &        EnDummy, VirDummy
+     &        EnDummy, VirDummy, sig
       WRITE (6, *) '**************** MC_NVT ***************'
 c     ---initialize system
       CALL READDAT(equil, prod, nsamp, ndispl, dr, iseed, nLambda, nGhosts, nWidomCycle, runWidom,
-     & runTDI)
+     & runTDI, sig)
       nmoves = ndispl
 c     --- initializing system Widom     
       PressSum = 0.0d0
@@ -47,13 +61,12 @@ c     --- initializing system Widom
 c     ---total energy of the system
       Lambda = 1
 
-      CALL TOTERG(en, vir, Lambda)
+      CALL TOTERG(en, vir, 1.0d0, 1.0d0)
       WRITE (6, 99001) en, vir
 c     ---start MC-cycle
       WRITE (6, *) en, vir
 
 c     --- Widom
-
       IF (runWidom.ne.0) THEN
       DO ii = 1, 2
 
@@ -82,7 +95,7 @@ c        ---intialize the subroutine that adjusts the maximum displacement
          DO icycl = 1, ncycl
             DO imove = 1, nmoves
 c              ---attempt to displace a particle
-               CALL MCMOVE(en, vir, attempt, nacc, dr, iseed, Lambda)
+               CALL MCMOVE(en, vir, attempt, nacc, dr, iseed, Lambda, sig)
             END DO
 
 c           --- sample the system every nsamp times
@@ -100,7 +113,7 @@ c                 --- Calculation of chemical potential with nGhosts trial chain
                      Yi = BOX * RANF()
                      Zi = BOX * RANF()
 c                    --- Taking lambda as 1
-                     CALL ENERI(Xi, Yi, Zi, 0, 1, EnDummy, VirDummy, Lambda)
+                     CALL ENERI(Xi, Yi, Zi, 0, 1, EnDummy, VirDummy, 1.0d0, 1.0d0, 1.0d0)
                      IF (TAILCO) THEN
 c                       --- verify tail correction
                         rho = NPART/(BOX**3)
@@ -124,7 +137,7 @@ c              ---adjust maximum displacements
             IF (attempt.NE.0) WRITE (6, 99003) attempt, nacc,
      &                               100.*FLOAT(nacc)/FLOAT(attempt)
 c           ---test total energy
-            CALL TOTERG(ent, virt, Lambda)
+            CALL TOTERG(ent, virt, 1.0d0, 1.0d0)
 
             IF (ABS(ent-en).GT.1.D-6) THEN
                 WRITE (6, *)
@@ -149,6 +162,7 @@ c           --- Print Chemical Potential and Pressure
             END IF
          END IF
       END DO
+      CALL STORE(21, dr)
 
       WRITE (6, *)
      &        ' ################################################ '
@@ -163,11 +177,16 @@ c           --- Print Chemical Potential and Pressure
 
       END IF
       
+
+
       IF (runTDI.NE.0) THEN
+
+
 c     --- TDI
-      DO I = nLambda, 0, -1
-         Lambda =  DBLE(I) / DBLE(nLambda)
-         write (6,*) I
+      DO I = 0, 2*nlambda
+         Lambda =  1 - (DBLE(I) / DBLE(nLambda))
+         WRITE (6,*) I
+         IF (I .GT. nlambda) Lambda = (DBLE(I) / DBLE(nLambda)) - 1
          DO ii = 1, 2
 
 c           --- ii=1 equilibration
@@ -177,6 +196,7 @@ c           --- ii=2 production
                IF (ncycl.NE.0) WRITE (6, *) ' Start equilibration '
             ELSE
                IF (ncycl.NE.0) WRITE (6, *) ' Start production '
+               
                ncycl = prod
             END IF
 
@@ -190,7 +210,7 @@ c           ---intialize the subroutine that adjusts the maximum displacement
 
                DO imove = 1, nmoves
 c                 ---attempt to displace a particle
-                  CALL MCMOVE(en, vir, attempt, nacc, dr, iseed, Lambda)
+                  CALL MCMOVE(en, vir, attempt, nacc, dr, iseed, Lambda, 1.0d0)
                END DO
 
 c              --- sample the system every nsamp times
@@ -200,6 +220,7 @@ c              --- assumes decorellation after nsamp steps
                      CALL SAMPLE(icycl, en, vir, press, lambda)
                   END IF
 
+                  WRITE(44,*) lambda, en
 c                 --- Outuput lambda stuff
 c                 --- Outuput lambda stuff
 c                 --- Outuput lambda stuff
@@ -231,7 +252,7 @@ c           --- Figure out the justification of this algorithm
 
 
 c           ---test total energy
-               CALL TOTERG(ent, virt, Lambda)
+               CALL TOTERG(ent, virt, Lambda, 1.0d0)
                IF (ABS(ent-en).GT.1.D-6) THEN
                   WRITE (6, *)
      &                    ' ######### PROBLEMS ENERGY ################ '
@@ -246,6 +267,20 @@ c           ---test total energy
       END DO
       END IF
       CALL STORE(21, dr)
+
+
+      WRITE (6, *)
+     &        ' ################################################ '
+      WRITE (6, *)
+     &        ' ################################################ '
+      WRITE (6, *)
+     &        ' ################ LAMBDA FINISHED ############### '
+      WRITE (6, *)
+     &        ' ################################################ '
+      WRITE (6, *)
+     &        ' ################################################ '
+
+
       STOP
  
 99001 FORMAT (' Total energy initial configuration: ', f12.5, /, 
@@ -262,5 +297,7 @@ c           ---test total energy
      &        ' Average pressure          :', f12.5, /,
      &        ' Number of samples         :', i12, /,
      &        ' Excess chemical potential :', f12.5)
+99005 FORMAT ('Variable sigma run number:', i5, /,
+     &        'Sigma = ', f12.5)
       END
       

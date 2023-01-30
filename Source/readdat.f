@@ -1,6 +1,6 @@
 **==readdat.spg  processed by SPAG 4.52O  at 18:54 on 27 Mar 1996
       SUBROUTINE READDAT(Equil, Prod, Nsamp, Ndispl, Dr, Iseed, nLambda, nGhosts,
-     & nWidomCycle, runWidom, runTDI)
+     & nWidomCycle, runWidom, runTDI, sig)
 C     ---read input data and model parameters
 c
 c     ---input parameters: file: fort.15
@@ -64,7 +64,7 @@ c     ---read simulation data
       READ (15, *)
       READ (15, *) NPART, TEMP, rho
       READ (15, *)
-      READ (15, *) runWidom, runTDI
+      READ (15, *) runWidom, runTDI, sig
 c     ---initialise and test random number generator
       CALL RANTEST(Iseed)
  
@@ -83,11 +83,14 @@ c     ---read/generate configuration
       IF (ibeg.EQ.0) THEN
 c        ---generate configuration form lattice
          CALL LATTICE
+
+c     ---skip###########
       ELSE
          WRITE (6, *) ' read conf from disk '
          READ (11, *) boxf
          READ (11, *) NPART
          READ (11, *) Dr
+         WRITE (6,*) 'boxf ', boxf, ' NPART ', NPART, ' Dr ', Dr
          rhof = NPART/boxf**3
          IF (ABS(boxf-BOX).GT.1D-6) THEN
             WRITE (6, 99007) rho, rhof
@@ -100,6 +103,8 @@ c        ---generate configuration form lattice
          END DO
          REWIND (11)
       END IF
+c     ---skip###########
+
 c     ---write input data
       WRITE (6, 99001) Equil, Prod, Nsamp
       WRITE (6, 99002) Ndispl, Dr
@@ -118,7 +123,7 @@ c     ---calculate cut-off radius potential
       IF (SHIFT) THEN
 c     ---calculate energy of the shift
          ECUT = 0
-         CALL ENER(ECUT, vir, RC2)
+         CALL ENER(ECUT, vir, RC2, 1.0d0, 1.0d0, sig)
          WRITE (6, 99005) RC, ECUT
       END IF
       IF (TAILCO) THEN

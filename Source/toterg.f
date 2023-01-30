@@ -1,5 +1,5 @@
 **==toterg.spg  processed by SPAG 4.52O  at 18:54 on 27 Mar 1996
-      SUBROUTINE TOTERG(Ener, Vir, Lambda)
+      SUBROUTINE TOTERG(Ener, Vir, Lambda, sig)
 c
 c     calculates total energy
 c
@@ -14,9 +14,10 @@ c
       INCLUDE 'potential.inc'
       INCLUDE 'system.inc'
  
-      DOUBLE PRECISION xi, yi, zi, Ener, eni, CORU, viri, Vir, rho, Lambda
+      DOUBLE PRECISION xi, yi, zi, Ener, eni, CORU, viri, Vir, rho, Lambda, lambda3, lambda5, sig
       INTEGER i, jb
- 
+      lambda3 = lambda*lambda*lambda
+      lambda5 = lambda3*lambda*lambda
       Ener = 0
       Vir = 0
       DO i = 1, NPART - 1
@@ -24,7 +25,7 @@ c
          yi = Y(i)
          zi = Z(i)
          jb = i + 1
-         CALL ENERI(xi, yi, zi, i, jb, eni, viri, Lambda)
+         CALL ENERI(xi, yi, zi, i, jb, eni, viri, Lambda, lambda3, lambda5, sig)
          Ener = Ener + eni
          Vir = Vir + viri
       END DO
