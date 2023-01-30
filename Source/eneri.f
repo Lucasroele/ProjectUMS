@@ -1,5 +1,5 @@
 **==eneri.spg  processed by SPAG 4.52O  at 18:54 on 27 Mar 1996
-      SUBROUTINE ENERI(Xi, Yi, Zi, I, Jb, En, Vir, lambda, lambda3, lambda5, sigmaMod)
+      SUBROUTINE ENERI(Xi, Yi, Zi, I, Jb, En, Vir, lambda3, lambda5)
 c
 c    calculates the energy of particle I with particles j=jb,npart
 c
@@ -12,13 +12,13 @@ c             = jb calculates energy particle I with all particles j > jb
 c  En  (output) energy particle i
 c  Vir (output) virial particle i
 c
-c CALL ENERI(Xi, Yi, Zi, 1, 0, EnDummy, VirDummy, Lambda)
+
       IMPLICIT NONE
       INCLUDE 'parameter.inc'
       INCLUDE 'conf.inc'
       INCLUDE 'system.inc'
  
-      DOUBLE PRECISION Xi, Yi, Zi, En, dx, dy, dz, r2, Vir, virij, enij, lambda, sigmaMod, lambda3, lambda5
+      DOUBLE PRECISION Xi, Yi, Zi, En, dx, dy, dz, r2, Vir, virij, enij, lambda3, lambda5
       INTEGER I, j, Jb
 c
       En = 0
@@ -45,7 +45,7 @@ c
                IF (dz.LT.-HBOX) dz = dz + BOX
             END IF
             r2 = dx*dx + dy*dy + dz*dz
-            CALL ENER(enij, virij, r2, lambda3, lambda5, sigmaMod)
+            CALL ENER(enij, virij, r2, lambda3, lambda5)
 
             En = En + enij
             Vir = Vir + virij

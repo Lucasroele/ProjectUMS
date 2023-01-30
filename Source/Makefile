@@ -1,4 +1,4 @@
-COMPFLAGS     =  -O -Wall -ffixed-line-length-132 -g -fbacktrace -fcheck=all# -check_bounds  -g -trapeuv
+COMPFLAGS     =  -O -Wall -ffixed-line-length-132# -check_bounds  -g -trapeuv
 
 CFLAGS	      = $(COMPFLAGS)
 PFLAGS	      = $(COMPFLAGS)

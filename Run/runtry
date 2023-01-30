@@ -1,7 +1,7 @@
 #!/bin/zsh
 let "rhoSigmaOG = 0.7"
 let "sigma = 0.9"
-for ((sigma = 1.0; sigma <= 1.0; sigma=sigma+0.1)); do
+for ((sigma = 0.95; sigma <= 1.05; sigma=sigma+0.01)); do
    let "rho = $rhoSigmaOG * $sigma * $sigma * $sigma"
    echo " --- sigma   $sigma"
    echo " --- rhoOG   $rhoSigmaOG "
@@ -14,7 +14,7 @@ for ((sigma = 1.0; sigma <= 1.0; sigma=sigma+0.1)); do
    dr
    0.09
    ndispl   nLambda   nGhosts nWidomCycle
-   50       1000      10      10000
+   50       1000      10      100000
    npart    temp      rho
    100      2.0       ${rho}
    runWidom runTDI    sigmaMod
@@ -29,9 +29,10 @@ endofdata
    mv   fort.66             data.dat
    mv   fort.10             WidomData.dat
    #perform block analysis
-   cp    lj.prth       fort.31
-   mv     lj.prt       fort.32
-   cp   fort.32     presEn.dat
-   ../Block/block            >>& out2
+   cp   lj.prth        fort.31
+   mv   lj.prt         fort.32
+   cp   fort.32        presEn.dat
+   cat  fort.40    >>  chempotVdensity.dat
+   ../Block/block            >>& "block$sigma"
    rm fort.*
 done

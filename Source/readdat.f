@@ -1,6 +1,6 @@
 **==readdat.spg  processed by SPAG 4.52O  at 18:54 on 27 Mar 1996
       SUBROUTINE READDAT(Equil, Prod, Nsamp, Ndispl, Dr, Iseed, nLambda, nGhosts,
-     & nWidomCycle, runWidom, runTDI, sig)
+     & nWidomCycle, runWidom, runTDI)
 C     ---read input data and model parameters
 c
 c     ---input parameters: file: fort.15
@@ -67,6 +67,8 @@ c     ---read simulation data
       READ (15, *) runWidom, runTDI, sig
 c     ---initialise and test random number generator
       CALL RANTEST(Iseed)
+c     --- DOEN???
+      Dr = Dr / sig
  
       IF (NPART.GT.NPMax) THEN
          WRITE (6, *) ' ERROR: number of particles too large'
@@ -78,7 +80,7 @@ c     ---read model parameters
       READ (25, *)
       READ (25, *) TAILCO, SHIFT
       READ (25, *)
-      READ (25, *) eps, sig, MASS, RC
+      READ (25, *) eps, MASS, RC
 c     ---read/generate configuration
       IF (ibeg.EQ.0) THEN
 c        ---generate configuration form lattice
@@ -123,7 +125,7 @@ c     ---calculate cut-off radius potential
       IF (SHIFT) THEN
 c     ---calculate energy of the shift
          ECUT = 0
-         CALL ENER(ECUT, vir, RC2, 1.0d0, 1.0d0, sig)
+         CALL ENER(ECUT, vir, RC2, 1.0d0, 1.0d0)
          WRITE (6, 99005) RC, ECUT
       END IF
       IF (TAILCO) THEN

@@ -12,8 +12,8 @@ foreach rho (0.70)
   50       1000      10      10000
   npart    temp      rho
   100      2.0       ${rho}
-  runWidom runTDI    
-  1        0
+  runWidom runTDI    sigmamod
+  1        0         1
 endofdata
  cp 	lj.res          	fort.11
  cp 	lj.model          	fort.25

@@ -1,0 +1,570 @@
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+ **************** MC_NVT ***************
+  ******** test random numbers ***********
+  i,ranf()            1  0.11180420853611572     
+  i,ranf()            2  0.74166310703406746     
+  i,ranf()            3  0.46027934237707857     
+  i,ranf()            4  0.11380693953292953     
+  i,ranf()            5  0.54839950623688738     
+ Initialisation on lattice: 
+       100 particles placed on a lattice
+  Number of equilibration cycles             :      1000
+  Number of production cycles                :     10000
+  Sample frequency                           :         1
+
+  Number of att. to displ. a part. per cycle :        50
+  Maximum displacement                       :     0.090
+
+
+  Number of particles                        :       100
+  Temperature                                :     2.000
+  Density                                    :     0.679
+  Box length                                 :     5.280
+
+  Model parameters: 
+     epsilon: 1.000
+     sigma  : 0.990
+     mass   : 1.000
+ number of lambda values:       1000
+
+
+ Simulations with tail correction: 
+ Potential truncated at  Rc =:     2.640
+ Tail corrections:   energy =     -0.291 pressure     -0.395
+
+
+ Total energy initial configuration:   -498.06422
+ Total virial initial configuration:    318.30192
+  -498.06421868503003        318.30192445935626     
+  Start equilibration 
+ ======>> Done          200  out of         1000
+ Max. displ. set to :  0.135 (old :  0.090)
+ Frac. acc.: 0.80 attempts:   10000 succes:    8011
+ ======>> Done          400  out of         1000
+ Max. displ. set to :  0.202 (old :  0.135)
+ Frac. acc.: 0.75 attempts:   10000 succes:    7468
+ ======>> Done          600  out of         1000
+ Max. displ. set to :  0.267 (old :  0.202)
+ Frac. acc.: 0.66 attempts:   10000 succes:    6624
+ ======>> Done          800  out of         1000
+ Max. displ. set to :  0.302 (old :  0.267)
+ Frac. acc.: 0.56 attempts:   10000 succes:    5648
+ ======>> Done         1000  out of         1000
+ Max. displ. set to :  0.317 (old :  0.302)
+ Frac. acc.: 0.53 attempts:   10000 succes:    5261
+ Number of att. to displ. a part.  :      50000
+ success:      33012(= 66.02%)
+ Total energy end of simulation    :   -394.63201
+       running energy              :   -394.63201
+       difference                  :   0.13074E-11
+ Total virial end of simulation    :    813.61935
+       running virial              :    813.61935
+       difference                  :  -0.43201E-11
+  Start production 
+ ======>> Done         2000  out of        10000
+ Max. displ. set to :  0.319 (old :  0.317)
+ Frac. acc.: 0.50 attempts:  100000 succes:   50198
+ ======>> Done         4000  out of        10000
+ Max. displ. set to :  0.323 (old :  0.319)
+ Frac. acc.: 0.51 attempts:  100000 succes:   50684
+ ======>> Done         6000  out of        10000
+ Max. displ. set to :  0.322 (old :  0.323)
+ Frac. acc.: 0.50 attempts:  100000 succes:   49862
+ ======>> Done         8000  out of        10000
+ Max. displ. set to :  0.323 (old :  0.322)
+ Frac. acc.: 0.50 attempts:  100000 succes:   50132
+ ======>> Done        10000  out of        10000
+ Max. displ. set to :  0.322 (old :  0.323)
+ Frac. acc.: 0.50 attempts:  100000 succes:   49819
+ Number of att. to displ. a part.  :     500000
+ success:     250695(= 50.14%)
+ Total energy end of simulation    :   -410.96728
+       running energy              :   -410.96728
+       difference                  :   0.11369E-11
+ Total virial end of simulation    :    435.79168
+       running virial              :    435.79168
+       difference                  :  -0.10573E-10
+ Results Widom test particle method : 
+ Average pressure          :     0.24316
+ Number of samples         :      100000
+ Excess chemical potential :     0.41338
+  ################################################ 
+  ################################################ 
+  ################ WIDOM FINISHED ################ 
+  ################################################ 
+  ################################################ 
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+ **************** MC_NVT ***************
+  ******** test random numbers ***********
+  i,ranf()            1  0.11180420853611572     
+  i,ranf()            2  0.74166310703406746     
+  i,ranf()            3  0.46027934237707857     
+  i,ranf()            4  0.11380693953292953     
+  i,ranf()            5  0.54839950623688738     
+ Initialisation on lattice: 
+       100 particles placed on a lattice
+  Number of equilibration cycles             :      1000
+  Number of production cycles                :     10000
+  Sample frequency                           :         1
+
+  Number of att. to displ. a part. per cycle :        50
+  Maximum displacement                       :     0.090
+
+
+  Number of particles                        :       100
+  Temperature                                :     2.000
+  Density                                    :     0.679
+  Box length                                 :     5.280
+
+  Model parameters: 
+     epsilon: 1.000
+     sigma  : 0.990
+     mass   : 1.000
+ number of lambda values:       1000
+
+
+ Simulations with tail correction: 
+ Potential truncated at  Rc =:     2.640
+ Tail corrections:   energy =     -0.291 pressure     -0.395
+
+
+ Total energy initial configuration:   -498.06422
+ Total virial initial configuration:    318.30192
+  -498.06421868503003        318.30192445935626     
+  Start equilibration 
+ ======>> Done          200  out of         1000
+ Max. displ. set to :  0.135 (old :  0.090)
+ Frac. acc.: 0.80 attempts:   10000 succes:    8011
+ ======>> Done          400  out of         1000
+ Max. displ. set to :  0.202 (old :  0.135)
+ Frac. acc.: 0.75 attempts:   10000 succes:    7468
+ ======>> Done          600  out of         1000
+ Max. displ. set to :  0.267 (old :  0.202)
+ Frac. acc.: 0.66 attempts:   10000 succes:    6624
+ ======>> Done          800  out of         1000
+ Max. displ. set to :  0.302 (old :  0.267)
+ Frac. acc.: 0.56 attempts:   10000 succes:    5648
+ ======>> Done         1000  out of         1000
+ Max. displ. set to :  0.317 (old :  0.302)
+ Frac. acc.: 0.53 attempts:   10000 succes:    5261
+ Number of att. to displ. a part.  :      50000
+ success:      33012(= 66.02%)
+ Total energy end of simulation    :   -394.63201
+       running energy              :   -394.63201
+       difference                  :   0.13074E-11
+ Total virial end of simulation    :    813.61935
+       running virial              :    813.61935
+       difference                  :  -0.43201E-11
+  Start production 
+ ======>> Done         2000  out of        10000
+ Max. displ. set to :  0.319 (old :  0.317)
+ Frac. acc.: 0.50 attempts:  100000 succes:   50198
+ ======>> Done         4000  out of        10000
+ Max. displ. set to :  0.323 (old :  0.319)
+ Frac. acc.: 0.51 attempts:  100000 succes:   50684
+ ======>> Done         6000  out of        10000
+ Max. displ. set to :  0.322 (old :  0.323)
+ Frac. acc.: 0.50 attempts:  100000 succes:   49862
+ ======>> Done         8000  out of        10000
+ Max. displ. set to :  0.323 (old :  0.322)
+ Frac. acc.: 0.50 attempts:  100000 succes:   50132
+ ======>> Done        10000  out of        10000
+ Max. displ. set to :  0.322 (old :  0.323)
+ Frac. acc.: 0.50 attempts:  100000 succes:   49819
+ Number of att. to displ. a part.  :     500000
+ success:     250695(= 50.14%)
+ Total energy end of simulation    :   -410.96728
+       running energy              :   -410.96728
+       difference                  :   0.11369E-11
+ Total virial end of simulation    :    435.79168
+       running virial              :    435.79168
+       difference                  :  -0.10573E-10
+ Results Widom test particle method : 
+ Average pressure          :     0.24316
+ Number of samples         :      100000
+ Excess chemical potential :     0.41338
+  ################################################ 
+  ################################################ 
+  ################ WIDOM FINISHED ################ 
+  ################################################ 
+  ################################################ 
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+ **************** MC_NVT ***************
+  ******** test random numbers ***********
+  i,ranf()            1  0.11180420853611572     
+  i,ranf()            2  0.74166310703406746     
+  i,ranf()            3  0.46027934237707857     
+  i,ranf()            4  0.11380693953292953     
+  i,ranf()            5  0.54839950623688738     
+ Initialisation on lattice: 
+       100 particles placed on a lattice
+  Number of equilibration cycles             :      1000
+  Number of production cycles                :     10000
+  Sample frequency                           :         1
+
+  Number of att. to displ. a part. per cycle :        50
+  Maximum displacement                       :     0.090
+
+
+  Number of particles                        :       100
+  Temperature                                :     2.000
+  Density                                    :     0.679
+  Box length                                 :     5.280
+
+  Model parameters: 
+     epsilon: 1.000
+     sigma  : 0.990
+     mass   : 1.000
+ number of lambda values:       1000
+
+
+ Simulations with tail correction: 
+ Potential truncated at  Rc =:     2.640
+ Tail corrections:   energy =     -0.291 pressure     -0.395
+
+
+ Total energy initial configuration:   -498.06422
+ Total virial initial configuration:    318.30192
+  -498.06421868503003        318.30192445935626     
+  Start equilibration 
+ ======>> Done          200  out of         1000
+ Max. displ. set to :  0.135 (old :  0.090)
+ Frac. acc.: 0.80 attempts:   10000 succes:    8011
+ ======>> Done          400  out of         1000
+ Max. displ. set to :  0.202 (old :  0.135)
+ Frac. acc.: 0.75 attempts:   10000 succes:    7468
+ ======>> Done          600  out of         1000
+ Max. displ. set to :  0.267 (old :  0.202)
+ Frac. acc.: 0.66 attempts:   10000 succes:    6624
+ ======>> Done          800  out of         1000
+ Max. displ. set to :  0.302 (old :  0.267)
+ Frac. acc.: 0.56 attempts:   10000 succes:    5648
+ ======>> Done         1000  out of         1000
+ Max. displ. set to :  0.317 (old :  0.302)
+ Frac. acc.: 0.53 attempts:   10000 succes:    5261
+ Number of att. to displ. a part.  :      50000
+ success:      33012(= 66.02%)
+ Total energy end of simulation    :   -394.63201
+       running energy              :   -394.63201
+       difference                  :   0.13074E-11
+ Total virial end of simulation    :    813.61935
+       running virial              :    813.61935
+       difference                  :  -0.43201E-11
+  Start production 
+ ======>> Done         2000  out of        10000
+ Max. displ. set to :  0.319 (old :  0.317)
+ Frac. acc.: 0.50 attempts:  100000 succes:   50198
+ ======>> Done         4000  out of        10000
+ Max. displ. set to :  0.323 (old :  0.319)
+ Frac. acc.: 0.51 attempts:  100000 succes:   50684
+ ======>> Done         6000  out of        10000
+ Max. displ. set to :  0.322 (old :  0.323)
+ Frac. acc.: 0.50 attempts:  100000 succes:   49862
+ ======>> Done         8000  out of        10000
+ Max. displ. set to :  0.323 (old :  0.322)
+ Frac. acc.: 0.50 attempts:  100000 succes:   50132
+ ======>> Done        10000  out of        10000
+ Max. displ. set to :  0.322 (old :  0.323)
+ Frac. acc.: 0.50 attempts:  100000 succes:   49819
+ Number of att. to displ. a part.  :     500000
+ success:     250695(= 50.14%)
+ Total energy end of simulation    :   -410.96728
+       running energy              :   -410.96728
+       difference                  :   0.11369E-11
+ Total virial end of simulation    :    435.79168
+       running virial              :    435.79168
+       difference                  :  -0.10573E-10
+ Results Widom test particle method : 
+ Average pressure          :     0.24316
+ Number of samples         :      100000
+ Excess chemical potential :     0.41338
+  ################################################ 
+  ################################################ 
+  ################ WIDOM FINISHED ################ 
+  ################################################ 
+  ################################################ 
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+ **************** MC_NVT ***************
+  ******** test random numbers ***********
+  i,ranf()            1  0.11180420853611572     
+  i,ranf()            2  0.74166310703406746     
+  i,ranf()            3  0.46027934237707857     
+  i,ranf()            4  0.11380693953292953     
+  i,ranf()            5  0.54839950623688738     
+ Initialisation on lattice: 
+       100 particles placed on a lattice
+  Number of equilibration cycles             :      1000
+  Number of production cycles                :     10000
+  Sample frequency                           :         1
+
+  Number of att. to displ. a part. per cycle :        50
+  Maximum displacement                       :     0.090
+
+
+  Number of particles                        :       100
+  Temperature                                :     2.000
+  Density                                    :     0.679
+  Box length                                 :     5.280
+
+  Model parameters: 
+     epsilon: 1.000
+     sigma  : 0.990
+     mass   : 1.000
+ number of lambda values:       1000
+
+
+ Simulations with tail correction: 
+ Potential truncated at  Rc =:     2.640
+ Tail corrections:   energy =     -0.291 pressure     -0.395
+
+
+ Total energy initial configuration:   -498.06422
+ Total virial initial configuration:    318.30192
+  -498.06421868503003        318.30192445935626     
+  Start equilibration 
+ ======>> Done          200  out of         1000
+ Max. displ. set to :  0.135 (old :  0.090)
+ Frac. acc.: 0.80 attempts:   10000 succes:    8011
+ ======>> Done          400  out of         1000
+ Max. displ. set to :  0.202 (old :  0.135)
+ Frac. acc.: 0.75 attempts:   10000 succes:    7468
+ ======>> Done          600  out of         1000
+ Max. displ. set to :  0.267 (old :  0.202)
+ Frac. acc.: 0.66 attempts:   10000 succes:    6624
+ ======>> Done          800  out of         1000
+ Max. displ. set to :  0.302 (old :  0.267)
+ Frac. acc.: 0.56 attempts:   10000 succes:    5648
+ ======>> Done         1000  out of         1000
+ Max. displ. set to :  0.317 (old :  0.302)
+ Frac. acc.: 0.53 attempts:   10000 succes:    5261
+ Number of att. to displ. a part.  :      50000
+ success:      33012(= 66.02%)
+ Total energy end of simulation    :   -394.63201
+       running energy              :   -394.63201
+       difference                  :   0.13074E-11
+ Total virial end of simulation    :    813.61935
+       running virial              :    813.61935
+       difference                  :  -0.43201E-11
+  Start production 
+ ======>> Done         2000  out of        10000
+ Max. displ. set to :  0.319 (old :  0.317)
+ Frac. acc.: 0.50 attempts:  100000 succes:   50198
+ ======>> Done         4000  out of        10000
+ Max. displ. set to :  0.323 (old :  0.319)
+ Frac. acc.: 0.51 attempts:  100000 succes:   50684
+ ======>> Done         6000  out of        10000
+ Max. displ. set to :  0.322 (old :  0.323)
+ Frac. acc.: 0.50 attempts:  100000 succes:   49862
+ ======>> Done         8000  out of        10000
+ Max. displ. set to :  0.323 (old :  0.322)
+ Frac. acc.: 0.50 attempts:  100000 succes:   50132
+ ======>> Done        10000  out of        10000
+ Max. displ. set to :  0.322 (old :  0.323)
+ Frac. acc.: 0.50 attempts:  100000 succes:   49819
+ Number of att. to displ. a part.  :     500000
+ success:     250695(= 50.14%)
+ Total energy end of simulation    :   -410.96728
+       running energy              :   -410.96728
+       difference                  :   0.11369E-11
+ Total virial end of simulation    :    435.79168
+       running virial              :    435.79168
+       difference                  :  -0.10573E-10
+ Results Widom test particle method : 
+ Average pressure          :     0.24316
+ Number of samples         :      100000
+ Excess chemical potential :     0.41338
+  ################################################ 
+  ################################################ 
+  ################ WIDOM FINISHED ################ 
+  ################################################ 
+  ################################################ 
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+ **************** MC_NVT ***************
+  ******** test random numbers ***********
+  i,ranf()            1  0.11180420853611572     
+  i,ranf()            2  0.74166310703406746     
+  i,ranf()            3  0.46027934237707857     
+  i,ranf()            4  0.11380693953292953     
+  i,ranf()            5  0.54839950623688738     
+ Initialisation on lattice: 
+       100 particles placed on a lattice
+  Number of equilibration cycles             :      1000
+  Number of production cycles                :     10000
+  Sample frequency                           :         1
+
+  Number of att. to displ. a part. per cycle :        50
+  Maximum displacement                       :     0.090
+
+
+  Number of particles                        :       100
+  Temperature                                :     2.000
+  Density                                    :     0.679
+  Box length                                 :     5.280
+
+  Model parameters: 
+     epsilon: 1.000
+     sigma  : 0.990
+     mass   : 1.000
+ number of lambda values:       1000
+
+
+ Simulations with tail correction: 
+ Potential truncated at  Rc =:     2.640
+ Tail corrections:   energy =     -0.291 pressure     -0.395
+
+
+ Total energy initial configuration:   -498.06422
+ Total virial initial configuration:    318.30192
+  -498.06421868503003        318.30192445935626     
+  Start equilibration 
+ ======>> Done          200  out of         1000
+ Max. displ. set to :  0.135 (old :  0.090)
+ Frac. acc.: 0.80 attempts:   10000 succes:    8011
+ ======>> Done          400  out of         1000
+ Max. displ. set to :  0.202 (old :  0.135)
+ Frac. acc.: 0.75 attempts:   10000 succes:    7468
+ ======>> Done          600  out of         1000
+ Max. displ. set to :  0.267 (old :  0.202)
+ Frac. acc.: 0.66 attempts:   10000 succes:    6624
+ ======>> Done          800  out of         1000
+ Max. displ. set to :  0.302 (old :  0.267)
+ Frac. acc.: 0.56 attempts:   10000 succes:    5648
+ ======>> Done         1000  out of         1000
+ Max. displ. set to :  0.317 (old :  0.302)
+ Frac. acc.: 0.53 attempts:   10000 succes:    5261
+ Number of att. to displ. a part.  :      50000
+ success:      33012(= 66.02%)
+ Total energy end of simulation    :   -394.63201
+       running energy              :   -394.63201
+       difference                  :   0.13074E-11
+ Total virial end of simulation    :    813.61935
+       running virial              :    813.61935
+       difference                  :  -0.43201E-11
+  Start production 
+ ======>> Done         2000  out of        10000
+ Max. displ. set to :  0.319 (old :  0.317)
+ Frac. acc.: 0.50 attempts:  100000 succes:   50198
+ ======>> Done         4000  out of        10000
+ Max. displ. set to :  0.323 (old :  0.319)
+ Frac. acc.: 0.51 attempts:  100000 succes:   50684
+ ======>> Done         6000  out of        10000
+ Max. displ. set to :  0.322 (old :  0.323)
+ Frac. acc.: 0.50 attempts:  100000 succes:   49862
+ ======>> Done         8000  out of        10000
+ Max. displ. set to :  0.323 (old :  0.322)
+ Frac. acc.: 0.50 attempts:  100000 succes:   50132
+ ======>> Done        10000  out of        10000
+ Max. displ. set to :  0.322 (old :  0.323)
+ Frac. acc.: 0.50 attempts:  100000 succes:   49819
+ Number of att. to displ. a part.  :     500000
+ success:     250695(= 50.14%)
+ Total energy end of simulation    :   -410.96728
+       running energy              :   -410.96728
+       difference                  :   0.11369E-11
+ Total virial end of simulation    :    435.79168
+       running virial              :    435.79168
+       difference                  :  -0.10573E-10
+ Results Widom test particle method : 
+ Average pressure          :     0.24316
+ Number of samples         :      100000
+ Excess chemical potential :     0.41338
+  ################################################ 
+  ################################################ 
+  ################ WIDOM FINISHED ################ 
+  ################################################ 
+  ################################################ 
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+ **************** MC_NVT ***************
+  ******** test random numbers ***********
+  i,ranf()            1  0.11180420853611572     
+  i,ranf()            2  0.74166310703406746     
+  i,ranf()            3  0.46027934237707857     
+  i,ranf()            4  0.11380693953292953     
+  i,ranf()            5  0.54839950623688738     
+ Initialisation on lattice: 
+       100 particles placed on a lattice
+  Number of equilibration cycles             :      1000
+  Number of production cycles                :     10000
+  Sample frequency                           :         1
+
+  Number of att. to displ. a part. per cycle :        50
+  Maximum displacement                       :     0.090
+
+
+  Number of particles                        :       100
+  Temperature                                :     2.000
+  Density                                    :     0.679
+  Box length                                 :     5.280
+
+  Model parameters: 
+     epsilon: 1.000
+     sigma  : 0.990
+     mass   : 1.000
+ number of lambda values:       1000
+
+
+ Simulations with tail correction: 
+ Potential truncated at  Rc =:     2.640
+ Tail corrections:   energy =     -0.291 pressure     -0.395
+
+
+ Total energy initial configuration:   -498.06422
+ Total virial initial configuration:    318.30192
+  -498.06421868503003        318.30192445935626     
+  Start equilibration 
+ ======>> Done          200  out of         1000
+ Max. displ. set to :  0.135 (old :  0.090)
+ Frac. acc.: 0.80 attempts:   10000 succes:    8011
+ ======>> Done          400  out of         1000
+ Max. displ. set to :  0.202 (old :  0.135)
+ Frac. acc.: 0.75 attempts:   10000 succes:    7468
+ ======>> Done          600  out of         1000
+ Max. displ. set to :  0.267 (old :  0.202)
+ Frac. acc.: 0.66 attempts:   10000 succes:    6624
+ ======>> Done          800  out of         1000
+ Max. displ. set to :  0.302 (old :  0.267)
+ Frac. acc.: 0.56 attempts:   10000 succes:    5648
+ ======>> Done         1000  out of         1000
+ Max. displ. set to :  0.317 (old :  0.302)
+ Frac. acc.: 0.53 attempts:   10000 succes:    5261
+ Number of att. to displ. a part.  :      50000
+ success:      33012(= 66.02%)
+ Total energy end of simulation    :   -394.63201
+       running energy              :   -394.63201
+       difference                  :   0.13074E-11
+ Total virial end of simulation    :    813.61935
+       running virial              :    813.61935
+       difference                  :  -0.43201E-11
+  Start production 
+ ======>> Done        20000  out of       100000
+ Max. displ. set to :  0.322 (old :  0.317)
+ Frac. acc.: 0.51 attempts: 1000000 succes:  506698
+ ======>> Done        40000  out of       100000
+ Max. displ. set to :  0.323 (old :  0.322)
+ Frac. acc.: 0.50 attempts: 1000000 succes:  501383
+ ======>> Done        60000  out of       100000
+ Max. displ. set to :  0.323 (old :  0.323)
+ Frac. acc.: 0.50 attempts: 1000000 succes:  499991
+ ======>> Done        80000  out of       100000
+ Max. displ. set to :  0.322 (old :  0.323)
+ Frac. acc.: 0.50 attempts: 1000000 succes:  499520
+ ======>> Done       100000  out of       100000
+ Max. displ. set to :  0.323 (old :  0.322)
+ Frac. acc.: 0.50 attempts: 1000000 succes:  501187
+ Number of att. to displ. a part.  :    5000000
+ success:    2508779(= 50.18%)
+ Total energy end of simulation    :   -425.27166
+       running energy              :   -425.27166
+       difference                  :  -0.32060E-10
+ Total virial end of simulation    :    315.74474
+       running virial              :    315.74474
+       difference                  :  -0.12807E-09
+ Results Widom test particle method : 
+ Average pressure          :     0.24556
+ Number of samples         :     1000000
+ Excess chemical potential :     0.49976
+  ################################################ 
+  ################################################ 
+  ################ WIDOM FINISHED ################ 
+  ################################################ 
+  ################################################ 

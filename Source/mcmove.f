@@ -1,5 +1,5 @@
 **==mcmove.spg  processed by SPAG 4.52O  at 18:54 on 27 Mar 1996
-      SUBROUTINE MCMOVE(En, Vir, Attempt, Nacc, Dr, Iseed, Lambda, sig)
+      SUBROUTINE MCMOVE(En, Vir, Attempt, Nacc, Dr, Iseed, Lambda)
 c
 c     attempts to displace a randomly selected particle
 c
@@ -19,21 +19,23 @@ c
       INCLUDE 'conf.inc'
       INCLUDE 'system.inc'
       DOUBLE PRECISION enn, eno, En, RANF, xn, yn, zn, viro, virn, Vir, 
-     &                 Dr, Lambda, sig
+     &                 Dr, lambda, Lambda3, lambda5
       INTEGER o, Attempt, Nacc, jb, Iseed
- 
+   
+      lambda3 = lambda*lambda*lambda
+      lambda5 = lambda3*lambda*lambda
       Attempt = Attempt + 1
       jb = 1
 c     ---select a particle at random
       o = INT(NPART*RANF(Iseed)) + 1
 c     ---calculate energy old configuration
-      CALL ENERI(X(o), Y(o), Z(o), o, jb, eno, viro, Lambda, sig)
+      CALL ENERI(X(o), Y(o), Z(o), o, jb, eno, viro, Lambda3, Lambda5)
 c     ---give particle a random displacement
       xn = X(o) + (RANF(Iseed)-0.5D0)*Dr
       yn = Y(o) + (RANF(Iseed)-0.5D0)*Dr
       zn = Z(o) + (RANF(Iseed)-0.5D0)*Dr
 c     ---calculate energy new configuration:
-      CALL ENERI(xn, yn, zn, o, jb, enn, virn, Lambda, sig)
+      CALL ENERI(xn, yn, zn, o, jb, enn, virn, Lambda3, lambda5)
 c     ---acceptance test
       IF (RANF(Iseed).LT.EXP(-BETA*(enn-eno))) THEN
 c        --accepted
