@@ -1,4 +1,4 @@
-COMPFLAGS     =  -O 
+COMPFLAGS     =  -O -Wall -ffixed-line-length-132
 
 CFLAGS	      = $(COMPFLAGS)
 PFLAGS	      = $(COMPFLAGS)

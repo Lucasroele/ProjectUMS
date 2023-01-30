@@ -1,3 +1,4 @@
- Heat Capacity                      :   0.00000000    
- Average Pressure                  :    3.0548146009436037     
- Chemical Potential                :  -0.71334988787746445     
+ Results Widom test particle method : 
+ Average pressure          :     0.17371
+ Number of samples         :     1000000
+ Excess chemical potential :    -0.77976

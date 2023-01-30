@@ -1,0 +1,95 @@
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+ **************** MC_NVT ***************
+  ******** test random numbers ***********
+  i,ranf()            1  0.11180420853611572     
+  i,ranf()            2  0.74166310703406746     
+  i,ranf()            3  0.46027934237707857     
+  i,ranf()            4  0.11380693953292953     
+  i,ranf()            5  0.54839950623688738     
+ Initialisation on lattice: 
+       100 particles placed on a lattice
+  Number of equilibration cycles             :      1000
+  Number of production cycles                :     10000
+  Sample frequency                           :         1
+
+  Number of att. to displ. a part. per cycle :        50
+  Maximum displacement                       :     0.090
+
+
+  Number of particles                        :       100
+  Temperature                                :     2.000
+  Density                                    :     0.639
+  Box length                                 :     5.389
+
+  Model parameters: 
+     epsilon: 1.000
+     sigma  : 0.970
+     mass   : 1.000
+ number of lambda values:       1000
+
+
+ Simulations with tail correction: 
+ Potential truncated at  Rc =:     2.695
+ Tail corrections:   energy =     -0.228 pressure     -0.291
+
+
+ Total energy initial configuration:   -478.64289
+ Total virial initial configuration:   -816.01685
+  -478.64288749155190       -816.01685161158002     
+  Start equilibration 
+ ======>> Done          200  out of         1000
+ Max. displ. set to :  0.135 (old :  0.090)
+ Frac. acc.: 0.83 attempts:   10000 succes:    8347
+ ======>> Done          400  out of         1000
+ Max. displ. set to :  0.203 (old :  0.135)
+ Frac. acc.: 0.78 attempts:   10000 succes:    7751
+ ======>> Done          600  out of         1000
+ Max. displ. set to :  0.274 (old :  0.203)
+ Frac. acc.: 0.68 attempts:   10000 succes:    6770
+ ======>> Done          800  out of         1000
+ Max. displ. set to :  0.331 (old :  0.274)
+ Frac. acc.: 0.60 attempts:   10000 succes:    6043
+ ======>> Done         1000  out of         1000
+ Max. displ. set to :  0.351 (old :  0.331)
+ Frac. acc.: 0.53 attempts:   10000 succes:    5303
+ Number of att. to displ. a part.  :      50000
+ success:      34214(= 68.43%)
+ Total energy end of simulation    :   -360.98178
+       running energy              :   -360.98178
+       difference                  :  -0.24443E-11
+ Total virial end of simulation    :    287.94580
+       running virial              :    287.94580
+       difference                  :   0.44906E-11
+  Start production 
+ ======>> Done        20000  out of       100000
+ Max. displ. set to :  0.368 (old :  0.351)
+ Frac. acc.: 0.52 attempts: 1000000 succes:  524098
+ ======>> Done        40000  out of       100000
+ Max. displ. set to :  0.374 (old :  0.368)
+ Frac. acc.: 0.51 attempts: 1000000 succes:  507512
+ ======>> Done        60000  out of       100000
+ Max. displ. set to :  0.376 (old :  0.374)
+ Frac. acc.: 0.50 attempts: 1000000 succes:  503160
+ ======>> Done        80000  out of       100000
+ Max. displ. set to :  0.375 (old :  0.376)
+ Frac. acc.: 0.50 attempts: 1000000 succes:  498498
+ ======>> Done       100000  out of       100000
+ Max. displ. set to :  0.375 (old :  0.375)
+ Frac. acc.: 0.50 attempts: 1000000 succes:  500084
+ Number of att. to displ. a part.  :    5000000
+ success:    2533352(= 50.67%)
+ Total energy end of simulation    :   -385.75067
+       running energy              :   -385.75067
+       difference                  :  -0.28990E-11
+ Total virial end of simulation    :     74.49235
+       running virial              :     74.49235
+       difference                  :   0.56559E-11
+ Results Widom test particle method : 
+ Average pressure          :     0.17371
+ Number of samples         :     1000000
+ Excess chemical potential :    -0.77976
+  ################################################ 
+  ################################################ 
+  ################ WIDOM FINISHED ################ 
+  ################################################ 
+  ################################################ 

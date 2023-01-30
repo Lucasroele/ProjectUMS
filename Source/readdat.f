@@ -1,24 +1,27 @@
 **==readdat.spg  processed by SPAG 4.52O  at 18:54 on 27 Mar 1996
-      SUBROUTINE READDAT(Equil, Prod, Nsamp, Ndispl, Dr, Iseed, nLambda, nWidom,
-     & nWidomCycle)
+      SUBROUTINE READDAT(Equil, Prod, Nsamp, Ndispl, Dr, Iseed, nLambda, nGhosts,
+     & nWidomCycle, runWidom, runTDI)
 C     ---read input data and model parameters
 c
 c     ---input parameters: file: fort.15
-c    ibeg  =  0 : initialize from a lattice
-c             1 : read configuration from disk
-c    Equil      : number of Monte Carlo cycles during equilibration
-c    Prod       : number of Monte Carlo cycles during production
-c    Nsamp      : number of Monte Carlo cycles between two sampling periods
-c    Iseed      : seed random number generator
-c    Dr         : maximum displacement
-c    Ndispl     : number of attemps to displace a particle per MC cycle
-c    NPART      : total numbero fo particles
-c    TEMP       : temperature
-c    rho        : density
-c    nLambda    : number of distinct lambdas to simulate at
-c    nWidomCycle: number of cycles that are run for the widom algorithm
-c    nWidom     : number of particle insertion attempts
-c
+c    ibeg  =  0  : initialize from a lattice
+c             1  : read configuration from disk
+c    Equil       : number of Monte Carlo cycles during equilibration
+c    Prod        : number of Monte Carlo cycles during production
+c    Nsamp       : number of Monte Carlo cycles between two sampling periods
+c    Iseed       : seed random number generator
+c    Dr          : maximum displacement
+c    Ndispl      : number of attemps to displace a particle per MC cycle
+c    NPART       : total numbero fo particles
+c    TEMP        : temperature
+c    rho         : density
+c    nLambda     : number of distinct lambdas to simulate at
+c    nWidomCycle : number of Monte Carlo cycles during Widom production
+c    nGhosts     : number of particle insertion attempts
+c    runWidom    : 0 dont run Widom
+c                : 1 run Widom
+c    runTDI      : 0 dont run TDI cycle
+c                : 1 run TDI
 c
 c     ---input parameters: file: fort.25
 c    TAILCO = .true. : tail corrections are applied
@@ -46,8 +49,8 @@ c    X(NPART),Y(NPART),Z(NPART): position particle last particle
       INCLUDE 'system.inc'
       INCLUDE 'potential.inc'
       INCLUDE 'conf.inc'
-      INTEGER ibeg, Equil, Prod, i, Ndispl, Nsamp, Iseed, nLambda, nWidom,
-     &       nWidomCycle
+      INTEGER ibeg, Equil, Prod, i, Ndispl, Nsamp, Iseed, nLambda, nGhosts,
+     &       nWidomCycle, runWidom, runTDI
       DOUBLE PRECISION eps, sig, CORU, CORP, vir, boxf, rhof, rho, Dr
      
  
@@ -57,11 +60,15 @@ c     ---read simulation data
       READ (15, *)
       READ (15, *) Dr
       READ (15, *)
-      READ (15, *) Ndispl, nLambda, nWidom, nWidomCycle
+      READ (15, *) Ndispl, nLambda, nGhosts, nWidomCycle
       READ (15, *)
       READ (15, *) NPART, TEMP, rho
+      READ (15, *)
+      READ (15, *) runWidom, runTDI, sig
 c     ---initialise and test random number generator
       CALL RANTEST(Iseed)
+c     --- DOEN???
+      Dr = Dr / sig
  
       IF (NPART.GT.NPMax) THEN
          WRITE (6, *) ' ERROR: number of particles too large'
@@ -73,16 +80,19 @@ c     ---read model parameters
       READ (25, *)
       READ (25, *) TAILCO, SHIFT
       READ (25, *)
-      READ (25, *) eps, sig, MASS, RC
+      READ (25, *) eps, MASS, RC
 c     ---read/generate configuration
       IF (ibeg.EQ.0) THEN
 c        ---generate configuration form lattice
          CALL LATTICE
+
+c     ---skip###########
       ELSE
          WRITE (6, *) ' read conf from disk '
          READ (11, *) boxf
          READ (11, *) NPART
          READ (11, *) Dr
+         WRITE (6,*) 'boxf ', boxf, ' NPART ', NPART, ' Dr ', Dr
          rhof = NPART/boxf**3
          IF (ABS(boxf-BOX).GT.1D-6) THEN
             WRITE (6, 99007) rho, rhof
@@ -95,6 +105,8 @@ c        ---generate configuration form lattice
          END DO
          REWIND (11)
       END IF
+c     ---skip###########
+
 c     ---write input data
       WRITE (6, 99001) Equil, Prod, Nsamp
       WRITE (6, 99002) Ndispl, Dr
@@ -113,7 +125,7 @@ c     ---calculate cut-off radius potential
       IF (SHIFT) THEN
 c     ---calculate energy of the shift
          ECUT = 0
-         CALL ENER(ECUT, vir, RC2)
+         CALL ENER(ECUT, vir, RC2, 1.0d0, 1.0d0)
          WRITE (6, 99005) RC, ECUT
       END IF
       IF (TAILCO) THEN

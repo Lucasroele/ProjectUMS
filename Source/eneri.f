@@ -1,5 +1,5 @@
 **==eneri.spg  processed by SPAG 4.52O  at 18:54 on 27 Mar 1996
-      SUBROUTINE ENERI(Xi, Yi, Zi, I, Jb, En, Vir, lambda)
+      SUBROUTINE ENERI(Xi, Yi, Zi, I, Jb, En, Vir, lambda3, lambda5)
 c
 c    calculates the energy of particle I with particles j=jb,npart
 c
@@ -7,25 +7,26 @@ c  Xi (input) x coordinate particle I
 c  Yi (input) y coordinate particle I
 c  Zi (input) z coordinate particle I
 c  I  (input) particle number
-c  Jb (input) =  0 calculates energy of virtual particle with all particles
+c  Jb (input) =  1 calculates energy of virtual particle with all particles
 c             = jb calculates energy particle I with all particles j > jb
 c  En  (output) energy particle i
 c  Vir (output) virial particle i
 c
-c CALL ENERI(Xi, Yi, Zi, 1, 0, EnDummy, VirDummy, Lambda)
+
       IMPLICIT NONE
       INCLUDE 'parameter.inc'
       INCLUDE 'conf.inc'
       INCLUDE 'system.inc'
  
-      DOUBLE PRECISION Xi, Yi, Zi, En, dx, dy, dz, r2, Vir, virij, enij, lambda
+      DOUBLE PRECISION Xi, Yi, Zi, En, dx, dy, dz, r2, Vir, virij, enij, lambda3, lambda5
       INTEGER I, j, Jb
 c
       En = 0
       Vir = 0
+
       DO j = Jb, NPART
          IF (j.NE.I) THEN
-            dx = Xi - x(j)
+            dx = Xi - X(j)
             dy = Yi - Y(j)
             dz = Zi - Z(j)
             IF (dx.GT.HBOX) THEN
@@ -44,7 +45,7 @@ c
                IF (dz.LT.-HBOX) dz = dz + BOX
             END IF
             r2 = dx*dx + dy*dy + dz*dz
-            CALL ENER(enij, virij, r2, lambda)
+            CALL ENER(enij, virij, r2, lambda3, lambda5)
 
             En = En + enij
             Vir = Vir + virij
