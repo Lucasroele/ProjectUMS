@@ -236,6 +236,7 @@ c           --- Figure out the justification of this algorithm
 
 c           ---test total energy
                CALL TOTERG(ent, virt, Lambda)
+               IF (II .EQ. 2) WRITE(44,*) lambda, ent - en             
                IF (ABS(ent-en).GT.1.D-6) THEN
                   WRITE (6, *)
      &                    ' ######### PROBLEMS ENERGY ################ '
