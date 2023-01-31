@@ -43,12 +43,12 @@ c     --- initializing system Widom
       EnSum = 0.0d0
       EnSquaredSum = 0.0d0
       ChemicalPotentialSum = 0.0d0
-      
-c     ---total energy of the system
       Lambda = 1
 
+c     ---total energy of the system
       CALL TOTERG(en, vir, Lambda)
       WRITE (6, 99001) en, vir
+
 c     ---start MC-cycle
       WRITE (6, *) en, vir
 
@@ -165,16 +165,14 @@ c           --- Print Chemical Potential and Pressure
       END IF
       
 
-
       IF (runTDI.NE.0) THEN
-
-
 c     --- TDI
-      DO I = nLambda, 0, -1
-         Lambda =  DBLE(I) / DBLE(nLambda)
-         write (6,*) I
-         DO ii = 1, 2
+      DO I = 0, 2*nlambda   
+         Lambda =  1 - (DBLE(I) / DBLE(nLambda))
+         WRITE (6,*) I 
+         IF (I .GT. nlambda) Lambda = (DBLE(I) / DBLE(nLambda)) -1  
 
+            DO ii = 1, 2
 c           --- ii=1 equilibration
 c           --- ii=2 production
             IF (ii.EQ.1) THEN
@@ -182,7 +180,6 @@ c           --- ii=2 production
                IF (ncycl.NE.0) WRITE (6, *) ' Start equilibration '
             ELSE
                IF (ncycl.NE.0) WRITE (6, *) ' Start production '
-               
                ncycl = prod
             END IF
 
@@ -205,14 +202,6 @@ c              --- assumes decorellation after nsamp steps
                   IF (MOD(icycl,nsamp).EQ.0) Then
                      CALL SAMPLE(icycl, en, vir, press, lambda)
                   END IF
-
-                  WRITE(44,*) lambda, en
-c                 --- Outuput lambda stuff
-c                 --- Outuput lambda stuff
-c                 --- Outuput lambda stuff
-c                 --- Outuput lambda stuff
-c                 --- Outuput lambda stuff
-
                END IF
 
 c              --- Runs every 1/5th of ncycl (prod and equil)
@@ -239,6 +228,7 @@ c           --- Figure out the justification of this algorithm
 
 c           ---test total energy
                CALL TOTERG(ent, virt, Lambda)
+               IF (II .EQ. 2) WRITE(44,*) lambda, ent - en             
                IF (ABS(ent-en).GT.1.D-6) THEN
                   WRITE (6, *)
      &                    ' ######### PROBLEMS ENERGY ################ '
