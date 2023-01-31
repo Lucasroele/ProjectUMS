@@ -202,14 +202,6 @@ c              --- assumes decorellation after nsamp steps
                   IF (MOD(icycl,nsamp).EQ.0) Then
                      CALL SAMPLE(icycl, en, vir, press, lambda)
                   END IF
-
-                  WRITE(44,*) lambda, en
-c                 --- Outuput lambda stuff
-c                 --- Outuput lambda stuff
-c                 --- Outuput lambda stuff
-c                 --- Outuput lambda stuff
-c                 --- Outuput lambda stuff
-
                END IF
 
 c              --- Runs every 1/5th of ncycl (prod and equil)
