@@ -33,7 +33,7 @@ c
             END DO
          END DO
       END DO
-      WRITE (6, 99001) itel
+      WRITE (10, 99001) itel
       RETURN
 99001 FORMAT (' Initialisation on lattice: ', /, i10, 
      &        ' particles placed on a lattice')

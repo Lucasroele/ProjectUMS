@@ -71,7 +71,7 @@ c     --- DOEN???
       Dr = Dr / sig
  
       IF (NPART.GT.NPMax) THEN
-         WRITE (6, *) ' ERROR: number of particles too large'
+         WRITE (10, *) ' ERROR: number of particles too large'
          STOP
       END IF
       BOX = (NPART/rho)**(1.D0/3.D0)
@@ -88,14 +88,14 @@ c        ---generate configuration form lattice
 
 c     ---skip###########
       ELSE
-         WRITE (6, *) ' read conf from disk '
+         WRITE (10, *) ' read conf from disk '
          READ (11, *) boxf
          READ (11, *) NPART
          READ (11, *) Dr
-         WRITE (6,*) 'boxf ', boxf, ' NPART ', NPART, ' Dr ', Dr
+         WRITE (10,*) 'boxf ', boxf, ' NPART ', NPART, ' Dr ', Dr
          rhof = NPART/boxf**3
          IF (ABS(boxf-BOX).GT.1D-6) THEN
-            WRITE (6, 99007) rho, rhof
+            WRITE (10, 99007) rho, rhof
          END IF
          DO i = 1, NPART
             READ (11, *) X(i), Y(i), Z(i)
@@ -108,11 +108,11 @@ c     ---skip###########
 c     ---skip###########
 
 c     ---write input data
-      WRITE (6, 99001) Equil, Prod, Nsamp
-      WRITE (6, 99002) Ndispl, Dr
-      WRITE (6, 99003) NPART, TEMP, rho, BOX
-      WRITE (6, 99004) eps, sig, MASS
-      WRITE (6, 99008) nLambda
+      WRITE (10, 99001) Equil, Prod, Nsamp
+      WRITE (10, 99002) Ndispl, Dr
+      WRITE (10, 99003) NPART, TEMP, rho, BOX
+      WRITE (10, 99004) eps, sig, MASS
+      WRITE (10, 99008) nLambda
 c     ---calculate parameters:
       BETA = 1/TEMP
       PI = 4*ATAN(1.D0)
@@ -126,10 +126,10 @@ c     ---calculate cut-off radius potential
 c     ---calculate energy of the shift
          ECUT = 0
          CALL ENER(ECUT, vir, RC2, 1.0d0, 1.0d0)
-         WRITE (6, 99005) RC, ECUT
+         WRITE (10, 99005) RC, ECUT
       END IF
       IF (TAILCO) THEN
-         WRITE (6, 99006) RC, CORU(RC, rho), CORP(RC, rho)
+         WRITE (10, 99006) RC, CORU(RC, rho, 1.0d0, 1.0d0), CORP(RC, rho)
       END IF
       RETURN
 99001 FORMAT ('  Number of equilibration cycles             :', i10, /, 

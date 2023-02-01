@@ -9,9 +9,9 @@ c
       DOUBLE PRECISION RANF
  
       CALL RANSET(Iseed)
-      PRINT *, ' ******** test random numbers ***********'
+      WRITE(10, *) ' ******** test random numbers ***********'
       DO i = 1, 5
-         PRINT *, ' i,ranf() ', i, RANF(Iseed)
+         WRITE(10,*) ' i,ranf() ', i, RANF(Iseed)
       END DO
       RETURN
       END

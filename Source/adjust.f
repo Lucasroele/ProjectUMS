@@ -26,7 +26,7 @@ c        ---limit the change:
          IF (Dr/dro.GT.1.5D0) Dr = dro*1.5D0
          IF (Dr/dro.LT.0.5D0) Dr = dro*0.5D0
          IF (Dr.GT.HBOX/2.D0) Dr = HBOX/2.D0
-         WRITE (6, 99001) Dr, dro, frac, Attemp - attempp, Nacc - naccp
+         WRITE (10, 99001) Dr, dro, frac, Attemp - attempp, Nacc - naccp
 c        ---store nacc and attemp for next use
          naccp = Nacc
          attempp = Attemp

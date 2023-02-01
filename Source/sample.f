@@ -1,6 +1,6 @@
 **==sample.spg  processed by SPAG 4.52O  at 18:54 on 27 Mar 1996
  
-      SUBROUTINE SAMPLE(I, En, Vir, press, Lambda)
+      SUBROUTINE SAMPLE(I, En, Vir, press)
 c
 c      write quantities (pressure and energy) to file
 c
@@ -15,7 +15,7 @@ c
       INCLUDE 'system.inc'
       INCLUDE 'potential.inc'
       INTEGER I
-      DOUBLE PRECISION En, enp, Vir, press, CORP, vol, rho, Lambda
+      DOUBLE PRECISION En, enp, Vir, press, CORP, vol, rho
       
       IF (NPART.NE.0) THEN
          enp = En/DBLE(NPART)

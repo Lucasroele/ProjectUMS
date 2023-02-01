@@ -8,7 +8,7 @@ c     Vir: (output) virial
 c     R2 : (input) distance squared between two particles
 c
       IMPLICIT NONE
-      DOUBLE PRECISION R2, r2i, r6i, En, Vir, lambda, lambda3, lambda5
+      DOUBLE PRECISION R2, r2i, r6i, En, Vir, lambda3, lambda5
       INCLUDE 'potential.inc'
 
 

@@ -1,43 +1,2117 @@
- --- rho     0.6792093000 
- --- rho     0.7000000000 
- --- rho     0.7212107000 
- --- rho     0.6588344000 
- --- rho     0.6792093000 
- --- rho     0.7000000000 
- --- rho     0.7212107000 
- --- rho     0.7428456000 
- --- rho     0.6588344000 
- --- rho     0.6792093000 
- --- rho     0.7000000000 
- --- rho     0.7212107000 
- --- rho     0.7428456000 
- --- rho     0.7649089000 
- --- rho     0.7874048000 
- --- rho     0.8103375000 
- --- rho     0.6588344000 
- --- rho     0.6792093000 
- --- rho     0.7000000000 
- --- rho     0.7212107000 
- --- rho     0.7428456000 
- --- rho     0.7649089000 
- --- rho     0.7874048000 
- --- rho     0.8103375000 
- --- rho     0.6588344000 
- --- rho     0.6792093000 
- --- rho     0.7000000000 
- --- rho     0.7212107000 
- --- rho     0.7428456000 
- --- rho     0.7649089000 
- --- rho     0.7874048000 
- --- rho     0.8103375000 
- --- rho     0.6588344000 
- --- rho     0.6792093000 
- --- rho     0.7000000000 
- --- rho     0.7212107000 
- --- rho     0.7428456000 
- --- rho     0.7649089000 
- --- rho     0.7874048000 
- --- rho     0.8103375000 
- --- rho     0.6001625000 
- --- rho     0.6193152000 
- --- rho     0.6388711000 
+ **************** MC_NVT ***************
+  i,ranf()            1  0.11180420853611572     
+  i,ranf()            2  0.74166310703406746     
+  i,ranf()            3  0.46027934237707857     
+  i,ranf()            4  0.11380693953292953     
+  i,ranf()            5  0.54839950623688738     
+ Initialisation on lattice: 
+       100 particles placed on a lattice
+  Number of equilibration cycles             :      1000
+  Number of production cycles                :     10000
+  Sample frequency                           :         1
+
+  Number of att. to displ. a part. per cycle :        50
+  Maximum displacement                       :     0.090
+
+
+  Number of particles                        :       100
+  Temperature                                :     2.000
+  Density                                    :     0.700
+  Box length                                 :     5.228
+
+  Model parameters: 
+     epsilon: 1.000
+     sigma  : 1.000
+     mass   : 1.000
+ number of lambda values:         20
+
+
+ Simulations with tail correction: 
+ Potential truncated at  Rc =:     2.614
+ Tail corrections:   energy =     -0.328 pressure     -0.459
+
+
+ Total energy initial configuration:   -486.41131
+ Total virial initial configuration:   1264.98050
+  -486.41130707075240        1264.9804960038036     
+  Start equilibration 
+ ======>> Done          200  out of         1000
+ Max. displ. set to :  0.135 (old :  0.090)
+ Frac. acc.: 0.78 attempts:   10000 succes:    7763
+ ======>> Done          400  out of         1000
+ Max. displ. set to :  0.199 (old :  0.135)
+ Frac. acc.: 0.74 attempts:   10000 succes:    7363
+ ======>> Done          600  out of         1000
+ Max. displ. set to :  0.250 (old :  0.199)
+ Frac. acc.: 0.63 attempts:   10000 succes:    6293
+ ======>> Done          800  out of         1000
+ Max. displ. set to :  0.285 (old :  0.250)
+ Frac. acc.: 0.57 attempts:   10000 succes:    5690
+ ======>> Done         1000  out of         1000
+ Max. displ. set to :  0.301 (old :  0.285)
+ Frac. acc.: 0.53 attempts:   10000 succes:    5278
+ Number of att. to displ. a part.  :      50000
+ success:      32387(= 64.77%)
+ Total energy end of simulation    :   -428.33261
+       running energy              :   -428.33261
+       difference                  :  -0.15348E-11
+ Total virial end of simulation    :    965.62178
+       running virial              :    965.62178
+       difference                  :   0.26148E-10
+  Start production 
+ ======>> Done         2000  out of        10000
+ Max. displ. set to :  0.296 (old :  0.301)
+ Frac. acc.: 0.49 attempts:  100000 succes:   49321
+ ======>> Done         4000  out of        10000
+ Max. displ. set to :  0.298 (old :  0.296)
+ Frac. acc.: 0.50 attempts:  100000 succes:   50201
+ ======>> Done         6000  out of        10000
+ Max. displ. set to :  0.297 (old :  0.298)
+ Frac. acc.: 0.50 attempts:  100000 succes:   49847
+ ======>> Done         8000  out of        10000
+ Max. displ. set to :  0.299 (old :  0.297)
+ Frac. acc.: 0.50 attempts:  100000 succes:   50396
+ ======>> Done        10000  out of        10000
+ Max. displ. set to :  0.299 (old :  0.299)
+ Frac. acc.: 0.50 attempts:  100000 succes:   49996
+ Number of att. to displ. a part.  :     500000
+ success:     249761(= 49.95%)
+ Total energy end of simulation    :   -443.71342
+       running energy              :   -443.71342
+       difference                  :  -0.94929E-11
+ Total virial end of simulation    :    510.86428
+       running virial              :    510.86428
+       difference                  :   0.77478E-10
+ Results Widom test particle method : 
+ Average pressure          :     0.29996
+ Number of samples         :      100000
+ Excess chemical potential :     1.84972
+ Results Widom test particle method : 
+ Average pressure          :     0.29996
+ Number of samples         :      100000
+ Excess chemical potential :     1.84972
+  ################################################ 
+  ################################################ 
+  ################ WIDOM FINISHED ################ 
+  ################################################ 
+  ################################################ 
+ lambda =            0
+  Start equilibration 
+ ======>> Done          200  out of         1000
+ Max. displ. set to :  0.299 (old :  0.299)
+ Frac. acc.: 0.50 attempts:   10000 succes:    4998
+ ======>> Done          400  out of         1000
+ Max. displ. set to :  0.306 (old :  0.299)
+ Frac. acc.: 0.51 attempts:   10000 succes:    5122
+ ======>> Done          600  out of         1000
+ Max. displ. set to :  0.309 (old :  0.306)
+ Frac. acc.: 0.50 attempts:   10000 succes:    5042
+ ======>> Done          800  out of         1000
+ Max. displ. set to :  0.294 (old :  0.309)
+ Frac. acc.: 0.48 attempts:   10000 succes:    4753
+ ======>> Done         1000  out of         1000
+ Max. displ. set to :  0.302 (old :  0.294)
+ Frac. acc.: 0.51 attempts:   10000 succes:    5149
+ Number of att. to displ. a part.  :      50000
+ success:      25064(= 50.13%)
+ Total energy end of simulation    :   -416.46979
+       running energy              :   -416.46979
+       difference                  :   0.79581E-12
+ Total virial end of simulation    :   1212.70131
+       running virial              :   1212.70131
+       difference                  :  -0.29559E-11
+  Start production 
+ ======>> Done         2000  out of        10000
+ Max. displ. set to :  0.297 (old :  0.302)
+ Frac. acc.: 0.49 attempts:  100000 succes:   49109
+ ======>> Done         4000  out of        10000
+ Max. displ. set to :  0.298 (old :  0.297)
+ Frac. acc.: 0.50 attempts:  100000 succes:   50116
+ ======>> Done         6000  out of        10000
+ Max. displ. set to :  0.299 (old :  0.298)
+ Frac. acc.: 0.50 attempts:  100000 succes:   50219
+ ======>> Done         8000  out of        10000
+ Max. displ. set to :  0.296 (old :  0.299)
+ Frac. acc.: 0.50 attempts:  100000 succes:   49572
+ ======>> Done        10000  out of        10000
+ Max. displ. set to :  0.296 (old :  0.296)
+ Frac. acc.: 0.50 attempts:  100000 succes:   49941
+ Number of att. to displ. a part.  :     500000
+ success:     248957(= 49.79%)
+ Total energy end of simulation    :   -430.74485
+       running energy              :   -430.74485
+       difference                  :  -0.56843E-12
+ Total virial end of simulation    :    803.11341
+       running virial              :    803.11341
+       difference                  :  -0.39108E-10
+ lambda =            1
+  Start equilibration 
+ ======>> Done          200  out of         1000
+ Max. displ. set to :  0.316 (old :  0.296)
+ Frac. acc.: 0.53 attempts:   10000 succes:    5331
+ ======>> Done          400  out of         1000
+ Max. displ. set to :  0.320 (old :  0.316)
+ Frac. acc.: 0.51 attempts:   10000 succes:    5065
+ ======>> Done          600  out of         1000
+ Max. displ. set to :  0.329 (old :  0.320)
+ Frac. acc.: 0.51 attempts:   10000 succes:    5142
+ ======>> Done          800  out of         1000
+ Max. displ. set to :  0.322 (old :  0.329)
+ Frac. acc.: 0.49 attempts:   10000 succes:    4893
+ ======>> Done         1000  out of         1000
+ Max. displ. set to :  0.324 (old :  0.322)
+ Frac. acc.: 0.50 attempts:   10000 succes:    5028
+ Number of att. to displ. a part.  :      50000
+ success:      25459(= 50.92%)
+ Total energy end of simulation    :   -370.15388
+       running energy              :   -370.15388
+       difference                  :  -0.18758E-11
+ Total virial end of simulation    :   1904.85147
+       running virial              :   1904.85147
+       difference                  :   0.23192E-10
+  Start production 
+ ======>> Done         2000  out of        10000
+ Max. displ. set to :  0.323 (old :  0.324)
+ Frac. acc.: 0.50 attempts:  100000 succes:   49898
+ ======>> Done         4000  out of        10000
+ Max. displ. set to :  0.322 (old :  0.323)
+ Frac. acc.: 0.50 attempts:  100000 succes:   49792
+ ======>> Done         6000  out of        10000
+ Max. displ. set to :  0.321 (old :  0.322)
+ Frac. acc.: 0.50 attempts:  100000 succes:   49979
+ ======>> Done         8000  out of        10000
+ Max. displ. set to :  0.321 (old :  0.321)
+ Frac. acc.: 0.50 attempts:  100000 succes:   49881
+ ======>> Done        10000  out of        10000
+ Max. displ. set to :  0.320 (old :  0.321)
+ Frac. acc.: 0.50 attempts:  100000 succes:   49870
+ Number of att. to displ. a part.  :     500000
+ success:     249420(= 49.88%)
+ Total energy end of simulation    :   -377.80781
+       running energy              :   -377.80781
+       difference                  :   0.37517E-11
+ Total virial end of simulation    :   1723.35072
+       running virial              :   1723.35072
+       difference                  :  -0.43201E-10
+ lambda =            2
+  Start equilibration 
+ ======>> Done          200  out of         1000
+ Max. displ. set to :  0.342 (old :  0.320)
+ Frac. acc.: 0.53 attempts:   10000 succes:    5341
+ ======>> Done          400  out of         1000
+ Max. displ. set to :  0.343 (old :  0.342)
+ Frac. acc.: 0.50 attempts:   10000 succes:    5019
+ ======>> Done          600  out of         1000
+ Max. displ. set to :  0.340 (old :  0.343)
+ Frac. acc.: 0.50 attempts:   10000 succes:    4956
+ ======>> Done          800  out of         1000
+ Max. displ. set to :  0.347 (old :  0.340)
+ Frac. acc.: 0.51 attempts:   10000 succes:    5105
+ ======>> Done         1000  out of         1000
+ Max. displ. set to :  0.347 (old :  0.347)
+ Frac. acc.: 0.50 attempts:   10000 succes:    5001
+ Number of att. to displ. a part.  :      50000
+ success:      25422(= 50.84%)
+ Total energy end of simulation    :   -308.68920
+       running energy              :   -308.68920
+       difference                  :   0.37517E-11
+ Total virial end of simulation    :   3527.34265
+       running virial              :   3527.34265
+       difference                  :   0.19099E-10
+  Start production 
+ ======>> Done         2000  out of        10000
+ Max. displ. set to :  0.345 (old :  0.347)
+ Frac. acc.: 0.50 attempts:  100000 succes:   49761
+ ======>> Done         4000  out of        10000
+ Max. displ. set to :  0.344 (old :  0.345)
+ Frac. acc.: 0.50 attempts:  100000 succes:   49814
+ ======>> Done         6000  out of        10000
+ Max. displ. set to :  0.345 (old :  0.344)
+ Frac. acc.: 0.50 attempts:  100000 succes:   50077
+ ======>> Done         8000  out of        10000
+ Max. displ. set to :  0.345 (old :  0.345)
+ Frac. acc.: 0.50 attempts:  100000 succes:   50043
+ ======>> Done        10000  out of        10000
+ Max. displ. set to :  0.347 (old :  0.345)
+ Frac. acc.: 0.50 attempts:  100000 succes:   50327
+ Number of att. to displ. a part.  :     500000
+ success:     250022(= 50.00%)
+ Total energy end of simulation    :   -344.39060
+       running energy              :   -344.39060
+       difference                  :   0.18304E-10
+ Total virial end of simulation    :   2594.48317
+       running virial              :   2594.48317
+       difference                  :   0.35470E-10
+ lambda =            3
+  Start equilibration 
+ ======>> Done          200  out of         1000
+ Max. displ. set to :  0.373 (old :  0.347)
+ Frac. acc.: 0.54 attempts:   10000 succes:    5364
+ ======>> Done          400  out of         1000
+ Max. displ. set to :  0.388 (old :  0.373)
+ Frac. acc.: 0.52 attempts:   10000 succes:    5207
+ ======>> Done          600  out of         1000
+ Max. displ. set to :  0.382 (old :  0.388)
+ Frac. acc.: 0.49 attempts:   10000 succes:    4925
+ ======>> Done          800  out of         1000
+ Max. displ. set to :  0.374 (old :  0.382)
+ Frac. acc.: 0.49 attempts:   10000 succes:    4895
+ ======>> Done         1000  out of         1000
+ Max. displ. set to :  0.374 (old :  0.374)
+ Frac. acc.: 0.50 attempts:   10000 succes:    5003
+ Number of att. to displ. a part.  :      50000
+ success:      25394(= 50.79%)
+ Total energy end of simulation    :   -302.54319
+       running energy              :   -302.54319
+       difference                  :   0.11937E-11
+ Total virial end of simulation    :   3545.23147
+       running virial              :   3545.23147
+       difference                  :  -0.24102E-10
+  Start production 
+ ======>> Done         2000  out of        10000
+ Max. displ. set to :  0.372 (old :  0.374)
+ Frac. acc.: 0.50 attempts:  100000 succes:   49716
+ ======>> Done         4000  out of        10000
+ Max. displ. set to :  0.372 (old :  0.372)
+ Frac. acc.: 0.50 attempts:  100000 succes:   50006
+ ======>> Done         6000  out of        10000
+ Max. displ. set to :  0.370 (old :  0.372)
+ Frac. acc.: 0.50 attempts:  100000 succes:   49738
+ ======>> Done         8000  out of        10000
+ Max. displ. set to :  0.376 (old :  0.370)
+ Frac. acc.: 0.51 attempts:  100000 succes:   50752
+ ======>> Done        10000  out of        10000
+ Max. displ. set to :  0.375 (old :  0.376)
+ Frac. acc.: 0.50 attempts:  100000 succes:   49838
+ Number of att. to displ. a part.  :     500000
+ success:     250050(= 50.01%)
+ Total energy end of simulation    :   -292.70764
+       running energy              :   -292.70764
+       difference                  :   0.64233E-11
+ Total virial end of simulation    :   4261.74382
+       running virial              :   4261.74382
+       difference                  :   0.45475E-11
+ lambda =            4
+  Start equilibration 
+ ======>> Done          200  out of         1000
+ Max. displ. set to :  0.404 (old :  0.375)
+ Frac. acc.: 0.54 attempts:   10000 succes:    5394
+ ======>> Done          400  out of         1000
+ Max. displ. set to :  0.402 (old :  0.404)
+ Frac. acc.: 0.50 attempts:   10000 succes:    4975
+ ======>> Done          600  out of         1000
+ Max. displ. set to :  0.389 (old :  0.402)
+ Frac. acc.: 0.48 attempts:   10000 succes:    4831
+ ======>> Done          800  out of         1000
+ Max. displ. set to :  0.398 (old :  0.389)
+ Frac. acc.: 0.51 attempts:   10000 succes:    5121
+ ======>> Done         1000  out of         1000
+ Max. displ. set to :  0.397 (old :  0.398)
+ Frac. acc.: 0.50 attempts:   10000 succes:    4982
+ Number of att. to displ. a part.  :      50000
+ success:      25303(= 50.61%)
+ Total energy end of simulation    :   -259.46746
+       running energy              :   -259.46746
+       difference                  :   0.22737E-11
+ Total virial end of simulation    :   5805.82509
+       running virial              :   5805.82509
+       difference                  :   0.18190E-10
+  Start production 
+ ======>> Done         2000  out of        10000
+ Max. displ. set to :  0.403 (old :  0.397)
+ Frac. acc.: 0.51 attempts:  100000 succes:   50775
+ ======>> Done         4000  out of        10000
+ Max. displ. set to :  0.407 (old :  0.403)
+ Frac. acc.: 0.51 attempts:  100000 succes:   50528
+ ======>> Done         6000  out of        10000
+ Max. displ. set to :  0.404 (old :  0.407)
+ Frac. acc.: 0.50 attempts:  100000 succes:   49695
+ ======>> Done         8000  out of        10000
+ Max. displ. set to :  0.405 (old :  0.404)
+ Frac. acc.: 0.50 attempts:  100000 succes:   50041
+ ======>> Done        10000  out of        10000
+ Max. displ. set to :  0.403 (old :  0.405)
+ Frac. acc.: 0.50 attempts:  100000 succes:   49719
+ Number of att. to displ. a part.  :     500000
+ success:     250758(= 50.15%)
+ Total energy end of simulation    :   -266.94290
+       running energy              :   -266.94290
+       difference                  :  -0.90381E-11
+ Total virial end of simulation    :   5503.01575
+       running virial              :   5503.01575
+       difference                  :   0.10186E-09
+ lambda =            5
+  Start equilibration 
+ ======>> Done          200  out of         1000
+ Max. displ. set to :  0.436 (old :  0.403)
+ Frac. acc.: 0.54 attempts:   10000 succes:    5415
+ ======>> Done          400  out of         1000
+ Max. displ. set to :  0.444 (old :  0.436)
+ Frac. acc.: 0.51 attempts:   10000 succes:    5098
+ ======>> Done          600  out of         1000
+ Max. displ. set to :  0.448 (old :  0.444)
+ Frac. acc.: 0.50 attempts:   10000 succes:    5043
+ ======>> Done          800  out of         1000
+ Max. displ. set to :  0.434 (old :  0.448)
+ Frac. acc.: 0.48 attempts:   10000 succes:    4837
+ ======>> Done         1000  out of         1000
+ Max. displ. set to :  0.431 (old :  0.434)
+ Frac. acc.: 0.50 attempts:   10000 succes:    4968
+ Number of att. to displ. a part.  :      50000
+ success:      25361(= 50.72%)
+ Total energy end of simulation    :   -247.22356
+       running energy              :   -247.22356
+       difference                  :  -0.65370E-12
+ Total virial end of simulation    :   5549.07286
+       running virial              :   5549.07286
+       difference                  :  -0.32742E-10
+  Start production 
+ ======>> Done         2000  out of        10000
+ Max. displ. set to :  0.436 (old :  0.431)
+ Frac. acc.: 0.51 attempts:  100000 succes:   50539
+ ======>> Done         4000  out of        10000
+ Max. displ. set to :  0.436 (old :  0.436)
+ Frac. acc.: 0.50 attempts:  100000 succes:   50081
+ ======>> Done         6000  out of        10000
+ Max. displ. set to :  0.439 (old :  0.436)
+ Frac. acc.: 0.50 attempts:  100000 succes:   50337
+ ======>> Done         8000  out of        10000
+ Max. displ. set to :  0.437 (old :  0.439)
+ Frac. acc.: 0.50 attempts:  100000 succes:   49769
+ ======>> Done        10000  out of        10000
+ Max. displ. set to :  0.441 (old :  0.437)
+ Frac. acc.: 0.50 attempts:  100000 succes:   50434
+ Number of att. to displ. a part.  :     500000
+ success:     251160(= 50.23%)
+ Total energy end of simulation    :   -223.42857
+       running energy              :   -223.42857
+       difference                  :   0.15064E-11
+ Total virial end of simulation    :   8303.52771
+       running virial              :   8303.52771
+       difference                  :  -0.47294E-10
+ lambda =            6
+  Start equilibration 
+ ======>> Done          200  out of         1000
+ Max. displ. set to :  0.461 (old :  0.441)
+ Frac. acc.: 0.52 attempts:   10000 succes:    5231
+ ======>> Done          400  out of         1000
+ Max. displ. set to :  0.475 (old :  0.461)
+ Frac. acc.: 0.51 attempts:   10000 succes:    5146
+ ======>> Done          600  out of         1000
+ Max. displ. set to :  0.475 (old :  0.475)
+ Frac. acc.: 0.50 attempts:   10000 succes:    5005
+ ======>> Done          800  out of         1000
+ Max. displ. set to :  0.476 (old :  0.475)
+ Frac. acc.: 0.50 attempts:   10000 succes:    5009
+ ======>> Done         1000  out of         1000
+ Max. displ. set to :  0.486 (old :  0.476)
+ Frac. acc.: 0.51 attempts:   10000 succes:    5108
+ Number of att. to displ. a part.  :      50000
+ success:      25499(= 51.00%)
+ Total energy end of simulation    :   -196.38916
+       running energy              :   -196.38916
+       difference                  :   0.68212E-12
+ Total virial end of simulation    :  10935.09768
+       running virial              :  10935.09768
+       difference                  :   0.16371E-10
+  Start production 
+ ======>> Done         2000  out of        10000
+ Max. displ. set to :  0.487 (old :  0.486)
+ Frac. acc.: 0.50 attempts:  100000 succes:   50008
+ ======>> Done         4000  out of        10000
+ Max. displ. set to :  0.483 (old :  0.487)
+ Frac. acc.: 0.50 attempts:  100000 succes:   49589
+ ======>> Done         6000  out of        10000
+ Max. displ. set to :  0.479 (old :  0.483)
+ Frac. acc.: 0.50 attempts:  100000 succes:   49592
+ ======>> Done         8000  out of        10000
+ Max. displ. set to :  0.482 (old :  0.479)
+ Frac. acc.: 0.50 attempts:  100000 succes:   50351
+ ======>> Done        10000  out of        10000
+ Max. displ. set to :  0.483 (old :  0.482)
+ Frac. acc.: 0.50 attempts:  100000 succes:   50140
+ Number of att. to displ. a part.  :     500000
+ success:     249680(= 49.94%)
+ Total energy end of simulation    :   -202.33652
+       running energy              :   -202.33652
+       difference                  :  -0.76739E-12
+ Total virial end of simulation    :   8366.75929
+       running virial              :   8366.75929
+       difference                  :   0.72760E-11
+ lambda =            7
+  Start equilibration 
+ ======>> Done          200  out of         1000
+ Max. displ. set to :  0.522 (old :  0.483)
+ Frac. acc.: 0.54 attempts:   10000 succes:    5402
+ ======>> Done          400  out of         1000
+ Max. displ. set to :  0.519 (old :  0.522)
+ Frac. acc.: 0.50 attempts:   10000 succes:    4972
+ ======>> Done          600  out of         1000
+ Max. displ. set to :  0.522 (old :  0.519)
+ Frac. acc.: 0.50 attempts:   10000 succes:    5025
+ ======>> Done          800  out of         1000
+ Max. displ. set to :  0.529 (old :  0.522)
+ Frac. acc.: 0.51 attempts:   10000 succes:    5072
+ ======>> Done         1000  out of         1000
+ Max. displ. set to :  0.533 (old :  0.529)
+ Frac. acc.: 0.50 attempts:   10000 succes:    5034
+ Number of att. to displ. a part.  :      50000
+ success:      25505(= 51.01%)
+ Total energy end of simulation    :   -167.05263
+       running energy              :   -167.05263
+       difference                  :  -0.10232E-11
+ Total virial end of simulation    :  13655.94113
+       running virial              :  13655.94113
+       difference                  :  -0.25284E-09
+  Start production 
+ ======>> Done         2000  out of        10000
+ Max. displ. set to :  0.532 (old :  0.533)
+ Frac. acc.: 0.50 attempts:  100000 succes:   49955
+ ======>> Done         4000  out of        10000
+ Max. displ. set to :  0.531 (old :  0.532)
+ Frac. acc.: 0.50 attempts:  100000 succes:   49854
+ ======>> Done         6000  out of        10000
+ Max. displ. set to :  0.529 (old :  0.531)
+ Frac. acc.: 0.50 attempts:  100000 succes:   49829
+ ======>> Done         8000  out of        10000
+ Max. displ. set to :  0.531 (old :  0.529)
+ Frac. acc.: 0.50 attempts:  100000 succes:   50216
+ ======>> Done        10000  out of        10000
+ Max. displ. set to :  0.524 (old :  0.531)
+ Frac. acc.: 0.49 attempts:  100000 succes:   49340
+ Number of att. to displ. a part.  :     500000
+ success:     249194(= 49.84%)
+ Total energy end of simulation    :   -167.05896
+       running energy              :   -167.05896
+       difference                  :   0.21316E-11
+ Total virial end of simulation    :  14050.90718
+       running virial              :  14050.90718
+       difference                  :   0.11642E-09
+ lambda =            8
+  Start equilibration 
+ ======>> Done          200  out of         1000
+ Max. displ. set to :  0.576 (old :  0.524)
+ Frac. acc.: 0.55 attempts:   10000 succes:    5491
+ ======>> Done          400  out of         1000
+ Max. displ. set to :  0.580 (old :  0.576)
+ Frac. acc.: 0.50 attempts:   10000 succes:    5040
+ ======>> Done          600  out of         1000
+ Max. displ. set to :  0.587 (old :  0.580)
+ Frac. acc.: 0.51 attempts:   10000 succes:    5054
+ ======>> Done          800  out of         1000
+ Max. displ. set to :  0.602 (old :  0.587)
+ Frac. acc.: 0.51 attempts:   10000 succes:    5128
+ ======>> Done         1000  out of         1000
+ Max. displ. set to :  0.595 (old :  0.602)
+ Frac. acc.: 0.49 attempts:   10000 succes:    4940
+ Number of att. to displ. a part.  :      50000
+ success:      25653(= 51.31%)
+ Total energy end of simulation    :   -131.18529
+       running energy              :   -131.18529
+       difference                  :  -0.15348E-11
+ Total virial end of simulation    :  17689.33052
+       running virial              :  17689.33052
+       difference                  :   0.36380E-10
+  Start production 
+ ======>> Done         2000  out of        10000
+ Max. displ. set to :  0.592 (old :  0.595)
+ Frac. acc.: 0.50 attempts:  100000 succes:   49802
+ ======>> Done         4000  out of        10000
+ Max. displ. set to :  0.592 (old :  0.592)
+ Frac. acc.: 0.50 attempts:  100000 succes:   49956
+ ======>> Done         6000  out of        10000
+ Max. displ. set to :  0.589 (old :  0.592)
+ Frac. acc.: 0.50 attempts:  100000 succes:   49746
+ ======>> Done         8000  out of        10000
+ Max. displ. set to :  0.588 (old :  0.589)
+ Frac. acc.: 0.50 attempts:  100000 succes:   49938
+ ======>> Done        10000  out of        10000
+ Max. displ. set to :  0.591 (old :  0.588)
+ Frac. acc.: 0.50 attempts:  100000 succes:   50242
+ Number of att. to displ. a part.  :     500000
+ success:     249684(= 49.94%)
+ Total energy end of simulation    :   -146.28992
+       running energy              :   -146.28992
+       difference                  :  -0.63665E-11
+ Total virial end of simulation    :  21127.13383
+       running virial              :  21127.13383
+       difference                  :  -0.15643E-09
+ lambda =            9
+  Start equilibration 
+ ======>> Done          200  out of         1000
+ Max. displ. set to :  0.625 (old :  0.591)
+ Frac. acc.: 0.53 attempts:   10000 succes:    5287
+ ======>> Done          400  out of         1000
+ Max. displ. set to :  0.642 (old :  0.625)
+ Frac. acc.: 0.51 attempts:   10000 succes:    5138
+ ======>> Done          600  out of         1000
+ Max. displ. set to :  0.653 (old :  0.642)
+ Frac. acc.: 0.51 attempts:   10000 succes:    5088
+ ======>> Done          800  out of         1000
+ Max. displ. set to :  0.654 (old :  0.653)
+ Frac. acc.: 0.50 attempts:   10000 succes:    5008
+ ======>> Done         1000  out of         1000
+ Max. displ. set to :  0.662 (old :  0.654)
+ Frac. acc.: 0.51 attempts:   10000 succes:    5062
+ Number of att. to displ. a part.  :      50000
+ success:      25583(= 51.17%)
+ Total energy end of simulation    :   -134.10665
+       running energy              :   -134.10665
+       difference                  :   0.00000E+00
+ Total virial end of simulation    :  19453.68821
+       running virial              :  19453.68821
+       difference                  :   0.36380E-10
+  Start production 
+ ======>> Done         2000  out of        10000
+ Max. displ. set to :  0.652 (old :  0.662)
+ Frac. acc.: 0.49 attempts:  100000 succes:   49251
+ ======>> Done         4000  out of        10000
+ Max. displ. set to :  0.657 (old :  0.652)
+ Frac. acc.: 0.50 attempts:  100000 succes:   50335
+ ======>> Done         6000  out of        10000
+ Max. displ. set to :  0.653 (old :  0.657)
+ Frac. acc.: 0.50 attempts:  100000 succes:   49705
+ ======>> Done         8000  out of        10000
+ Max. displ. set to :  0.658 (old :  0.653)
+ Frac. acc.: 0.50 attempts:  100000 succes:   50362
+ ======>> Done        10000  out of        10000
+ Max. displ. set to :  0.659 (old :  0.658)
+ Frac. acc.: 0.50 attempts:  100000 succes:   50063
+ Number of att. to displ. a part.  :     500000
+ success:     249716(= 49.94%)
+ Total energy end of simulation    :   -119.15721
+       running energy              :   -119.15721
+       difference                  :  -0.71054E-13
+ Total virial end of simulation    :  29793.14389
+       running virial              :  29793.14389
+       difference                  :  -0.24738E-09
+ lambda =           10
+  Start equilibration 
+ ======>> Done          200  out of         1000
+ Max. displ. set to :  0.707 (old :  0.659)
+ Frac. acc.: 0.54 attempts:   10000 succes:    5366
+ ======>> Done          400  out of         1000
+ Max. displ. set to :  0.703 (old :  0.707)
+ Frac. acc.: 0.50 attempts:   10000 succes:    4975
+ ======>> Done          600  out of         1000
+ Max. displ. set to :  0.720 (old :  0.703)
+ Frac. acc.: 0.51 attempts:   10000 succes:    5118
+ ======>> Done          800  out of         1000
+ Max. displ. set to :  0.729 (old :  0.720)
+ Frac. acc.: 0.51 attempts:   10000 succes:    5062
+ ======>> Done         1000  out of         1000
+ Max. displ. set to :  0.734 (old :  0.729)
+ Frac. acc.: 0.50 attempts:   10000 succes:    5036
+ Number of att. to displ. a part.  :      50000
+ success:      25557(= 51.11%)
+ Total energy end of simulation    :    -85.54750
+       running energy              :    -85.54750
+       difference                  :   0.78160E-12
+ Total virial end of simulation    :  45033.01486
+       running virial              :  45033.01486
+       difference                  :  -0.94587E-10
+  Start production 
+ ======>> Done         2000  out of        10000
+ Max. displ. set to :  0.733 (old :  0.734)
+ Frac. acc.: 0.50 attempts:  100000 succes:   49966
+ ======>> Done         4000  out of        10000
+ Max. displ. set to :  0.739 (old :  0.733)
+ Frac. acc.: 0.50 attempts:  100000 succes:   50362
+ ======>> Done         6000  out of        10000
+ Max. displ. set to :  0.739 (old :  0.739)
+ Frac. acc.: 0.50 attempts:  100000 succes:   50031
+ ======>> Done         8000  out of        10000
+ Max. displ. set to :  0.740 (old :  0.739)
+ Frac. acc.: 0.50 attempts:  100000 succes:   50070
+ ======>> Done        10000  out of        10000
+ Max. displ. set to :  0.744 (old :  0.740)
+ Frac. acc.: 0.50 attempts:  100000 succes:   50260
+ Number of att. to displ. a part.  :     500000
+ success:     250689(= 50.14%)
+ Total energy end of simulation    :    -93.24193
+       running energy              :    -93.24193
+       difference                  :  -0.62528E-12
+ Total virial end of simulation    :  36265.78450
+       running virial              :  36265.78450
+       difference                  :   0.61846E-09
+ lambda =           11
+  Start equilibration 
+ ======>> Done          200  out of         1000
+ Max. displ. set to :  0.793 (old :  0.744)
+ Frac. acc.: 0.53 attempts:   10000 succes:    5329
+ ======>> Done          400  out of         1000
+ Max. displ. set to :  0.846 (old :  0.793)
+ Frac. acc.: 0.53 attempts:   10000 succes:    5334
+ ======>> Done          600  out of         1000
+ Max. displ. set to :  0.857 (old :  0.846)
+ Frac. acc.: 0.51 attempts:   10000 succes:    5065
+ ======>> Done          800  out of         1000
+ Max. displ. set to :  0.846 (old :  0.857)
+ Frac. acc.: 0.49 attempts:   10000 succes:    4934
+ ======>> Done         1000  out of         1000
+ Max. displ. set to :  0.857 (old :  0.846)
+ Frac. acc.: 0.51 attempts:   10000 succes:    5066
+ Number of att. to displ. a part.  :      50000
+ success:      25728(= 51.46%)
+ Total energy end of simulation    :    -75.75449
+       running energy              :    -75.75449
+       difference                  :  -0.71054E-13
+ Total virial end of simulation    :  50319.14756
+       running virial              :  50319.14756
+       difference                  :  -0.56752E-09
+  Start production 
+ ======>> Done         2000  out of        10000
+ Max. displ. set to :  0.851 (old :  0.857)
+ Frac. acc.: 0.50 attempts:  100000 succes:   49642
+ ======>> Done         4000  out of        10000
+ Max. displ. set to :  0.851 (old :  0.851)
+ Frac. acc.: 0.50 attempts:  100000 succes:   50037
+ ======>> Done         6000  out of        10000
+ Max. displ. set to :  0.846 (old :  0.851)
+ Frac. acc.: 0.50 attempts:  100000 succes:   49708
+ ======>> Done         8000  out of        10000
+ Max. displ. set to :  0.855 (old :  0.846)
+ Frac. acc.: 0.51 attempts:  100000 succes:   50530
+ ======>> Done        10000  out of        10000
+ Max. displ. set to :  0.853 (old :  0.855)
+ Frac. acc.: 0.50 attempts:  100000 succes:   49880
+ Number of att. to displ. a part.  :     500000
+ success:     249797(= 49.96%)
+ Total energy end of simulation    :    -73.24485
+       running energy              :    -73.24485
+       difference                  :   0.34106E-12
+ Total virial end of simulation    :  50798.94824
+       running virial              :  50798.94824
+       difference                  :  -0.45839E-09
+ lambda =           12
+  Start equilibration 
+ ======>> Done          200  out of         1000
+ Max. displ. set to :  0.945 (old :  0.853)
+ Frac. acc.: 0.55 attempts:   10000 succes:    5538
+ ======>> Done          400  out of         1000
+ Max. displ. set to :  0.991 (old :  0.945)
+ Frac. acc.: 0.52 attempts:   10000 succes:    5241
+ ======>> Done          600  out of         1000
+ Max. displ. set to :  0.988 (old :  0.991)
+ Frac. acc.: 0.50 attempts:   10000 succes:    4985
+ ======>> Done          800  out of         1000
+ Max. displ. set to :  0.993 (old :  0.988)
+ Frac. acc.: 0.50 attempts:   10000 succes:    5025
+ ======>> Done         1000  out of         1000
+ Max. displ. set to :  0.991 (old :  0.993)
+ Frac. acc.: 0.50 attempts:   10000 succes:    4991
+ Number of att. to displ. a part.  :      50000
+ success:      25780(= 51.56%)
+ Total energy end of simulation    :    -50.22697
+       running energy              :    -50.22697
+       difference                  :   0.25580E-12
+ Total virial end of simulation    :  99503.87771
+       running virial              :  99503.87771
+       difference                  :   0.53842E-09
+  Start production 
+ ======>> Done         2000  out of        10000
+ Max. displ. set to :  0.993 (old :  0.991)
+ Frac. acc.: 0.50 attempts:  100000 succes:   50087
+ ======>> Done         4000  out of        10000
+ Max. displ. set to :  0.993 (old :  0.993)
+ Frac. acc.: 0.50 attempts:  100000 succes:   50039
+ ======>> Done         6000  out of        10000
+ Max. displ. set to :  0.992 (old :  0.993)
+ Frac. acc.: 0.50 attempts:  100000 succes:   49916
+ ======>> Done         8000  out of        10000
+ Max. displ. set to :  0.999 (old :  0.992)
+ Frac. acc.: 0.50 attempts:  100000 succes:   50365
+ ======>> Done        10000  out of        10000
+ Max. displ. set to :  0.991 (old :  0.999)
+ Frac. acc.: 0.50 attempts:  100000 succes:   49615
+ Number of att. to displ. a part.  :     500000
+ success:     250022(= 50.00%)
+ Total energy end of simulation    :    -57.09684
+       running energy              :    -57.09684
+       difference                  :  -0.49738E-13
+ Total virial end of simulation    :  88400.11743
+       running virial              :  88400.11743
+       difference                  :   0.11642E-09
+ lambda =           13
+  Start equilibration 
+ ======>> Done          200  out of         1000
+ Max. displ. set to :  1.090 (old :  0.991)
+ Frac. acc.: 0.55 attempts:   10000 succes:    5498
+ ======>> Done          400  out of         1000
+ Max. displ. set to :  1.143 (old :  1.090)
+ Frac. acc.: 0.52 attempts:   10000 succes:    5244
+ ======>> Done          600  out of         1000
+ Max. displ. set to :  1.160 (old :  1.143)
+ Frac. acc.: 0.51 attempts:   10000 succes:    5075
+ ======>> Done          800  out of         1000
+ Max. displ. set to :  1.163 (old :  1.160)
+ Frac. acc.: 0.50 attempts:   10000 succes:    5010
+ ======>> Done         1000  out of         1000
+ Max. displ. set to :  1.189 (old :  1.163)
+ Frac. acc.: 0.51 attempts:   10000 succes:    5114
+ Number of att. to displ. a part.  :      50000
+ success:      25941(= 51.88%)
+ Total energy end of simulation    :    -43.26512
+       running energy              :    -43.26512
+       difference                  :   0.39080E-12
+ Total virial end of simulation    : 158179.74676
+       running virial              : 158179.74676
+       difference                  :   0.34925E-09
+  Start production 
+ ======>> Done         2000  out of        10000
+ Max. displ. set to :  1.203 (old :  1.189)
+ Frac. acc.: 0.51 attempts:  100000 succes:   50573
+ ======>> Done         4000  out of        10000
+ Max. displ. set to :  1.203 (old :  1.203)
+ Frac. acc.: 0.50 attempts:  100000 succes:   50023
+ ======>> Done         6000  out of        10000
+ Max. displ. set to :  1.200 (old :  1.203)
+ Frac. acc.: 0.50 attempts:  100000 succes:   49876
+ ======>> Done         8000  out of        10000
+ Max. displ. set to :  1.202 (old :  1.200)
+ Frac. acc.: 0.50 attempts:  100000 succes:   50090
+ ======>> Done        10000  out of        10000
+ Max. displ. set to :  1.206 (old :  1.202)
+ Frac. acc.: 0.50 attempts:  100000 succes:   50138
+ Number of att. to displ. a part.  :     500000
+ success:     250700(= 50.14%)
+ Total energy end of simulation    :    -37.04287
+       running energy              :    -37.04287
+       difference                  :  -0.12008E-11
+ Total virial end of simulation    : 166786.40145
+       running virial              : 166786.40145
+       difference                  :  -0.42783E-08
+ lambda =           14
+  Start equilibration 
+ ======>> Done          200  out of         1000
+ Max. displ. set to :  1.307 (old :  1.206)
+ Frac. acc.: 0.55 attempts:   10000 succes:    5518
+ ======>> Done          400  out of         1000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.54 attempts:   10000 succes:    5380
+ ======>> Done          600  out of         1000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.54 attempts:   10000 succes:    5364
+ ======>> Done          800  out of         1000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.54 attempts:   10000 succes:    5367
+ ======>> Done         1000  out of         1000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.54 attempts:   10000 succes:    5391
+ Number of att. to displ. a part.  :      50000
+ success:      27020(= 54.04%)
+ Total energy end of simulation    :    -30.63842
+       running energy              :    -30.63842
+       difference                  :  -0.17053E-12
+ Total virial end of simulation    : 250035.87524
+       running virial              : 250035.87524
+       difference                  :  -0.26193E-08
+  Start production 
+ ======>> Done         2000  out of        10000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.54 attempts:  100000 succes:   54203
+ ======>> Done         4000  out of        10000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.54 attempts:  100000 succes:   54002
+ ======>> Done         6000  out of        10000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.54 attempts:  100000 succes:   54283
+ ======>> Done         8000  out of        10000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.54 attempts:  100000 succes:   53971
+ ======>> Done        10000  out of        10000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.54 attempts:  100000 succes:   53921
+ Number of att. to displ. a part.  :     500000
+ success:     270380(= 54.08%)
+ Total energy end of simulation    :    -24.03142
+       running energy              :    -24.03142
+       difference                  :  -0.12790E-12
+ Total virial end of simulation    : 255133.24792
+       running virial              : 255133.24792
+       difference                  :   0.35216E-08
+ lambda =           15
+  Start equilibration 
+ ======>> Done          200  out of         1000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.60 attempts:   10000 succes:    6044
+ ======>> Done          400  out of         1000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.60 attempts:   10000 succes:    5980
+ ======>> Done          600  out of         1000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.60 attempts:   10000 succes:    5972
+ ======>> Done          800  out of         1000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.61 attempts:   10000 succes:    6064
+ ======>> Done         1000  out of         1000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.60 attempts:   10000 succes:    5978
+ Number of att. to displ. a part.  :      50000
+ success:      30038(= 60.08%)
+ Total energy end of simulation    :    -20.38614
+       running energy              :    -20.38614
+       difference                  :   0.27356E-12
+ Total virial end of simulation    : 353211.89249
+       running virial              : 353211.89249
+       difference                  :   0.20373E-08
+  Start production 
+ ======>> Done         2000  out of        10000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.60 attempts:  100000 succes:   59926
+ ======>> Done         4000  out of        10000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.61 attempts:  100000 succes:   60518
+ ======>> Done         6000  out of        10000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.60 attempts:  100000 succes:   60282
+ ======>> Done         8000  out of        10000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.60 attempts:  100000 succes:   60222
+ ======>> Done        10000  out of        10000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.60 attempts:  100000 succes:   60317
+ Number of att. to displ. a part.  :     500000
+ success:     301265(= 60.25%)
+ Total energy end of simulation    :    -18.75142
+       running energy              :    -18.75142
+       difference                  :   0.27356E-12
+ Total virial end of simulation    : 368679.78356
+       running virial              : 368679.78356
+       difference                  :   0.83819E-08
+ lambda =           16
+  Start equilibration 
+ ======>> Done          200  out of         1000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.67 attempts:   10000 succes:    6724
+ ======>> Done          400  out of         1000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.67 attempts:   10000 succes:    6698
+ ======>> Done          600  out of         1000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.67 attempts:   10000 succes:    6726
+ ======>> Done          800  out of         1000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.67 attempts:   10000 succes:    6701
+ ======>> Done         1000  out of         1000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.67 attempts:   10000 succes:    6740
+ Number of att. to displ. a part.  :      50000
+ success:      33589(= 67.18%)
+ Total energy end of simulation    :    -12.75038
+       running energy              :    -12.75038
+       difference                  :   0.83489E-13
+ Total virial end of simulation    : 930068.30861
+       running virial              : 930068.30861
+       difference                  :  -0.75670E-08
+  Start production 
+ ======>> Done         2000  out of        10000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.67 attempts:  100000 succes:   66755
+ ======>> Done         4000  out of        10000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.67 attempts:  100000 succes:   67295
+ ======>> Done         6000  out of        10000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.67 attempts:  100000 succes:   67344
+ ======>> Done         8000  out of        10000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.67 attempts:  100000 succes:   66758
+ ======>> Done        10000  out of        10000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.67 attempts:  100000 succes:   67188
+ Number of att. to displ. a part.  :     500000
+ success:     335340(= 67.07%)
+ Total energy end of simulation    :    -11.27051
+       running energy              :    -11.27051
+       difference                  :  -0.27356E-12
+ Total virial end of simulation    : 919128.71026
+       running virial              : 919128.71026
+       difference                  :  -0.31665E-07
+ lambda =           17
+  Start equilibration 
+ ======>> Done          200  out of         1000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.75 attempts:   10000 succes:    7490
+ ======>> Done          400  out of         1000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.75 attempts:   10000 succes:    7479
+ ======>> Done          600  out of         1000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.74 attempts:   10000 succes:    7407
+ ======>> Done          800  out of         1000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.75 attempts:   10000 succes:    7464
+ ======>> Done         1000  out of         1000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.75 attempts:   10000 succes:    7471
+ Number of att. to displ. a part.  :      50000
+ success:      37311(= 74.62%)
+ Total energy end of simulation    :     -6.50209
+       running energy              :     -6.50209
+       difference                  :   0.00000E+00
+ Total virial end of simulation    : ************
+       running virial              : ************
+       difference                  :   0.18626E-08
+  Start production 
+ ======>> Done         2000  out of        10000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.75 attempts:  100000 succes:   74537
+ ======>> Done         4000  out of        10000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.75 attempts:  100000 succes:   74551
+ ======>> Done         6000  out of        10000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.75 attempts:  100000 succes:   74881
+ ======>> Done         8000  out of        10000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.75 attempts:  100000 succes:   74626
+ ======>> Done        10000  out of        10000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.75 attempts:  100000 succes:   74710
+ Number of att. to displ. a part.  :     500000
+ success:     373305(= 74.66%)
+ Total energy end of simulation    :     -6.03201
+       running energy              :     -6.03201
+       difference                  :   0.12434E-13
+ Total virial end of simulation    : ************
+       running virial              : ************
+       difference                  :  -0.69151E-07
+ lambda =           18
+  Start equilibration 
+ ======>> Done          200  out of         1000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.83 attempts:   10000 succes:    8320
+ ======>> Done          400  out of         1000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.83 attempts:   10000 succes:    8301
+ ======>> Done          600  out of         1000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.83 attempts:   10000 succes:    8283
+ ======>> Done          800  out of         1000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.82 attempts:   10000 succes:    8241
+ ======>> Done         1000  out of         1000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.82 attempts:   10000 succes:    8216
+ Number of att. to displ. a part.  :      50000
+ success:      41361(= 82.72%)
+ Total energy end of simulation    :      1.63472
+       running energy              :      1.63472
+       difference                  :  -0.20628E-12
+ Total virial end of simulation    : ************
+       running virial              : ************
+       difference                  :  -0.24028E-06
+  Start production 
+ ======>> Done         2000  out of        10000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.83 attempts:  100000 succes:   82867
+ ======>> Done         4000  out of        10000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.83 attempts:  100000 succes:   82857
+ ======>> Done         6000  out of        10000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.83 attempts:  100000 succes:   83159
+ ======>> Done         8000  out of        10000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.83 attempts:  100000 succes:   82738
+ ======>> Done        10000  out of        10000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.83 attempts:  100000 succes:   82685
+ Number of att. to displ. a part.  :     500000
+ success:     414306(= 82.86%)
+ Total energy end of simulation    :      0.29527
+       running energy              :      0.29527
+       difference                  :  -0.72942E-13
+ Total virial end of simulation    : ************
+       running virial              : ************
+       difference                  :   0.50105E-06
+ lambda =           19
+  Start equilibration 
+ ======>> Done          200  out of         1000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.91 attempts:   10000 succes:    9126
+ ======>> Done          400  out of         1000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.92 attempts:   10000 succes:    9156
+ ======>> Done          600  out of         1000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.92 attempts:   10000 succes:    9162
+ ======>> Done          800  out of         1000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.92 attempts:   10000 succes:    9232
+ ======>> Done         1000  out of         1000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.92 attempts:   10000 succes:    9206
+ Number of att. to displ. a part.  :      50000
+ success:      45882(= 91.76%)
+  ######### PROBLEMS VIRIAL ################ 
+ Total energy end of simulation    :      0.26386
+       running energy              :      0.26386
+       difference                  :   0.98310E-13
+ Total virial end of simulation    : ************
+       running virial              : ************
+       difference                  :   0.76443E-05
+  Start production 
+ ======>> Done         2000  out of        10000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.92 attempts:  100000 succes:   91839
+ ======>> Done         4000  out of        10000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.92 attempts:  100000 succes:   91716
+ ======>> Done         6000  out of        10000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.92 attempts:  100000 succes:   91760
+ ======>> Done         8000  out of        10000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.92 attempts:  100000 succes:   91767
+ ======>> Done        10000  out of        10000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.92 attempts:  100000 succes:   91866
+ Number of att. to displ. a part.  :     500000
+ success:     458948(= 91.79%)
+  ######### PROBLEMS VIRIAL ################ 
+ Total energy end of simulation    :     -0.02904
+       running energy              :     -0.02904
+       difference                  :   0.11612E-11
+ Total virial end of simulation    : ************
+       running virial              : ************
+       difference                  :   0.60454E-04
+ lambda =           20
+  Start equilibration 
+ ======>> Done          200  out of         1000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 1.00 attempts:   10000 succes:   10000
+ ======>> Done          400  out of         1000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 1.00 attempts:   10000 succes:   10000
+ ======>> Done          600  out of         1000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 1.00 attempts:   10000 succes:   10000
+ ======>> Done          800  out of         1000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 1.00 attempts:   10000 succes:   10000
+ ======>> Done         1000  out of         1000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 1.00 attempts:   10000 succes:   10000
+ Number of att. to displ. a part.  :      50000
+ success:      50000(= *****%)
+  ######### PROBLEMS VIRIAL ################ 
+ Total energy end of simulation    :      0.00000
+       running energy              :      0.00000
+       difference                  :   0.00000E+00
+ Total virial end of simulation    : ************
+       running virial              : ************
+       difference                  :   0.65863E+09
+  Start production 
+ ======>> Done         2000  out of        10000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 1.00 attempts:  100000 succes:  100000
+ ======>> Done         4000  out of        10000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 1.00 attempts:  100000 succes:  100000
+ ======>> Done         6000  out of        10000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 1.00 attempts:  100000 succes:  100000
+ ======>> Done         8000  out of        10000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 1.00 attempts:  100000 succes:  100000
+ ======>> Done        10000  out of        10000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 1.00 attempts:  100000 succes:  100000
+ Number of att. to displ. a part.  :     500000
+ success:     500000(= *****%)
+  ######### PROBLEMS VIRIAL ################ 
+ Total energy end of simulation    :      0.00000
+       running energy              :      0.00000
+       difference                  :   0.00000E+00
+ Total virial end of simulation    : ************
+       running virial              : ************
+       difference                  :   0.12952E+13
+ lambda =           21
+  Start equilibration 
+ ======>> Done          200  out of         1000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.92 attempts:   10000 succes:    9168
+ ======>> Done          400  out of         1000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.92 attempts:   10000 succes:    9218
+ ======>> Done          600  out of         1000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.92 attempts:   10000 succes:    9188
+ ======>> Done          800  out of         1000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.92 attempts:   10000 succes:    9151
+ ======>> Done         1000  out of         1000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.92 attempts:   10000 succes:    9160
+ Number of att. to displ. a part.  :      50000
+ success:      45885(= 91.77%)
+  ######### PROBLEMS VIRIAL ################ 
+ Total energy end of simulation    :     -0.47178
+       running energy              :     -0.47178
+       difference                  :  -0.14710E-12
+ Total virial end of simulation    : ************
+       running virial              : ************
+       difference                  :   0.24140E-05
+  Start production 
+ ======>> Done         2000  out of        10000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.92 attempts:  100000 succes:   91816
+ ======>> Done         4000  out of        10000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.92 attempts:  100000 succes:   91815
+ ======>> Done         6000  out of        10000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.92 attempts:  100000 succes:   91677
+ ======>> Done         8000  out of        10000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.92 attempts:  100000 succes:   91858
+ ======>> Done        10000  out of        10000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.92 attempts:  100000 succes:   91752
+ Number of att. to displ. a part.  :     500000
+ success:     458918(= 91.78%)
+  ######### PROBLEMS VIRIAL ################ 
+ Total energy end of simulation    :     -0.83576
+       running energy              :     -0.83576
+       difference                  :  -0.36182E-12
+ Total virial end of simulation    : ************
+       running virial              : ************
+       difference                  :   0.58115E-05
+ lambda =           22
+  Start equilibration 
+ ======>> Done          200  out of         1000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.83 attempts:   10000 succes:    8296
+ ======>> Done          400  out of         1000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.83 attempts:   10000 succes:    8275
+ ======>> Done          600  out of         1000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.83 attempts:   10000 succes:    8263
+ ======>> Done          800  out of         1000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.83 attempts:   10000 succes:    8251
+ ======>> Done         1000  out of         1000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.83 attempts:   10000 succes:    8344
+ Number of att. to displ. a part.  :      50000
+ success:      41429(= 82.86%)
+ Total energy end of simulation    :      5.05395
+       running energy              :      5.05395
+       difference                  :  -0.77272E-13
+ Total virial end of simulation    : ************
+       running virial              : ************
+       difference                  :   0.30175E-06
+  Start production 
+ ======>> Done         2000  out of        10000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.83 attempts:  100000 succes:   82848
+ ======>> Done         4000  out of        10000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.83 attempts:  100000 succes:   82683
+ ======>> Done         6000  out of        10000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.83 attempts:  100000 succes:   82813
+ ======>> Done         8000  out of        10000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.83 attempts:  100000 succes:   82773
+ ======>> Done        10000  out of        10000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.83 attempts:  100000 succes:   82789
+ Number of att. to displ. a part.  :     500000
+ success:     413906(= 82.78%)
+ Total energy end of simulation    :     -2.31201
+       running energy              :     -2.31201
+       difference                  :  -0.56044E-12
+ Total virial end of simulation    : ************
+       running virial              : ************
+       difference                  :  -0.34925E-06
+ lambda =           23
+  Start equilibration 
+ ======>> Done          200  out of         1000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.75 attempts:   10000 succes:    7541
+ ======>> Done          400  out of         1000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.74 attempts:   10000 succes:    7445
+ ======>> Done          600  out of         1000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.75 attempts:   10000 succes:    7517
+ ======>> Done          800  out of         1000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.75 attempts:   10000 succes:    7460
+ ======>> Done         1000  out of         1000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.75 attempts:   10000 succes:    7490
+ Number of att. to displ. a part.  :      50000
+ success:      37453(= 74.91%)
+ Total energy end of simulation    :     -8.20483
+       running energy              :     -8.20483
+       difference                  :  -0.26645E-13
+ Total virial end of simulation    : ************
+       running virial              : ************
+       difference                  :   0.14901E-07
+  Start production 
+ ======>> Done         2000  out of        10000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.75 attempts:  100000 succes:   74737
+ ======>> Done         4000  out of        10000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.75 attempts:  100000 succes:   74838
+ ======>> Done         6000  out of        10000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.75 attempts:  100000 succes:   74570
+ ======>> Done         8000  out of        10000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.75 attempts:  100000 succes:   74560
+ ======>> Done        10000  out of        10000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.74 attempts:  100000 succes:   74466
+ Number of att. to displ. a part.  :     500000
+ success:     373171(= 74.63%)
+ Total energy end of simulation    :     -7.55659
+       running energy              :     -7.55659
+       difference                  :  -0.16254E-12
+ Total virial end of simulation    : ************
+       running virial              : ************
+       difference                  :  -0.75437E-07
+ lambda =           24
+  Start equilibration 
+ ======>> Done          200  out of         1000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.67 attempts:   10000 succes:    6669
+ ======>> Done          400  out of         1000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.66 attempts:   10000 succes:    6612
+ ======>> Done          600  out of         1000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.66 attempts:   10000 succes:    6552
+ ======>> Done          800  out of         1000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.67 attempts:   10000 succes:    6736
+ ======>> Done         1000  out of         1000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.67 attempts:   10000 succes:    6718
+ Number of att. to displ. a part.  :      50000
+ success:      33287(= 66.57%)
+ Total energy end of simulation    :    -13.17069
+       running energy              :    -13.17069
+       difference                  :   0.53291E-13
+ Total virial end of simulation    : 975423.51091
+       running virial              : 975423.51091
+       difference                  :  -0.37253E-08
+  Start production 
+ ======>> Done         2000  out of        10000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.67 attempts:  100000 succes:   67167
+ ======>> Done         4000  out of        10000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.67 attempts:  100000 succes:   66884
+ ======>> Done         6000  out of        10000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.67 attempts:  100000 succes:   66812
+ ======>> Done         8000  out of        10000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.67 attempts:  100000 succes:   67070
+ ======>> Done        10000  out of        10000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.67 attempts:  100000 succes:   67380
+ Number of att. to displ. a part.  :     500000
+ success:     335313(= 67.06%)
+ Total energy end of simulation    :     -8.50141
+       running energy              :     -8.50141
+       difference                  :   0.20073E-12
+ Total virial end of simulation    : 864040.92352
+       running virial              : 864040.92352
+       difference                  :   0.27707E-07
+ lambda =           25
+  Start equilibration 
+ ======>> Done          200  out of         1000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.60 attempts:   10000 succes:    6043
+ ======>> Done          400  out of         1000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.60 attempts:   10000 succes:    5988
+ ======>> Done          600  out of         1000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.60 attempts:   10000 succes:    6018
+ ======>> Done          800  out of         1000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.61 attempts:   10000 succes:    6090
+ ======>> Done         1000  out of         1000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.59 attempts:   10000 succes:    5928
+ Number of att. to displ. a part.  :      50000
+ success:      30067(= 60.13%)
+ Total energy end of simulation    :    -22.01858
+       running energy              :    -22.01858
+       difference                  :   0.12434E-12
+ Total virial end of simulation    : 345811.67191
+       running virial              : 345811.67191
+       difference                  :   0.62864E-08
+  Start production 
+ ======>> Done         2000  out of        10000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.60 attempts:  100000 succes:   60097
+ ======>> Done         4000  out of        10000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.60 attempts:  100000 succes:   60220
+ ======>> Done         6000  out of        10000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.61 attempts:  100000 succes:   60552
+ ======>> Done         8000  out of        10000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.60 attempts:  100000 succes:   60095
+ ======>> Done        10000  out of        10000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.60 attempts:  100000 succes:   60159
+ Number of att. to displ. a part.  :     500000
+ success:     301123(= 60.22%)
+ Total energy end of simulation    :    -14.69514
+       running energy              :    -14.69514
+       difference                  :  -0.71942E-12
+ Total virial end of simulation    : 489659.46169
+       running virial              : 489659.46169
+       difference                  :  -0.89640E-08
+ lambda =           26
+  Start equilibration 
+ ======>> Done          200  out of         1000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.54 attempts:   10000 succes:    5432
+ ======>> Done          400  out of         1000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.54 attempts:   10000 succes:    5406
+ ======>> Done          600  out of         1000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.54 attempts:   10000 succes:    5407
+ ======>> Done          800  out of         1000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.53 attempts:   10000 succes:    5254
+ ======>> Done         1000  out of         1000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.53 attempts:   10000 succes:    5292
+ Number of att. to displ. a part.  :      50000
+ success:      26791(= 53.58%)
+ Total energy end of simulation    :    -28.68103
+       running energy              :    -28.68103
+       difference                  :  -0.11724E-12
+ Total virial end of simulation    : 210065.80426
+       running virial              : 210065.80426
+       difference                  :  -0.12224E-08
+  Start production 
+ ======>> Done         2000  out of        10000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.54 attempts:  100000 succes:   53974
+ ======>> Done         4000  out of        10000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.54 attempts:  100000 succes:   53797
+ ======>> Done         6000  out of        10000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.54 attempts:  100000 succes:   54181
+ ======>> Done         8000  out of        10000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.54 attempts:  100000 succes:   54078
+ ======>> Done        10000  out of        10000
+ Max. displ. set to :  1.307 (old :  1.307)
+ Frac. acc.: 0.54 attempts:  100000 succes:   54017
+ Number of att. to displ. a part.  :     500000
+ success:     270047(= 54.01%)
+ Total energy end of simulation    :    -29.22672
+       running energy              :    -29.22672
+       difference                  :  -0.13003E-11
+ Total virial end of simulation    : 250215.90250
+       running virial              : 250215.90250
+       difference                  :  -0.70722E-08
+ lambda =           27
+  Start equilibration 
+ ======>> Done          200  out of         1000
+ Max. displ. set to :  1.266 (old :  1.307)
+ Frac. acc.: 0.48 attempts:   10000 succes:    4845
+ ======>> Done          400  out of         1000
+ Max. displ. set to :  1.229 (old :  1.266)
+ Frac. acc.: 0.49 attempts:   10000 succes:    4853
+ ======>> Done          600  out of         1000
+ Max. displ. set to :  1.237 (old :  1.229)
+ Frac. acc.: 0.50 attempts:   10000 succes:    5032
+ ======>> Done          800  out of         1000
+ Max. displ. set to :  1.224 (old :  1.237)
+ Frac. acc.: 0.49 attempts:   10000 succes:    4947
+ ======>> Done         1000  out of         1000
+ Max. displ. set to :  1.202 (old :  1.224)
+ Frac. acc.: 0.49 attempts:   10000 succes:    4912
+ Number of att. to displ. a part.  :      50000
+ success:      24589(= 49.18%)
+ Total energy end of simulation    :    -35.26468
+       running energy              :    -35.26468
+       difference                  :   0.55422E-12
+ Total virial end of simulation    : 161851.87570
+       running virial              : 161851.87570
+       difference                  :  -0.14552E-08
+  Start production 
+ ======>> Done         2000  out of        10000
+ Max. displ. set to :  1.206 (old :  1.202)
+ Frac. acc.: 0.50 attempts:  100000 succes:   50168
+ ======>> Done         4000  out of        10000
+ Max. displ. set to :  1.208 (old :  1.206)
+ Frac. acc.: 0.50 attempts:  100000 succes:   50078
+ ======>> Done         6000  out of        10000
+ Max. displ. set to :  1.211 (old :  1.208)
+ Frac. acc.: 0.50 attempts:  100000 succes:   50102
+ ======>> Done         8000  out of        10000
+ Max. displ. set to :  1.208 (old :  1.211)
+ Frac. acc.: 0.50 attempts:  100000 succes:   49882
+ ======>> Done        10000  out of        10000
+ Max. displ. set to :  1.212 (old :  1.208)
+ Frac. acc.: 0.50 attempts:  100000 succes:   50175
+ Number of att. to displ. a part.  :     500000
+ success:     250405(= 50.08%)
+ Total energy end of simulation    :    -33.37344
+       running energy              :    -33.37344
+       difference                  :  -0.92371E-12
+ Total virial end of simulation    : 155495.06707
+       running virial              : 155495.06707
+       difference                  :  -0.94005E-08
+ lambda =           28
+  Start equilibration 
+ ======>> Done          200  out of         1000
+ Max. displ. set to :  1.073 (old :  1.212)
+ Frac. acc.: 0.44 attempts:   10000 succes:    4427
+ ======>> Done          400  out of         1000
+ Max. displ. set to :  1.019 (old :  1.073)
+ Frac. acc.: 0.47 attempts:   10000 succes:    4749
+ ======>> Done          600  out of         1000
+ Max. displ. set to :  0.997 (old :  1.019)
+ Frac. acc.: 0.49 attempts:   10000 succes:    4892
+ ======>> Done          800  out of         1000
+ Max. displ. set to :  1.016 (old :  0.997)
+ Frac. acc.: 0.51 attempts:   10000 succes:    5094
+ ======>> Done         1000  out of         1000
+ Max. displ. set to :  1.001 (old :  1.016)
+ Frac. acc.: 0.49 attempts:   10000 succes:    4928
+ Number of att. to displ. a part.  :      50000
+ success:      24090(= 48.18%)
+ Total energy end of simulation    :    -45.83544
+       running energy              :    -45.83544
+       difference                  :  -0.68212E-12
+ Total virial end of simulation    : 110079.87620
+       running virial              : 110079.87620
+       difference                  :   0.21828E-09
+  Start production 
+ ======>> Done         2000  out of        10000
+ Max. displ. set to :  1.009 (old :  1.001)
+ Frac. acc.: 0.50 attempts:  100000 succes:   50400
+ ======>> Done         4000  out of        10000
+ Max. displ. set to :  1.008 (old :  1.009)
+ Frac. acc.: 0.50 attempts:  100000 succes:   49905
+ ======>> Done         6000  out of        10000
+ Max. displ. set to :  1.003 (old :  1.008)
+ Frac. acc.: 0.50 attempts:  100000 succes:   49782
+ ======>> Done         8000  out of        10000
+ Max. displ. set to :  1.009 (old :  1.003)
+ Frac. acc.: 0.50 attempts:  100000 succes:   50271
+ ======>> Done        10000  out of        10000
+ Max. displ. set to :  0.998 (old :  1.009)
+ Frac. acc.: 0.49 attempts:  100000 succes:   49481
+ Number of att. to displ. a part.  :     500000
+ success:     249839(= 49.97%)
+ Total energy end of simulation    :    -51.93714
+       running energy              :    -51.93714
+       difference                  :  -0.25366E-11
+ Total virial end of simulation    : 100457.61402
+       running virial              : 100457.61402
+       difference                  :   0.49477E-09
+ lambda =           29
+  Start equilibration 
+ ======>> Done          200  out of         1000
+ Max. displ. set to :  0.905 (old :  0.998)
+ Frac. acc.: 0.45 attempts:   10000 succes:    4536
+ ======>> Done          400  out of         1000
+ Max. displ. set to :  0.863 (old :  0.905)
+ Frac. acc.: 0.48 attempts:   10000 succes:    4767
+ ======>> Done          600  out of         1000
+ Max. displ. set to :  0.858 (old :  0.863)
+ Frac. acc.: 0.50 attempts:   10000 succes:    4968
+ ======>> Done          800  out of         1000
+ Max. displ. set to :  0.863 (old :  0.858)
+ Frac. acc.: 0.50 attempts:   10000 succes:    5028
+ ======>> Done         1000  out of         1000
+ Max. displ. set to :  0.862 (old :  0.863)
+ Frac. acc.: 0.50 attempts:   10000 succes:    4995
+ Number of att. to displ. a part.  :      50000
+ success:      24294(= 48.59%)
+ Total energy end of simulation    :    -92.74567
+       running energy              :    -92.74567
+       difference                  :  -0.21316E-12
+ Total virial end of simulation    :  37433.54854
+       running virial              :  37433.54854
+       difference                  :  -0.72760E-10
+  Start production 
+ ======>> Done         2000  out of        10000
+ Max. displ. set to :  0.857 (old :  0.862)
+ Frac. acc.: 0.50 attempts:  100000 succes:   49700
+ ======>> Done         4000  out of        10000
+ Max. displ. set to :  0.856 (old :  0.857)
+ Frac. acc.: 0.50 attempts:  100000 succes:   49953
+ ======>> Done         6000  out of        10000
+ Max. displ. set to :  0.860 (old :  0.856)
+ Frac. acc.: 0.50 attempts:  100000 succes:   50227
+ ======>> Done         8000  out of        10000
+ Max. displ. set to :  0.845 (old :  0.860)
+ Frac. acc.: 0.49 attempts:  100000 succes:   49139
+ ======>> Done        10000  out of        10000
+ Max. displ. set to :  0.851 (old :  0.845)
+ Frac. acc.: 0.50 attempts:  100000 succes:   50346
+ Number of att. to displ. a part.  :     500000
+ success:     249365(= 49.87%)
+ Total energy end of simulation    :    -76.43519
+       running energy              :    -76.43519
+       difference                  :  -0.16058E-11
+ Total virial end of simulation    :  49805.09626
+       running virial              :  49805.09626
+       difference                  :  -0.12151E-08
+ lambda =           30
+  Start equilibration 
+ ======>> Done          200  out of         1000
+ Max. displ. set to :  0.779 (old :  0.851)
+ Frac. acc.: 0.46 attempts:   10000 succes:    4578
+ ======>> Done          400  out of         1000
+ Max. displ. set to :  0.758 (old :  0.779)
+ Frac. acc.: 0.49 attempts:   10000 succes:    4868
+ ======>> Done          600  out of         1000
+ Max. displ. set to :  0.758 (old :  0.758)
+ Frac. acc.: 0.50 attempts:   10000 succes:    4995
+ ======>> Done          800  out of         1000
+ Max. displ. set to :  0.753 (old :  0.758)
+ Frac. acc.: 0.50 attempts:   10000 succes:    4970
+ ======>> Done         1000  out of         1000
+ Max. displ. set to :  0.737 (old :  0.753)
+ Frac. acc.: 0.49 attempts:   10000 succes:    4897
+ Number of att. to displ. a part.  :      50000
+ success:      24308(= 48.62%)
+ Total energy end of simulation    :   -100.40149
+       running energy              :   -100.40149
+       difference                  :  -0.85265E-13
+ Total virial end of simulation    :  33743.99205
+       running virial              :  33743.99205
+       difference                  :  -0.16007E-09
+  Start production 
+ ======>> Done         2000  out of        10000
+ Max. displ. set to :  0.738 (old :  0.737)
+ Frac. acc.: 0.50 attempts:  100000 succes:   50013
+ ======>> Done         4000  out of        10000
+ Max. displ. set to :  0.736 (old :  0.738)
+ Frac. acc.: 0.50 attempts:  100000 succes:   49888
+ ======>> Done         6000  out of        10000
+ Max. displ. set to :  0.740 (old :  0.736)
+ Frac. acc.: 0.50 attempts:  100000 succes:   50288
+ ======>> Done         8000  out of        10000
+ Max. displ. set to :  0.746 (old :  0.740)
+ Frac. acc.: 0.50 attempts:  100000 succes:   50355
+ ======>> Done        10000  out of        10000
+ Max. displ. set to :  0.742 (old :  0.746)
+ Frac. acc.: 0.50 attempts:  100000 succes:   49750
+ Number of att. to displ. a part.  :     500000
+ success:     250294(= 50.06%)
+ Total energy end of simulation    :    -87.09819
+       running energy              :    -87.09819
+       difference                  :  -0.13216E-11
+ Total virial end of simulation    :  43038.33508
+       running virial              :  43038.33508
+       difference                  :   0.23283E-09
+ lambda =           31
+  Start equilibration 
+ ======>> Done          200  out of         1000
+ Max. displ. set to :  0.688 (old :  0.742)
+ Frac. acc.: 0.46 attempts:   10000 succes:    4638
+ ======>> Done          400  out of         1000
+ Max. displ. set to :  0.683 (old :  0.688)
+ Frac. acc.: 0.50 attempts:   10000 succes:    4965
+ ======>> Done          600  out of         1000
+ Max. displ. set to :  0.674 (old :  0.683)
+ Frac. acc.: 0.49 attempts:   10000 succes:    4932
+ ======>> Done          800  out of         1000
+ Max. displ. set to :  0.665 (old :  0.674)
+ Frac. acc.: 0.49 attempts:   10000 succes:    4930
+ ======>> Done         1000  out of         1000
+ Max. displ. set to :  0.645 (old :  0.665)
+ Frac. acc.: 0.49 attempts:   10000 succes:    4853
+ Number of att. to displ. a part.  :      50000
+ success:      24318(= 48.64%)
+ Total energy end of simulation    :   -120.01828
+       running energy              :   -120.01828
+       difference                  :   0.15490E-11
+ Total virial end of simulation    :  28725.41890
+       running virial              :  28725.41890
+       difference                  :   0.38563E-09
+  Start production 
+ ======>> Done         2000  out of        10000
+ Max. displ. set to :  0.656 (old :  0.645)
+ Frac. acc.: 0.51 attempts:  100000 succes:   50872
+ ======>> Done         4000  out of        10000
+ Max. displ. set to :  0.656 (old :  0.656)
+ Frac. acc.: 0.50 attempts:  100000 succes:   50000
+ ======>> Done         6000  out of        10000
+ Max. displ. set to :  0.651 (old :  0.656)
+ Frac. acc.: 0.50 attempts:  100000 succes:   49580
+ ======>> Done         8000  out of        10000
+ Max. displ. set to :  0.651 (old :  0.651)
+ Frac. acc.: 0.50 attempts:  100000 succes:   50052
+ ======>> Done        10000  out of        10000
+ Max. displ. set to :  0.654 (old :  0.651)
+ Frac. acc.: 0.50 attempts:  100000 succes:   50203
+ Number of att. to displ. a part.  :     500000
+ success:     250707(= 50.14%)
+ Total energy end of simulation    :    -98.81212
+       running energy              :    -98.81212
+       difference                  :   0.23732E-11
+ Total virial end of simulation    :  31624.49876
+       running virial              :  31624.49876
+       difference                  :   0.11823E-08
+ lambda =           32
+  Start equilibration 
+ ======>> Done          200  out of         1000
+ Max. displ. set to :  0.601 (old :  0.654)
+ Frac. acc.: 0.46 attempts:   10000 succes:    4596
+ ======>> Done          400  out of         1000
+ Max. displ. set to :  0.589 (old :  0.601)
+ Frac. acc.: 0.49 attempts:   10000 succes:    4897
+ ======>> Done          600  out of         1000
+ Max. displ. set to :  0.593 (old :  0.589)
+ Frac. acc.: 0.50 attempts:   10000 succes:    5038
+ ======>> Done          800  out of         1000
+ Max. displ. set to :  0.609 (old :  0.593)
+ Frac. acc.: 0.51 attempts:   10000 succes:    5130
+ ======>> Done         1000  out of         1000
+ Max. displ. set to :  0.591 (old :  0.609)
+ Frac. acc.: 0.49 attempts:   10000 succes:    4854
+ Number of att. to displ. a part.  :      50000
+ success:      24515(= 49.03%)
+ Total energy end of simulation    :   -137.86943
+       running energy              :   -137.86943
+       difference                  :  -0.56843E-12
+ Total virial end of simulation    :  18343.75842
+       running virial              :  18343.75842
+       difference                  :   0.29104E-10
+  Start production 
+ ======>> Done         2000  out of        10000
+ Max. displ. set to :  0.587 (old :  0.591)
+ Frac. acc.: 0.50 attempts:  100000 succes:   49682
+ ======>> Done         4000  out of        10000
+ Max. displ. set to :  0.587 (old :  0.587)
+ Frac. acc.: 0.50 attempts:  100000 succes:   49967
+ ======>> Done         6000  out of        10000
+ Max. displ. set to :  0.590 (old :  0.587)
+ Frac. acc.: 0.50 attempts:  100000 succes:   50260
+ ======>> Done         8000  out of        10000
+ Max. displ. set to :  0.587 (old :  0.590)
+ Frac. acc.: 0.50 attempts:  100000 succes:   49800
+ ======>> Done        10000  out of        10000
+ Max. displ. set to :  0.589 (old :  0.587)
+ Frac. acc.: 0.50 attempts:  100000 succes:   50142
+ Number of att. to displ. a part.  :     500000
+ success:     249851(= 49.97%)
+ Total energy end of simulation    :   -147.09134
+       running energy              :   -147.09134
+       difference                  :  -0.39790E-12
+ Total virial end of simulation    :  17957.05879
+       running virial              :  17957.05879
+       difference                  :  -0.27649E-09
+ lambda =           33
+  Start equilibration 
+ ======>> Done          200  out of         1000
+ Max. displ. set to :  0.554 (old :  0.589)
+ Frac. acc.: 0.47 attempts:   10000 succes:    4698
+ ======>> Done          400  out of         1000
+ Max. displ. set to :  0.532 (old :  0.554)
+ Frac. acc.: 0.48 attempts:   10000 succes:    4804
+ ======>> Done          600  out of         1000
+ Max. displ. set to :  0.533 (old :  0.532)
+ Frac. acc.: 0.50 attempts:   10000 succes:    5008
+ ======>> Done          800  out of         1000
+ Max. displ. set to :  0.530 (old :  0.533)
+ Frac. acc.: 0.50 attempts:   10000 succes:    4977
+ ======>> Done         1000  out of         1000
+ Max. displ. set to :  0.545 (old :  0.530)
+ Frac. acc.: 0.51 attempts:   10000 succes:    5141
+ Number of att. to displ. a part.  :      50000
+ success:      24628(= 49.26%)
+ Total energy end of simulation    :   -168.96028
+       running energy              :   -168.96028
+       difference                  :  -0.11369E-12
+ Total virial end of simulation    :  12868.82432
+       running virial              :  12868.82432
+       difference                  :   0.14370E-09
+  Start production 
+ ======>> Done         2000  out of        10000
+ Max. displ. set to :  0.535 (old :  0.545)
+ Frac. acc.: 0.49 attempts:  100000 succes:   49107
+ ======>> Done         4000  out of        10000
+ Max. displ. set to :  0.533 (old :  0.535)
+ Frac. acc.: 0.50 attempts:  100000 succes:   49745
+ ======>> Done         6000  out of        10000
+ Max. displ. set to :  0.529 (old :  0.533)
+ Frac. acc.: 0.50 attempts:  100000 succes:   49670
+ ======>> Done         8000  out of        10000
+ Max. displ. set to :  0.526 (old :  0.529)
+ Frac. acc.: 0.50 attempts:  100000 succes:   49720
+ ======>> Done        10000  out of        10000
+ Max. displ. set to :  0.529 (old :  0.526)
+ Frac. acc.: 0.50 attempts:  100000 succes:   50283
+ Number of att. to displ. a part.  :     500000
+ success:     248525(= 49.71%)
+ Total energy end of simulation    :   -167.28821
+       running energy              :   -167.28821
+       difference                  :  -0.18758E-11
+ Total virial end of simulation    :  12888.66181
+       running virial              :  12888.66181
+       difference                  :   0.50568E-09
+ lambda =           34
+  Start equilibration 
+ ======>> Done          200  out of         1000
+ Max. displ. set to :  0.499 (old :  0.529)
+ Frac. acc.: 0.47 attempts:   10000 succes:    4718
+ ======>> Done          400  out of         1000
+ Max. displ. set to :  0.492 (old :  0.499)
+ Frac. acc.: 0.49 attempts:   10000 succes:    4924
+ ======>> Done          600  out of         1000
+ Max. displ. set to :  0.477 (old :  0.492)
+ Frac. acc.: 0.48 attempts:   10000 succes:    4848
+ ======>> Done          800  out of         1000
+ Max. displ. set to :  0.477 (old :  0.477)
+ Frac. acc.: 0.50 attempts:   10000 succes:    5000
+ ======>> Done         1000  out of         1000
+ Max. displ. set to :  0.475 (old :  0.477)
+ Frac. acc.: 0.50 attempts:   10000 succes:    4984
+ Number of att. to displ. a part.  :      50000
+ success:      24474(= 48.95%)
+ Total energy end of simulation    :   -204.41073
+       running energy              :   -204.41073
+       difference                  :  -0.34106E-12
+ Total virial end of simulation    :   9567.88989
+       running virial              :   9567.88989
+       difference                  :  -0.20009E-10
+  Start production 
+ ======>> Done         2000  out of        10000
+ Max. displ. set to :  0.478 (old :  0.475)
+ Frac. acc.: 0.50 attempts:  100000 succes:   50292
+ ======>> Done         4000  out of        10000
+ Max. displ. set to :  0.480 (old :  0.478)
+ Frac. acc.: 0.50 attempts:  100000 succes:   50173
+ ======>> Done         6000  out of        10000
+ Max. displ. set to :  0.479 (old :  0.480)
+ Frac. acc.: 0.50 attempts:  100000 succes:   49958
+ ======>> Done         8000  out of        10000
+ Max. displ. set to :  0.475 (old :  0.479)
+ Frac. acc.: 0.50 attempts:  100000 succes:   49525
+ ======>> Done        10000  out of        10000
+ Max. displ. set to :  0.478 (old :  0.475)
+ Frac. acc.: 0.50 attempts:  100000 succes:   50387
+ Number of att. to displ. a part.  :     500000
+ success:     250335(= 50.07%)
+ Total energy end of simulation    :   -198.28551
+       running energy              :   -198.28551
+       difference                  :   0.34959E-11
+ Total virial end of simulation    :   9452.35880
+       running virial              :   9452.35880
+       difference                  :  -0.12187E-09
+ lambda =           35
+  Start equilibration 
+ ======>> Done          200  out of         1000
+ Max. displ. set to :  0.447 (old :  0.478)
+ Frac. acc.: 0.47 attempts:   10000 succes:    4673
+ ======>> Done          400  out of         1000
+ Max. displ. set to :  0.454 (old :  0.447)
+ Frac. acc.: 0.51 attempts:   10000 succes:    5081
+ ======>> Done          600  out of         1000
+ Max. displ. set to :  0.442 (old :  0.454)
+ Frac. acc.: 0.49 attempts:   10000 succes:    4862
+ ======>> Done          800  out of         1000
+ Max. displ. set to :  0.441 (old :  0.442)
+ Frac. acc.: 0.50 attempts:   10000 succes:    4994
+ ======>> Done         1000  out of         1000
+ Max. displ. set to :  0.438 (old :  0.441)
+ Frac. acc.: 0.50 attempts:   10000 succes:    4965
+ Number of att. to displ. a part.  :      50000
+ success:      24575(= 49.15%)
+ Total energy end of simulation    :   -251.81150
+       running energy              :   -251.81150
+       difference                  :  -0.22453E-11
+ Total virial end of simulation    :   6770.25715
+       running virial              :   6770.25715
+       difference                  :   0.55479E-10
+  Start production 
+ ======>> Done         2000  out of        10000
+ Max. displ. set to :  0.441 (old :  0.438)
+ Frac. acc.: 0.50 attempts:  100000 succes:   50311
+ ======>> Done         4000  out of        10000
+ Max. displ. set to :  0.439 (old :  0.441)
+ Frac. acc.: 0.50 attempts:  100000 succes:   49724
+ ======>> Done         6000  out of        10000
+ Max. displ. set to :  0.441 (old :  0.439)
+ Frac. acc.: 0.50 attempts:  100000 succes:   50318
+ ======>> Done         8000  out of        10000
+ Max. displ. set to :  0.441 (old :  0.441)
+ Frac. acc.: 0.50 attempts:  100000 succes:   49921
+ ======>> Done        10000  out of        10000
+ Max. displ. set to :  0.442 (old :  0.441)
+ Frac. acc.: 0.50 attempts:  100000 succes:   50101
+ Number of att. to displ. a part.  :     500000
+ success:     250375(= 50.08%)
+ Total energy end of simulation    :   -221.52121
+       running energy              :   -221.52121
+       difference                  :  -0.23306E-11
+ Total virial end of simulation    :   7697.02652
+       running virial              :   7697.02652
+       difference                  :  -0.76398E-10
+ lambda =           36
+  Start equilibration 
+ ======>> Done          200  out of         1000
+ Max. displ. set to :  0.420 (old :  0.442)
+ Frac. acc.: 0.48 attempts:   10000 succes:    4761
+ ======>> Done          400  out of         1000
+ Max. displ. set to :  0.408 (old :  0.420)
+ Frac. acc.: 0.49 attempts:   10000 succes:    4853
+ ======>> Done          600  out of         1000
+ Max. displ. set to :  0.406 (old :  0.408)
+ Frac. acc.: 0.50 attempts:   10000 succes:    4973
+ ======>> Done          800  out of         1000
+ Max. displ. set to :  0.410 (old :  0.406)
+ Frac. acc.: 0.51 attempts:   10000 succes:    5051
+ ======>> Done         1000  out of         1000
+ Max. displ. set to :  0.412 (old :  0.410)
+ Frac. acc.: 0.50 attempts:   10000 succes:    5027
+ Number of att. to displ. a part.  :      50000
+ success:      24665(= 49.33%)
+ Total energy end of simulation    :   -254.04351
+       running energy              :   -254.04351
+       difference                  :  -0.99476E-12
+ Total virial end of simulation    :   6040.18949
+       running virial              :   6040.18949
+       difference                  :   0.20918E-10
+  Start production 
+ ======>> Done         2000  out of        10000
+ Max. displ. set to :  0.410 (old :  0.412)
+ Frac. acc.: 0.50 attempts:  100000 succes:   49694
+ ======>> Done         4000  out of        10000
+ Max. displ. set to :  0.407 (old :  0.410)
+ Frac. acc.: 0.50 attempts:  100000 succes:   49618
+ ======>> Done         6000  out of        10000
+ Max. displ. set to :  0.405 (old :  0.407)
+ Frac. acc.: 0.50 attempts:  100000 succes:   49772
+ ======>> Done         8000  out of        10000
+ Max. displ. set to :  0.404 (old :  0.405)
+ Frac. acc.: 0.50 attempts:  100000 succes:   49893
+ ======>> Done        10000  out of        10000
+ Max. displ. set to :  0.407 (old :  0.404)
+ Frac. acc.: 0.50 attempts:  100000 succes:   50442
+ Number of att. to displ. a part.  :     500000
+ success:     249419(= 49.88%)
+ Total energy end of simulation    :   -247.70340
+       running energy              :   -247.70340
+       difference                  :   0.54285E-11
+ Total virial end of simulation    :   6138.95213
+       running virial              :   6138.95213
+       difference                  :   0.39108E-10
+ lambda =           37
+  Start equilibration 
+ ======>> Done          200  out of         1000
+ Max. displ. set to :  0.378 (old :  0.407)
+ Frac. acc.: 0.46 attempts:   10000 succes:    4633
+ ======>> Done          400  out of         1000
+ Max. displ. set to :  0.377 (old :  0.378)
+ Frac. acc.: 0.50 attempts:   10000 succes:    4994
+ ======>> Done          600  out of         1000
+ Max. displ. set to :  0.375 (old :  0.377)
+ Frac. acc.: 0.50 attempts:   10000 succes:    4976
+ ======>> Done          800  out of         1000
+ Max. displ. set to :  0.373 (old :  0.375)
+ Frac. acc.: 0.50 attempts:   10000 succes:    4971
+ ======>> Done         1000  out of         1000
+ Max. displ. set to :  0.365 (old :  0.373)
+ Frac. acc.: 0.49 attempts:   10000 succes:    4889
+ Number of att. to displ. a part.  :      50000
+ success:      24463(= 48.93%)
+ Total energy end of simulation    :   -319.74096
+       running energy              :   -319.74096
+       difference                  :   0.31264E-11
+ Total virial end of simulation    :   3809.99283
+       running virial              :   3809.99283
+       difference                  :  -0.53205E-10
+  Start production 
+ ======>> Done         2000  out of        10000
+ Max. displ. set to :  0.371 (old :  0.365)
+ Frac. acc.: 0.51 attempts:  100000 succes:   50804
+ ======>> Done         4000  out of        10000
+ Max. displ. set to :  0.370 (old :  0.371)
+ Frac. acc.: 0.50 attempts:  100000 succes:   49957
+ ======>> Done         6000  out of        10000
+ Max. displ. set to :  0.375 (old :  0.370)
+ Frac. acc.: 0.51 attempts:  100000 succes:   50578
+ ======>> Done         8000  out of        10000
+ Max. displ. set to :  0.377 (old :  0.375)
+ Frac. acc.: 0.50 attempts:  100000 succes:   50294
+ ======>> Done        10000  out of        10000
+ Max. displ. set to :  0.377 (old :  0.377)
+ Frac. acc.: 0.50 attempts:  100000 succes:   50015
+ Number of att. to displ. a part.  :     500000
+ success:     251648(= 50.33%)
+ Total energy end of simulation    :   -311.52994
+       running energy              :   -311.52994
+       difference                  :   0.90949E-11
+ Total virial end of simulation    :   3450.46647
+       running virial              :   3450.46647
+       difference                  :  -0.10732E-09
+ lambda =           38
+  Start equilibration 
+ ======>> Done          200  out of         1000
+ Max. displ. set to :  0.345 (old :  0.377)
+ Frac. acc.: 0.46 attempts:   10000 succes:    4579
+ ======>> Done          400  out of         1000
+ Max. displ. set to :  0.348 (old :  0.345)
+ Frac. acc.: 0.50 attempts:   10000 succes:    5043
+ ======>> Done          600  out of         1000
+ Max. displ. set to :  0.345 (old :  0.348)
+ Frac. acc.: 0.50 attempts:   10000 succes:    4960
+ ======>> Done          800  out of         1000
+ Max. displ. set to :  0.348 (old :  0.345)
+ Frac. acc.: 0.50 attempts:   10000 succes:    5033
+ ======>> Done         1000  out of         1000
+ Max. displ. set to :  0.339 (old :  0.348)
+ Frac. acc.: 0.49 attempts:   10000 succes:    4876
+ Number of att. to displ. a part.  :      50000
+ success:      24491(= 48.98%)
+ Total energy end of simulation    :   -339.03156
+       running energy              :   -339.03156
+       difference                  :  -0.34106E-12
+ Total virial end of simulation    :   2664.10519
+       running virial              :   2664.10519
+       difference                  :   0.35470E-10
+  Start production 
+ ======>> Done         2000  out of        10000
+ Max. displ. set to :  0.347 (old :  0.339)
+ Frac. acc.: 0.51 attempts:  100000 succes:   51182
+ ======>> Done         4000  out of        10000
+ Max. displ. set to :  0.344 (old :  0.347)
+ Frac. acc.: 0.50 attempts:  100000 succes:   49592
+ ======>> Done         6000  out of        10000
+ Max. displ. set to :  0.346 (old :  0.344)
+ Frac. acc.: 0.50 attempts:  100000 succes:   50305
+ ======>> Done         8000  out of        10000
+ Max. displ. set to :  0.341 (old :  0.346)
+ Frac. acc.: 0.49 attempts:  100000 succes:   49248
+ ======>> Done        10000  out of        10000
+ Max. displ. set to :  0.343 (old :  0.341)
+ Frac. acc.: 0.50 attempts:  100000 succes:   50261
+ Number of att. to displ. a part.  :     500000
+ success:     250588(= 50.12%)
+ Total energy end of simulation    :   -359.50110
+       running energy              :   -359.50110
+       difference                  :   0.68212E-11
+ Total virial end of simulation    :   2221.40786
+       running virial              :   2221.40786
+       difference                  :  -0.24102E-10
+ lambda =           39
+  Start equilibration 
+ ======>> Done          200  out of         1000
+ Max. displ. set to :  0.326 (old :  0.343)
+ Frac. acc.: 0.47 attempts:   10000 succes:    4748
+ ======>> Done          400  out of         1000
+ Max. displ. set to :  0.324 (old :  0.326)
+ Frac. acc.: 0.50 attempts:   10000 succes:    4968
+ ======>> Done          600  out of         1000
+ Max. displ. set to :  0.327 (old :  0.324)
+ Frac. acc.: 0.50 attempts:   10000 succes:    5048
+ ======>> Done          800  out of         1000
+ Max. displ. set to :  0.321 (old :  0.327)
+ Frac. acc.: 0.49 attempts:   10000 succes:    4909
+ ======>> Done         1000  out of         1000
+ Max. displ. set to :  0.319 (old :  0.321)
+ Frac. acc.: 0.50 attempts:   10000 succes:    4971
+ Number of att. to displ. a part.  :      50000
+ success:      24644(= 49.29%)
+ Total energy end of simulation    :   -387.68376
+       running energy              :   -387.68376
+       difference                  :  -0.12506E-11
+ Total virial end of simulation    :   1374.96261
+       running virial              :   1374.96261
+       difference                  :   0.11596E-10
+  Start production 
+ ======>> Done         2000  out of        10000
+ Max. displ. set to :  0.321 (old :  0.319)
+ Frac. acc.: 0.50 attempts:  100000 succes:   50264
+ ======>> Done         4000  out of        10000
+ Max. displ. set to :  0.316 (old :  0.321)
+ Frac. acc.: 0.49 attempts:  100000 succes:   49221
+ ======>> Done         6000  out of        10000
+ Max. displ. set to :  0.320 (old :  0.316)
+ Frac. acc.: 0.51 attempts:  100000 succes:   50652
+ ======>> Done         8000  out of        10000
+ Max. displ. set to :  0.321 (old :  0.320)
+ Frac. acc.: 0.50 attempts:  100000 succes:   50170
+ ======>> Done        10000  out of        10000
+ Max. displ. set to :  0.322 (old :  0.321)
+ Frac. acc.: 0.50 attempts:  100000 succes:   50232
+ Number of att. to displ. a part.  :     500000
+ success:     250539(= 50.11%)
+ Total energy end of simulation    :   -384.52996
+       running energy              :   -384.52996
+       difference                  :   0.23306E-11
+ Total virial end of simulation    :   1529.51368
+       running virial              :   1529.51368
+       difference                  :   0.67530E-10
+ lambda =           40
+  Start equilibration 
+ ======>> Done          200  out of         1000
+ Max. displ. set to :  0.302 (old :  0.322)
+ Frac. acc.: 0.47 attempts:   10000 succes:    4681
+ ======>> Done          400  out of         1000
+ Max. displ. set to :  0.298 (old :  0.302)
+ Frac. acc.: 0.49 attempts:   10000 succes:    4945
+ ======>> Done          600  out of         1000
+ Max. displ. set to :  0.296 (old :  0.298)
+ Frac. acc.: 0.50 attempts:   10000 succes:    4961
+ ======>> Done          800  out of         1000
+ Max. displ. set to :  0.296 (old :  0.296)
+ Frac. acc.: 0.50 attempts:   10000 succes:    5001
+ ======>> Done         1000  out of         1000
+ Max. displ. set to :  0.294 (old :  0.296)
+ Frac. acc.: 0.50 attempts:   10000 succes:    4971
+ Number of att. to displ. a part.  :      50000
+ success:      24559(= 49.12%)
+ Total energy end of simulation    :   -406.42189
+       running energy              :   -406.42189
+       difference                  :  -0.31832E-11
+ Total virial end of simulation    :   1293.05174
+       running virial              :   1293.05174
+       difference                  :   0.22737E-11
+  Start production 
+ ======>> Done         2000  out of        10000
+ Max. displ. set to :  0.300 (old :  0.294)
+ Frac. acc.: 0.51 attempts:  100000 succes:   50876
+ ======>> Done         4000  out of        10000
+ Max. displ. set to :  0.301 (old :  0.300)
+ Frac. acc.: 0.50 attempts:  100000 succes:   50191
+ ======>> Done         6000  out of        10000
+ Max. displ. set to :  0.298 (old :  0.301)
+ Frac. acc.: 0.50 attempts:  100000 succes:   49520
+ ======>> Done         8000  out of        10000
+ Max. displ. set to :  0.295 (old :  0.298)
+ Frac. acc.: 0.50 attempts:  100000 succes:   49588
+ ======>> Done        10000  out of        10000
+ Max. displ. set to :  0.298 (old :  0.295)
+ Frac. acc.: 0.50 attempts:  100000 succes:   50433
+ Number of att. to displ. a part.  :     500000
+ success:     250608(= 50.12%)
+ Total energy end of simulation    :   -420.23767
+       running energy              :   -420.23767
+       difference                  :  -0.14666E-10
+ Total virial end of simulation    :   1001.68099
+       running virial              :   1001.68099
+       difference                  :   0.20009E-10
+  ################################################ 
+  ################################################ 
+  ################ LAMBDA FINISHED ############### 
+  ################################################ 
+  ################################################ 
