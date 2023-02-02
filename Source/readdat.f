@@ -53,7 +53,6 @@ c    X(NPART),Y(NPART),Z(NPART): position particle last particle
      &       nWidomCycle, runWidom, runTDI
       DOUBLE PRECISION eps, sig, CORU, CORP, vir, boxf, rhof, rho, Dr
      
- 
 c     ---read simulation data
       READ (15, *)
       READ (15, *) ibeg, Equil, Prod, Nsamp, Iseed

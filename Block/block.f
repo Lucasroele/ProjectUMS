@@ -56,6 +56,8 @@ c     --- sum into av(j) and sav(j) for Flyberg and Petersen algorithm
             sav(j) = sav(j) + bdata(i, j)*bdata(i, j)
          END DO
       END DO
+c     --- sav = sum bdata^2
+
  100  idum = 0
       nb20 = nblok/20
       DO j = 1, data
@@ -67,6 +69,7 @@ c     --- Loop that calculates the 20 averages
 c     --- ii   = cycles through the averages
 c     --- i    = cycles through the blocks of size 20
 c     --- idum = compound iterator -not dynamically created for optimization- used to access bdata
+c     --- ssum = sum bdata^2
       DO ii = 1, 20
          DO j = 1, data
             sum(j) = 0.D0

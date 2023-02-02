@@ -27,11 +27,12 @@ c__________________________________________________________________________
       INCLUDE 'potential.inc'
       INTEGER iseed, equil, prod, nsamp, ii, icycl, ndispl, attempt, 
      &        nacc, ncycl, nmoves, imove, nLambda, I, J, SampleCount,
-     &        nGhosts, nWidomCycle, runWidom, runTDI
+     &        nGhosts, nWidomCycle, runWidom, runTDI, NBLokm
+      PARAMETER (NBLokm=150000)
       DOUBLE PRECISION en, ent, vir, virt, dr, Lambda , Press, PressSum, 
-     &        ChemicalPotentialSum, RANF, widomPress,
-     &        Xi, Yi, Zi, EnSum, EnSquaredSum, rho, CORU,
-     &        EnDummy, VirDummy, EnStart, chempotId, chempotEx, chempotL
+     &        ChemicalPotentialSum, RANF, widomPress, lambEn, lambEnArray(NBLokm),
+     &        Xi, Yi, Zi, EnSum, EnSquaredSum, rho, CORU, wtest, chempotBroglie,
+     &        EnDummy, VirDummy, EnStart, chempotId, chempotEx, chempotL, slambEn
       WRITE (10, *) '**************** MC_NVT ***************'
 c     ---initialize system
       CALL READDAT(equil, prod, nsamp, ndispl, dr, iseed, nLambda, nGhosts, nWidomCycle, runWidom,
@@ -51,11 +52,10 @@ c     ---total energy of the system
 
 c     ---start MC-cycle
       WRITE (10, *) en, vir
-
 c     --- Widom
       IF (runWidom.ne.0) THEN
-      DO ii = 1, 2
 
+      DO ii = 1, 2
 c        --- ii=1 equilibration
 c        --- ii=2 production
          IF (ii.EQ.1) THEN
@@ -88,7 +88,7 @@ c           --- sample the system every nsamp times
 c           --- assumes decorellation after nsamp steps
             IF (ii.EQ.2) THEN
                IF (MOD(icycl,nsamp).EQ.0) Then
-                  CALL SAMPLE(icycl, en, vir, press, Lambda)
+                  wtest = 0.0d0
                   SampleCount = SampleCount + 1
                   PressSum = PressSum + press
                   EnSquaredSum = EnSquaredSum + en * en
@@ -106,6 +106,8 @@ c                       --- verify tail correction
                         EnDummy = EnDummy + 2*CORU(RC, rho, Lambda, Lambda)
                      END IF
                      ChemicalPotentialSum = ChemicalPotentialSum + Exp(-BETA * EnDummy)
+c                    --- Sample/block.f doesnt work for enp and press in this way
+                     CALL SAMPLE(icycl, en, vir, Exp(-BETA * EnDummy))
                   END DO
                END IF
             END IF
@@ -141,14 +143,15 @@ c           ---test total energy
                chempotEx = -Log((ChemicalPotentialSum/DBLE(SampleCount))
      &         / DBLE(nGhosts))/BETA
                chempotId = -log(BOX*BOX*BOX/DBLE(npart+1))/BETA
+               chempotBroglie = -log((6.62607015D-34 * SQRT(BETA/2*PI))**3)/BETA
                Write(10,99004) widomPress, nGhosts*SampleCount, chempotEx
                Write(10,99004) widomPress, nGhosts*SampleCount, chempotEx
                Write(40,*) rho, chempotEx
-               Write(44, 99005) chempotEx, chempotId
+               Write(44, 99005) chempotEx, chempotId, chempotBroglie
             END IF
          END IF
       END DO
-
+      
       WRITE (10, *)
      &        ' ################################################ '
       WRITE (10, *)
@@ -161,22 +164,30 @@ c           ---test total energy
      &        ' ################################################ '
 
       END IF
-      
 
+      lambEn = 0.0d0
+      sampleCount = 0
       IF (runTDI.NE.0) THEN
 c     --- TDI
       DO I = 0, 2 * nlambda
-         IF (MOD(I,nlambda/10).eq.0) write(6,*)'Running lambda step', I+1, 'out of', 2*nlambda/10
+         IF (nlambda .Ge. 10) THEN
+            IF (MOD(I,nlambda/10).eq.0) write(6,*)'Running lambda step', I/(nlambda/10), 'out of', 20
+         ELSE
+            write(6,*)'Running lambda step', I, 'out of', 2 * nlambda
+         END IF
          IF (I .EQ. nlambda + 1) THEN
-            chempotL = (en - EnStart) / DBLE(NPART)
-            write (44,99006) Lambda, en - Enstart, chempotL
+            chempotL = (lambEn - EnStart) / DBLE(NPART)
+            write (44,99006) Lambda, lambEn - Enstart, chempotL
          END IF
          IF (I .LE. nlambda) THEN
             Lambda =  1.0d0 - (DBLE(I) / DBLE(nLambda))
          ELSE
             Lambda = (DBLE(I) / DBLE(nLambda)) - 1.0d0
          END IF
+
          WRITE (10,*) 'lambda = ', I
+         lambEn = 0.0d0
+         sampleCount = 0
          CALL TOTERG(en, vir, Lambda)
             DO ii = 1, 2
 c           --- ii=1 equilibration
@@ -204,11 +215,14 @@ c                 ---attempt to displace a particle
 
 c              --- sample the system every nsamp times
 c              --- assumes decorellation after nsamp steps
-c               IF (ii.EQ.2) THEN
-c                  IF (MOD(icycl,nsamp).EQ.0) Then
+               IF (ii.EQ.2) THEN
+                  IF (MOD(icycl,nsamp).EQ.0) Then
+                  lambEn = lambEn + en
+                  SampleCount = SampleCount + 1
+                  lambEnArray(SampleCount) = en
 c                     CALL SAMPLE(icycl, en, vir, press, lambda)
-c                  END IF
-c               END IF
+                  END IF
+               END IF
 
 c              --- Runs every 1/5th of ncycl (prod and equil)
                IF (MOD(icycl,ncycl/5).EQ.0) THEN
@@ -221,19 +235,26 @@ c                 ---adjust maximum displacements
             END DO
 
 
-            IF (I .eq. 0) THEN
-               IF (ii .eq. 1) THEN
-                  EnStart = en
+            IF (SampleCount .ne. 0) THEN
+               IF (ii .eq. 2) THEN
+                  lambEn = lambEn / DBLE(SampleCount)
+                  slambEn = 0.0d0
+                  DO J = 1, SampleCount
+                     slambEn = slambEn + (lambEnArray(J) - lambEn)**2
+                  END DO
+                  slambEn = SQRT(slambEn / DBLE(SampleCount))
+                  WRITE(44,*) lambda, lambEn, slambEn
+                  IF (I .eq. 0) THEN
+                     EnStart = lambEn
+                  END IF
                END IF
             END IF
 
             IF (ncycl.NE.0) THEN
                IF (attempt.NE.0) WRITE (10, 99003) attempt, nacc,
      &                               100.*FLOAT(nacc)/FLOAT(attempt)
-
 c           ---test total energy
                CALL TOTERG(ent, virt, Lambda)
-               IF (II .EQ. 2) WRITE(44,*) lambda, ent 
                IF (ABS(ent-en).GT.1.D-6) THEN
                   WRITE (10, *)
      &                    ' ######### PROBLEMS ENERGY ################ '
@@ -247,8 +268,8 @@ c           ---test total energy
          END DO
       END DO
       END IF
-      chempotL = (EnStart - en) / DBLE(NPART) + chempotL
-      write (44, 99006) Lambda, EnStart + DBLE(NPART) * chempotL - en, chempotL
+      chempotL = (EnStart - lambEn) / DBLE(NPART) + chempotL
+      write (44, 99006) Lambda, EnStart + DBLE(NPART) * chempotL - lambEn, chempotL
       CALL STORE(21, dr)
 
       WRITE (10, *)
@@ -273,14 +294,15 @@ c           ---test total energy
      &        '       running virial              : ', f12.5, /, 
      &        '       difference                  :  ', e12.5)
 99003 FORMAT (' Number of att. to displ. a part.  : ', i10, /, 
-     &        ' success: ', i10, '(= ', f5.2, '%)')
+     &        ' success: ', i10, 'g(= ', f5.2, '%)')
 99004 FORMAT (' Results Widom test particle method : '/,
      &        ' Average pressure          :', f12.5, /,
      &        ' Number of samples         :', i12, /,
      &        ' Excess chemical potential :', f12.5)
 99005 FORMAT ('Finished a WIDOM cycle', /,
      &        'Ex Chemical potential      :', f12.5, /,
-     &        'Id Chemical potential      :', f12.5)
+     &        'Id Chemical potential      :', f12.5, /,
+     &        'Chempot Broglie            :', f12.5)
 99006 FORMAT ('Finished a LAMBDA cycle ending at lambda =', f8.6, /,
      &        'Free energy                :', f12.5, /,
      &        'Chemical potential         :', f12.5)
